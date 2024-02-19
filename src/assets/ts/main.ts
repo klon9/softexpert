@@ -1,19 +1,11 @@
-import '../scss/main.scss'
-import 'swiper/css';
-import Swiper from 'swiper'
+import "../scss/main.scss";
 
+// import Swiper bundle with all modules installed
+import Swiper from 'swiper/bundle';
 
+// import styles bundle
+import 'swiper/css/bundle';
 
-const swiper = new Swiper('.swiper', {
-    speed: 400,
-    spaceBetween: 100,
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  slidesPerView:3
-
+const swiper = new Swiper(".swiperr", {
+    slidesPerView:1
 });
-

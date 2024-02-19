@@ -7,15 +7,9 @@
     <title>Vite + TS</title>
   </head>
   <body>
+    <!-- header + nav -->
     <header class="main-header">
       <div class="container">
-        <div class="main-header_left-side_wrapper">
-          <div class="main-header_left-side_item">Web</div>
-          <div class="main-header_left-side_item">Mobile</div>
-          <div class="main-header_left-side_item">Analytics</div>
-          <div class="main-header_left-side_item">Design</div>
-          <div class="main-header_left-side_item">ML</div>
-        </div>
         <div class="main-header_wrapper">
           <div class="main-header_logo-wrapper">
             <img
@@ -37,7 +31,17 @@
             </ul>
           </nav>
         </div>
-
+      </div>
+    </header>
+    <div class="main-promo">
+      <div class="container">
+        <div class="main_left-side_wrapper">
+          <div class="main_left-side_item">Web</div>
+          <div class="main_left-side_item">Mobile</div>
+          <div class="main_left-side_item">Analytics</div>
+          <div class="main_left-side_item">Design</div>
+          <div class="main_left-side_item">ML</div>
+        </div>
         <div class="main-promo_wrapper">
           <div class="main-promo_description">
             <h1 class="main-promo_title">
@@ -54,24 +58,24 @@
             class="main-promo_image"
           />
         </div>
-
-        <div class="main-header_right-side_wrapper">
-          <a href="#" class="main-header_right-side_item"
+        <div class="main_right-side_wrapper">
+          <a href="#" class="main_right-side_item"
             ><img src="/src/assets/images/icons/socials/vk.svg" alt="vk"
           /></a>
-          <a href="#" class="main-header_right-side_item"
+          <a href="#" class="main_right-side_item"
             ><img src="/src/assets/images/icons/socials/tg.svg" alt="tg"
           /></a>
-          <a href="#" class="main-header_right-side_item"
+          <a href="#" class="main_right-side_item"
             ><img src="/src/assets/images/icons/socials/yt.svg" alt="yt"
           /></a>
         </div>
       </div>
-    </header>
+    </div>
+
     <div class="main-slider">
       <div class="container">
-        <div class="swiper">
-          <div class="swiper-wrapper">
+        <div class="main-slider_swiper">
+          <div class="main-slider_swiper-wrapper swiper-wrapper">
             <div class="main-slider_item">
               <div class="main-slider_item_front">
                 <div class="main-slider_item_number">1</div>
@@ -227,17 +231,10 @@
               </div>
             </div>
           </div>
-
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
         </div>
+        <!-- navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </div>
     <script type="module" src="/src/assets/ts/main.ts"></script>
