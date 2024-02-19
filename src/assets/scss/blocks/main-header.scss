@@ -1,0 +1,124 @@
+.main-header {
+    width: 100%;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-header_wrapper {
+    padding: 50px 0 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-header_logo-wrapper {
+    display: flex;
+    width: 340px;
+    grid-column-gap: 25px;
+}
+
+.main-header_logo-img {
+    width: auto;
+    height: fit-content;
+}
+
+.main-header_logo-description {
+    padding: 5px 0 0;
+    font-size: 13px;
+}
+
+.main-header_nav-wrapper {
+    padding: 0 65px;
+}
+
+.main-header_nav-wrapper > ul {
+    margin: 0;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-column-gap: 98px;
+    padding: 0;
+
+    line-height: 18px;
+    font-size: 15px;
+    letter-spacing: 0.1px;
+}
+
+
+.main-header_nav-wrapper li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    color: #6E74A8;
+    list-style: none;
+
+    transition: color .2s linear;
+
+    &::after{
+        content:"";
+        position: absolute;
+        bottom: -30px;
+        left: calc(50% - 4.5px);
+
+        height: 9px;
+        width: 9px;
+
+        border-radius: 50%;
+        background-color: currentColor;
+        opacity: 0;
+
+        transition: opacity .2s linear;
+
+    }
+
+    &:hover {
+        &::after{
+            opacity: 1;
+        }
+        color: #4CC8AF;
+    }
+}
+
+
+.button{
+    padding:15px 36px;
+    border-radius: 25px;
+    background-color: #fff;
+
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: .1px;
+}
+
+.main-header_left-side_wrapper {
+    position: absolute;
+    top: 0;
+    left: -171px;
+    display: flex;
+    padding: 75px 0 0 29px;
+    grid-column-gap: 31px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height: 100%;
+    justify-content: center;
+    border: 1px solid #fff;
+    border-width: 0 0 0 3px;
+}
+
+.main-header_left-side_item {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.main-header_right-side_wrapper {
+    position: absolute;
+    bottom: -38px;
+    display: grid;
+    grid-row-gap: 27px;
+    right: -132px;
+    justify-items: center;
+}

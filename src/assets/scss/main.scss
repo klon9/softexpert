@@ -1,4 +1,38 @@
+@import "../scss/mixins/font-face";
+@import "../scss/mixins/breakpoint";
+@import "../scss/fonts";
+@import "../scss/blocks/main-header.scss";
+@import "../scss/blocks/main-promo.scss";
+@import "../scss/blocks/main-slider.scss";
+
+
 body{
     position: relative;
-    background: #ccc;
+    background: #EBEFF2;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Nekst", sans-serif;
+    font-weight: 400;
 }
+
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 72px;
+}
+
+h6{
+    font-family: "PlayfairDisplay", sans-serif;
+    font-size: 31px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 41px;
+    letter-spacing: 0em;
+}
+

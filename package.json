@@ -23,5 +23,9 @@
     "vite-plugin-browser-sync": "^3.0.0",
     "vite-plugin-checker": "^0.6.4",
     "vite-plugin-qrcode": "^0.2.3"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "swiper": "^11.0.6"
   }
 }

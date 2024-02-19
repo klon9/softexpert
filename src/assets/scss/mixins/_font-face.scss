@@ -1,0 +1,10 @@
+/* stylelint-disable */
+@mixin font-face($font-family, $url, $weight, $style, $format) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url('#{$url}') format($format);
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
