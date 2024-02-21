@@ -1,0 +1,37 @@
+.main-block-2_items-wrapper {
+  padding: 30px 0 0 0;
+  display: flex;
+}
+
+.main-block-2_item {
+  flex: 1;
+  padding-right: 95px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 20px;
+}
+
+.main-block-2_item_img-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.main-block-2_item_title {
+  align-self: center;
+
+  font-family: PlayfairDisplay;
+  font-size: 23px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0em;
+}
+
+.main-block-2_item_desc {
+  grid-area: 2/1/2/3;
+
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0em;
+}

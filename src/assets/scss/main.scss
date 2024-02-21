@@ -6,66 +6,75 @@
 @import "../scss/blocks/main-sides.scss";
 @import "../scss/blocks/main-slider.scss";
 @import "../scss/blocks/main-block-1.scss";
+@import "../scss/blocks/main-block-2.scss";
 
-body{
-    position: relative;
-    background: #EBEFF2;
-    margin: 0;
-    padding: 0;
-
-    font-family: "Nekst", sans-serif;
-    font-weight: 400;
-    color: #3E496A;
+*{
+  box-sizing: border-box;
 }
 
+body {
+  position: relative;
+  background: #ebeff2;
+  margin: 0;
+  padding: 0;
 
-a{
-    text-decoration: none;
-    color: currentColor;
+  font-family: "Nekst", sans-serif;
+  font-weight: 400;
+  color: #3e496a;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
 }
 
 h1 {
-    font-size: 60px;
-    line-height: 72px;
+  font-size: 60px;
+  line-height: 72px;
 }
 
-h6{
-    font-family: "PlayfairDisplay", sans-serif;
-    font-size: 31px;
-    font-style: italic;
-    font-weight: 500;
-    line-height: 41px;
-    letter-spacing: 0em;
+h2 {
+  font-size: 64px;
+  line-height: 46px;
+  letter-spacing: 0em;
+}
+
+h6 {
+  font-family: "PlayfairDisplay", sans-serif;
+  font-size: 31px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 41px;
+  letter-spacing: 0em;
 }
 
 .button {
-    padding: 13px 36px;
-    border: 1px solid #37374a;
-    border-radius: 25px;
-    background-color: #37374a;
-  
-    color: #fff;
-    font-size: 16px;
-    line-height: 19.2px;
-    letter-spacing: 0.1px;
-  
-    transition: all 0.2s linear;
-  }
-  
-  .button:hover,
-  .button:focus,
-  .button:active {
-    background: linear-gradient(
-        152.36deg,
-        rgba(149, 51, 215, 0.1) 1.9%,
-        rgba(72, 244, 255, 0.056) 98.27%,
-        rgba(255, 0, 127, 0.1) 98.28%
-      ),
-      linear-gradient(180deg, #ffffff 0%, #e5e9f6 100%);
-  
-    border-image-source: linear-gradient(180deg, #ffffff 0%, #e5e9f6 100%);
-    box-shadow: 0px 4px 14px 0px #9eaacf40;
-  
-    color: #6e74a8;
-  }
+  padding: 13px 36px;
+  border: 1px solid #37374a;
+  border-radius: 25px;
+  background-color: #37374a;
 
+  color: #fff;
+  font-size: 16px;
+  line-height: 19.2px;
+  letter-spacing: 0.1px;
+
+  transition: all 0.2s linear;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background: linear-gradient(
+      152.36deg,
+      rgba(149, 51, 215, 0.1) 1.9%,
+      rgba(72, 244, 255, 0.056) 98.27%,
+      rgba(255, 0, 127, 0.1) 98.28%
+    ),
+    linear-gradient(180deg, #ffffff 0%, #e5e9f6 100%);
+
+  border-image-source: linear-gradient(180deg, #ffffff 0%, #e5e9f6 100%);
+  box-shadow: 0px 4px 14px 0px #9eaacf40;
+
+  color: #6e74a8;
+}
