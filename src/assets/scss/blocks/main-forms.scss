@@ -1,0 +1,52 @@
+.main-form {
+  position: relative;
+  max-width: 1433px;
+  min-height: 270px;
+  padding: 40px 60px 40px 105px;
+  display: grid;
+  align-items: center;
+  grid-column-gap: 70px;
+  grid-template-columns: 3fr 5fr;
+  border-radius: 45px;
+  z-index: 1;
+}
+
+.main-form_part-1 {
+  height: 100%;
+}
+
+.main-form_title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em;
+}
+
+.main-form_subtitle {
+  padding-top: 20px;
+  font-family: PlayfairDisplay;
+  font-size: 31px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 41px;
+  letter-spacing: 0em;
+}
+
+.main-form_subtitle__small{
+    font-size: 20px;
+    line-height: 26.66px;
+    font-weight: 500;
+}
+
+.main-form_agreements {
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0 12px;
+}
+
+.main-form_part-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px 17px;
+  align-items: center;
+}

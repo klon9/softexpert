@@ -5,7 +5,7 @@
 }
 
 .container {
-  max-width: 1500px;
+  max-width: 1440px;
   margin: 0 auto;
   position: relative;
 }
@@ -81,4 +81,10 @@
     }
     color: #4cc8af;
   }
+}
+
+
+.button-default {
+  width: fit-content;
+  height: fit-content;
 }

@@ -1,0 +1,31 @@
+.main-block-5 {
+  padding: 80px 0 0;
+
+  h2 {
+    text-align: center;
+  }
+
+  .block-description {
+    text-align: center;
+  }
+
+  .main-block-4_item {
+    min-height: 525px;
+    padding: 170px 30px 50px;
+    grid-template-columns: 0.55fr;
+    grid-row-gap: 16px;
+    align-items: normal;
+  }
+}
+
+.main-block-5_items-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 73px 30px;
+}
+
+.main-block-5_item_logo-wrapper {
+  min-height: 127px;
+  display: flex;
+  align-items: center;
+}
