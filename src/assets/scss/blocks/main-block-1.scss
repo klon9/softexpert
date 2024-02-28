@@ -5,9 +5,9 @@
 }
 
 .main-block-1_content-wrapper {
-  width: 930px;
+  width: 870px;
   margin: 0 0 0 auto;
-  padding: 133px 60px 10px 0;
+  padding: 140px 0 10px 0;
 }
 
 .main-block-1_desc {
@@ -115,6 +115,11 @@
   }
 }
 
+.card-element__with-angle {
+  box-shadow: none;
+  background: none;
+}
+
 .card-element__green {
   &::after {
     position: absolute;
@@ -130,6 +135,65 @@
       rgba(0, 249, 115, 0.505945) 49.41%,
       rgba(0, 243, 156, 0) 100%
     );
+    content: "";
+  }
+}
+
+.card-element__orange {
+  &::after {
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    left: 11px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: radial-gradient(
+      91.67% 91.67% at 72.92% 95.83%,
+      #ec9646 0%,
+      rgba(249, 90, 0, 0.505945) 49.41%,
+      rgba(243, 219, 0, 0) 100%
+    );
+    content: "";
+  }
+}
+
+.card-element__red {
+  &::after {
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    left: 11px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: radial-gradient(
+      91.67% 91.67% at 72.92% 95.83%,
+      #ec4646 0%,
+      rgba(249, 0, 0, 0.505945) 49.41%,
+      rgba(255, 0, 0, 0.489583) 49.42%,
+      rgba(243, 0, 0, 0) 100%
+    );
+    content: "";
+  }
+}
+
+.card-element__violet {
+  &::after {
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    left: 11px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: radial-gradient(
+      91.67% 91.67% at 72.92% 95.83%,
+      #5d46ec 0%,
+      rgba(80, 0, 249, 0.505945) 51.04%,
+      rgba(209, 0, 243, 0) 100%
+    );
+
     content: "";
   }
 }

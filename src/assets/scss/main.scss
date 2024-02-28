@@ -11,8 +11,11 @@
 @import "../scss/blocks/main-block-3.scss";
 @import "../scss/blocks/main-block-4_cases.scss";
 @import "../scss/blocks/main-block-5.scss";
+@import "../scss/blocks/main-block-6.scss";
+@import "../scss/blocks/main-block-7.scss";
 @import "../scss/blocks/main-forms.scss";
 @import "../scss/blocks/main-grids.scss";
+@import "../scss/blocks/main-footer.scss";
 
 * {
   box-sizing: border-box;
@@ -21,6 +24,7 @@
 body {
   position: relative;
   background: #ebeff2;
+
   margin: 0;
   padding: 0;
 
@@ -44,6 +48,14 @@ h2 {
   line-height: 46px;
   letter-spacing: 0em;
 }
+
+h3 {
+  margin: 60px 0 24px;
+  font-size: 58px;
+  text-align: center;
+  color: #fff;
+}
+
 h4 {
   font-size: 30px;
   line-height: 55px;
@@ -71,7 +83,7 @@ h6 {
   line-height: 19.2px;
   letter-spacing: 0.1px;
 
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
 }
 
 .button:hover,
@@ -95,7 +107,7 @@ input[type="text"],
 input[type="tel"] {
   background: #ffffff33;
   border: 1px solid #ffffffcc;
-  padding: 18px 28px;
+  padding: 14px 28px 22px;
   border-radius: 50px;
   font-size: 20px;
   line-height: 24px;
@@ -168,4 +180,51 @@ input[type="submit"] {
 .cursive-text {
   font-family: PlayfairDisplay;
   font-style: italic;
+}
+
+.with-arrow {
+  position: relative;
+  display: inline-flex;
+  height: 20px;
+  align-items: center;
+  &::after {
+    position: absolute;
+    right: -40px;
+    transform: translateY(2px);
+    content: "";
+    height: 1px;
+    width: 40px;
+    background: currentColor;
+    display: inline-block;
+
+    transition: all 0.1s linear;
+  }
+
+  &::before {
+    position: absolute;
+    right: -39px;
+    transform: translateY(2px);
+    content: "";
+    height: 9px;
+    width: 9px;
+    border: 1px solid currentColor;
+    border-width: 1px 1px 0 0;
+    display: inline-block;
+    rotate: 45deg;
+
+    transition: all 0.1s linear;
+  }
+}
+
+*:hover > .with-arrow {
+  &::after {
+    width: 60px;
+    right: -60px;
+    transform: translateY(2px);
+  }
+
+  &::before {
+    right: -60px;
+    transform: translateY(2px);
+  }
 }

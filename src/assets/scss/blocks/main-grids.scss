@@ -2,6 +2,8 @@
   display: grid;
 
   &.grid-3 {
+    padding: 50px 0 0;
+
     grid-auto-rows: minmax(355px, auto);
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 31px 38px;
@@ -9,13 +11,11 @@
 }
 
 .main-grid_item {
-  padding: 65px 55px;
+  padding: 60px 55px 20px 58px;
 
   display: grid;
-  grid-row-gap: 15px;
+  grid-row-gap: 14px;
   grid-template-rows: 100px auto;
-  box-shadow: none;
-  background: none;
 }
 
 .main-grid_item_number {
@@ -40,6 +40,7 @@
 
 .main-grid_item_desc {
   font-size: 16px;
-  line-height: 23px;
+  line-height: 1.45;
   letter-spacing: 0em;
+  color: $lilac;
 }
