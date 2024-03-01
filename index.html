@@ -11,11 +11,13 @@
       <div class="container">
         <div class="main-header_wrapper">
           <div class="main-header_logo-wrapper">
-            <img
-              src="/src/assets/images/logo.png"
-              alt="Софтэксперт"
-              class="main-header_logo-img"
-            />
+            <picture>
+              <img
+                src="/src/assets/images/logo.svg"
+                alt="Софтэксперт"
+                class="main-header_logo-img"
+              />
+            </picture>
             <div class="main-header_logo-description">
               Mobile&software Development
             </div>
@@ -71,6 +73,8 @@
             ><img src="/src/assets/images/icons/socials/yt.svg" alt="yt"
           /></a>
         </div>
+        <div class="background-block bg-promo bg-promo-purple"></div>
+        <div class="background-block bg-promo bg-promo-orange"></div>
       </div>
     </div>
 
@@ -247,7 +251,7 @@
     <div class="main-block-1">
       <div class="container">
         <div class="main-block-1_image-wrapper">
-          <img src="/src/assets/images/icons/block-2/promo.png" />
+          <img src="/src/assets/images/block-1/background.png" />
         </div>
         <div class="main-block-1_content-wrapper">
           <div class="main-block-1_desc">
@@ -391,6 +395,11 @@
 
     <div class="main-block-3">
       <div class="container">
+        <div class="main-block-decor">
+          <picture>
+            <img src="/src/assets/images/block-3/background.png">
+          </picture>
+        </div>
         <h2>Услуги</h2>
         <div class="main-block-3_items-wrapper">
           <div class="main-block-3_item card-element">
@@ -449,23 +458,6 @@
                 <li>Electron</li>
                 <li>blazor</li>
               </ul>
-            </div>
-          </div>
-
-          <div class="main-block-3_item card-element">
-            <div class="main-block-3_item_image-wrapper">
-              <picture>
-                <img src="/src/assets/images/block-3/element-4/image.png" />
-              </picture>
-            </div>
-
-            <div class="main-block-3_item-title">СУБД</div>
-            <div class="main-block-3_item-desc">
-              <p>
-                реляционные (postgres,ms sql,mysql)<br />
-                документоориентированные нереляционные(MongoDB) in&nbsp;memory
-                database (redis)
-              </p>
             </div>
           </div>
         </div>
@@ -771,6 +763,13 @@
             </div>
           </div>
         </div>
+
+        <div class="main-block-decor">
+          <picture>
+            <img src="/src/assets/images/block-4/form-decor.png" />
+          </picture>
+        </div>
+
         <form class="main-form main-form-2 card-element__green">
           <div class="before">
             <svg
@@ -1131,6 +1130,11 @@
             </div>
           </div>
         </div>
+        <div class="cube-block_wrapper">
+          <picture>
+            <img src="/src/assets/images/block-7/background.png" alt="" />
+          </picture>
+        </div>
       </div>
     </div>
 
@@ -1233,7 +1237,9 @@
       <div class="container">
         <div class="main-footer_part-1">
           <div class="main-footer_logo-wrapper">
-            <div class="main-footer_slogan">Mobile&Software Development</div>
+            <picture>
+              <img src="/src/assets/images/logo-footer.svg" />
+            </picture>
           </div>
 
           <div class="main-footer_phones-wrapper">
@@ -1278,6 +1284,8 @@
         </div>
       </div>
     </footer>
+
+    <div class="background-block bg-promo bg-promo-blue"></div>
     <script type="module" src="/src/assets/ts/main.ts"></script>
   </body>
 </html>

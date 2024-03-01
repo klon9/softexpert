@@ -1,12 +1,17 @@
 .main-block-3 {
   padding: 0 0 20px;
-  background: url(/src/assets/images/block-3/background.png) 100% -93% no-repeat;
+  overflow: hidden;
+  .main-block-decor {
+    bottom: unset;
+    right: -240px;
+    top: -207px;
+  }
 }
 
 .main-block-3_items-wrapper {
   padding: 40px 0 66px;
   display: flex;
-  grid-gap: 33px;
+  grid-gap: 45px;
 }
 
 .main-block-3_item {
@@ -18,7 +23,7 @@
   grid-gap: 16px;
   box-shadow: 0px 3.1019434929px 34.1213760376px 0px
     rgba(158, 170, 207, 0.3019607843);
-    clip-path: none;
+  clip-path: none;
 
   img {
     height: 100%;

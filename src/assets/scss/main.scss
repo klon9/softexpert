@@ -16,6 +16,7 @@
 @import "../scss/blocks/main-forms.scss";
 @import "../scss/blocks/main-grids.scss";
 @import "../scss/blocks/main-footer.scss";
+@import "../scss/blocks/backgrond-blocks.scss";
 
 * {
   box-sizing: border-box;
@@ -23,7 +24,7 @@
 
 body {
   position: relative;
-  background: #ebeff2;
+  background: linear-gradient(#ebeff2 87%, #cedae2 95%, #c7ced3 97.19%);
 
   margin: 0;
   padding: 0;
@@ -107,7 +108,7 @@ input[type="text"],
 input[type="tel"] {
   background: #ffffff33;
   border: 1px solid #ffffffcc;
-  padding: 14px 28px 22px;
+  padding: 18px 28px 18px;
   border-radius: 50px;
   font-size: 20px;
   line-height: 24px;
@@ -125,6 +126,7 @@ input[type="tel"] {
 input[type="submit"] {
   padding: 20px;
   border-radius: 50px;
+  border: none;
   background-color: #37374a;
   font-size: 16px;
   color: #fff;
@@ -227,4 +229,11 @@ input[type="submit"] {
     right: -60px;
     transform: translateY(2px);
   }
+}
+
+.main-block-decor {
+  position: absolute;
+  bottom: -225px;
+  right: -110px;
+  z-index: 0;
 }

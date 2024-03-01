@@ -1,6 +1,15 @@
 .main-block-4 {
   padding: 50px 0 0;
 
+  background: linear-gradient(
+    transparent 3%,
+    #e3e0f3 15%,
+    transparent 35%,
+    transparent 85%,
+    #e3e0f3 95%,
+    transparent 100%
+  );
+
   h2 {
     text-align: center;
   }
@@ -9,7 +18,7 @@
     padding: 14px 0 30px;
   }
 
-  .main-form_subtitle__small{
+  .main-form_subtitle__small {
     letter-spacing: 0;
   }
 }
@@ -41,9 +50,10 @@
   &:hover {
     color: $green;
   }
-  
-  box-shadow: 0px 4.141469478607178px 45.55616760253906px 0px #9EAACF4D;
 
+  overflow: hidden;
+  clip-path: none;
+  box-shadow: 0px 4.141469478607178px 45.55616760253906px 0px #9eaacf4d;
 }
 
 .main-block-4_item_logo-wrapper {
@@ -51,10 +61,15 @@
 
   display: flex;
   align-items: center;
+  z-index: 1;
 
   img {
     max-height: 100%;
   }
+}
+
+.main-block-4_item-title {
+  z-index: 1;
 }
 
 .main-block-4_item-long {
@@ -69,5 +84,4 @@
   position: absolute;
   right: 0;
   top: 0;
-  z-index: -1;
 }

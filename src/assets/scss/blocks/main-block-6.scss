@@ -1,7 +1,14 @@
-.main-block-6{
-    padding: 62px 0;
+.main-block-6 {
+  padding: 62px 0;
 
-    h2{
-        text-align: center;
-    }
+  h2 {
+    text-align: center;
+  }
+
+  .cube-block_wrapper {
+    position: absolute;
+    bottom: -190px;
+    right: -240px;
+    z-index: -1;
+  }
 }
