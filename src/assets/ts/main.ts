@@ -7,7 +7,24 @@ import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
 const swiper1 = new Swiper(".main-advantages_slider.swiper", {
-  slidesPerView: 4,
+  breakpoints: {
+    1680: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+
+    375: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+  },
   navigation: {
     nextEl: ".swiper-button_next",
     prevEl: ".swiper-button_prev",
@@ -26,6 +43,16 @@ const swiper2 = new Swiper(".slider-reviews .swiper", {
   loop: true,
   wrapperClass: "slider-reviews_wrapper",
   slideClass: "slider-reviews_item",
-  //centeredSlides:true,
-  //spaceBetween: 400,
+});
+
+window.addEventListener("scroll", () => {
+  const $header = document.getElementById("main-header");
+  const $activeClass = "main-header_active";
+
+  if (
+    (window.scrollY > 0 && !$header?.classList.contains($activeClass)) ||
+    (window.scrollY == 0 && $header?.classList.contains($activeClass))
+  ) {
+    $header?.classList.toggle($activeClass);
+  }
 });

@@ -30,13 +30,13 @@
   font-style: italic;
   font-weight: 600;
   line-height: 41px;
-  letter-spacing: .42px;
+  letter-spacing: 0.42px;
 }
 
-.main-form_subtitle__small{
-    font-size: 20px;
-    line-height: 26.66px;
-    font-weight: 500;
+.main-form_subtitle__small {
+  font-size: 20px;
+  line-height: 26.66px;
+  font-weight: 500;
 }
 
 .main-form_agreements {
@@ -50,4 +50,25 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px 17px;
   align-items: center;
+}
+
+@include desktop {
+  .main-form {
+    padding: 52px 75px 40px 70px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 22px;
+  }
+
+  .main-form_title {
+    font-size: 30px;
+  }
+
+  .main-form_subtitle {
+    padding: 10px 0 0 0 ;
+    font-size: 20px;
+  }
+
+  .main-form_part-2{
+    grid-gap: 10px 34px;
+  }
 }

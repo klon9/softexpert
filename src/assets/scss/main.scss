@@ -25,7 +25,6 @@
 body {
   position: relative;
   background: linear-gradient(#ebeff2 87%, #cedae2 95%, #c7ced3 97.19%);
-
   margin: 0;
   padding: 0;
 
@@ -41,7 +40,7 @@ a {
 
 h1 {
   font-size: 60px;
-  line-height: 72px;
+  line-height: 1.2;
 }
 
 h2 {
@@ -138,45 +137,67 @@ input[type="submit"] {
   right: 0;
   bottom: 0;
   left: 0;
-  border-radius: 45px;
   z-index: -1;
-}
 
-.before::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  content: "";
-  height: 48px;
-  width: calc(100% - 48px);
+  .part-1 {
+    position: relative;
+    width: calc(100% - $card-block_angle-margin);
+    height: $card-block_angle-margin;
+    margin-left: $card-block_angle-margin;
+    background: $card-block_angle-background-1;
+    border-radius: calc($card-block_border-radius / 2) $card-block_border-radius
+      0 0;
 
-  border: 1px solid #fff;
+    box-shadow: 0 -1px 1px 0 rgba(255, 255, 255, 0.9);
+    &::before {
+      position: absolute;
+      content: "";
+      top: 1px;
+      right: 1px;
+      bottom: 0;
+      left: 1px;
+      background: rgba(238, 241, 250, 0.3);
+      border-radius: calc($card-block_border-radius / 2)
+        $card-block_border-radius 0 0;
+    }
+  }
 
-  border-width: 1px 1px 0 0;
-  border-radius: 22.5px 45px 0 0;
-  background: #f1f4f699;
-}
+  .part-2 {
+    position: relative;
+    height: calc(100% - $card-block_angle-margin);
+    background: $card-block_angle-background-2;
+    border-radius: calc($card-block_border-radius / 2) 0
+      $card-block_border-radius $card-block_border-radius;
 
-.before::after {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  content: "";
-  height: calc(100% - 50px);
-  width: 100%;
-  border: 1px solid #fff;
+    box-shadow: 0 1px 1px 0 rgba(221, 221, 221, 0.7);
 
-  border-width: 0 1px 1px 1px;
-  border-radius: 22.5px 0 45px 45px;
-  background: #f1f4f699;
-}
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 1px;
+      bottom: 1px;
+      left: 1px;
+      background: rgba(238, 241, 250, 0.3);
+      border-radius: calc($card-block_border-radius / 2) 0
+        $card-block_border-radius $card-block_border-radius;
+    }
+  }
 
-.before svg {
-  position: absolute;
-  top: 25px;
-  left: 23px;
-  height: 25px;
-  width: 25px;
+  .part-3 {
+    position: absolute;
+    width: $card-block_angle-width;
+    left: calc($card-block_angle-margin / 2);
+    top: calc($card-block_angle-margin / 2);
+    aspect-ratio: 1;
+    background-image: radial-gradient(
+      circle at 100% 100%,
+      transparent $card-block_angle-width,
+      ($card-block_angle-background-1, $card-block_angle-background-1)
+        calc($card-block_angle-width + 1px)
+    );
+    rotate: 180deg;
+  }
 }
 
 .cursive-text {
@@ -236,4 +257,33 @@ input[type="submit"] {
   bottom: -225px;
   right: -110px;
   z-index: 0;
+}
+
+@include desktop {
+  .button {
+    padding: 8px 20px;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
+
+  .container {
+    padding: 0 110px;
+  }
+
+  h1{
+    font-size: 48px;
+    line-height: 1.15;
+  }
+
+  h2{
+    font-size: 47px;
+    margin: 4px 0;
+    letter-spacing: -.4px;
+  }
+
+  h6{
+    font-size: 24px;
+    line-height: 1.3;
+  }
 }

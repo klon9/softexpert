@@ -39,3 +39,36 @@
   rotate: 45deg;
   transform: translate(-50%, -50%);
 }
+
+@include desktop {
+  .main-promo_wrapper{
+    padding: 144px 0 150px;
+  } .main-promo_description {
+    padding-top: 100px px;
+    flex-shrink: 0;
+    width: 900px;
+    padding: 92px 34px 0;
+    letter-spacing: -1.1px;
+  }
+
+  .main-promo_title {
+    margin-bottom: 70px;
+  }
+
+  .main-promo_subtitle {
+    max-width: 380px;
+  }
+
+  .main-promo_image {
+    margin-left: -195px;
+    position: absolute;
+    right: -50px;
+    width: 590px;
+    top: 130px;
+    z-index: -1;
+  }
+
+  .main-promo_arrow-to-bottom{
+    bottom: 4px;
+  }
+}

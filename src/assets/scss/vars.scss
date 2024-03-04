@@ -1,5 +1,24 @@
+@import "/src/assets/scss/mixins/breakpoint";
+
 $lilac: #6e74a8;
 $green: #4cc8af;
 $gray: #3e496ab2;
 
 $review_slide_width: 940px;
+
+$card-block_angle-background-1: rgba(255, 255, 255, 0.5);
+$card-block_angle-background-2: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0.5) 0%,
+  rgba(229, 233, 246, 0.5) 100%
+);
+
+$card-block_angle-width: 25px;
+$card-block_angle-margin: 50px;
+$card-block_border-radius: 45px;
+
+@include desktop {
+  $card-block_angle-width: 20px;
+  $card-block_angle-margin: 40px;
+  $card-block_border-radius: 40px;
+}
