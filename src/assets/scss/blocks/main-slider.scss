@@ -181,6 +181,10 @@
   .main-slider {
     margin: 0;
     padding: 22px 0;
+
+    .container{
+      padding: 0 110px;
+    }
   }
 
   .main-slider_swiper.swiper {
