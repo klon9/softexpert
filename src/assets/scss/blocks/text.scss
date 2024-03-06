@@ -1,0 +1,41 @@
+.text-block {
+  clip-path: none;
+  box-shadow: 0px 3.1019434928894043px 34.121376037597656px 0px #9eaacf4d;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0;
+
+  h4 {
+    margin: 38px 0 28px;
+  }
+  .text-block_text-wrapper {
+    padding: 14px 120px 14px 15px;
+  }
+
+  .text-block_img-wrapper {
+    img {
+      width: 100%;
+    }
+  }
+
+  @include desktop {
+    grid-template-columns: 2fr 6fr;
+
+    h4 {
+      margin: 45px 0 22px;
+    }
+
+    p{
+      line-height: 1.2;
+    }
+
+    .text-block_text-wrapper {
+      padding: 10px 50px 14px 7px;
+    }
+
+
+  }
+}

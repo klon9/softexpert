@@ -1,0 +1,34 @@
+.section__get-started {
+  position: relative;
+  padding: 0 0 110px;
+
+  &::after {
+    position: absolute;
+    top: -100px;
+    height: calc(100% + 450px);
+    left: 0;
+    width: 100%;
+    z-index: 0;
+
+    content: "";
+    background: linear-gradient(
+      -190.42deg,
+      transparent 25.25%,
+      #f3e0e2 45.46%,
+      transparent 77.5%
+    );
+  }
+
+  .container {
+    z-index: 1;
+  }
+}
+
+@include desktop {
+  .section__get-started {
+    padding: 0 0 83px;
+    .container {
+      padding: 0 70px;
+    }
+  }
+}

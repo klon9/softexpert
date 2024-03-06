@@ -1,0 +1,28 @@
+.section__stages {
+  padding: 62px 0;
+
+  h2 {
+    text-align: center;
+  }
+
+  .main-block-decor {
+    position: absolute;
+    bottom: -190px;
+    right: -240px;
+    z-index: -2;
+  }
+
+  @include desktop {
+    padding: 32px 0;
+
+    .main-block-decor {
+      bottom: -119px;
+      right: -154px;
+      width: 670px;
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

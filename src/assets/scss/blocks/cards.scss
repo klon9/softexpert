@@ -1,0 +1,106 @@
+.card-element {
+  position: relative;
+
+  background: rgba(241, 244, 246, 0.6);
+  border-radius: 45px;
+  box-shadow: inset 0 1px 0 #ffffff, 0 2px 1px #e5e9f6;
+}
+
+.card-element__with-angle {
+  box-shadow: none;
+  background: none;
+}
+
+.card-element__green {
+  &::after {
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    left: 11px;
+    height: 24px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(
+      91.67% 91.67% at 72.92% 95.83%,
+      rgb(70, 236, 156) 0%,
+      rgba(0, 249, 115, 0.505945) 49.41%,
+      rgba(0, 243, 156, 0) 100%
+    );
+    content: "";
+  }
+}
+
+.card-element__orange {
+  &::after {
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    left: 11px;
+    height: 24px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(
+      91.67% 91.67% at 72.92% 95.83%,
+      rgb(236, 150, 70) 0%,
+      rgba(249, 90, 0, 0.505945) 49.41%,
+      rgba(243, 219, 0, 0) 100%
+    );
+    content: "";
+  }
+}
+
+.card-element__red {
+  &::after {
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    left: 11px;
+    height: 24px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(
+      91.67% 91.67% at 72.92% 95.83%,
+      rgb(236, 70, 70) 0%,
+      rgba(249, 0, 0, 0.505945) 49.41%,
+      rgba(255, 0, 0, 0.489583) 49.42%,
+      rgba(243, 0, 0, 0) 100%
+    );
+    content: "";
+  }
+}
+
+.card-element__violet {
+  &::after {
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    left: 11px;
+    height: 24px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(
+      91.67% 91.67% at 72.92% 95.83%,
+      rgb(93, 70, 236) 0%,
+      rgba(80, 0, 249, 0.505945) 51.04%,
+      rgba(209, 0, 243, 0) 100%
+    );
+
+    content: "";
+  }
+}
+
+@include desktop {
+  .section__statistics {
+    .card-element__green,
+    .card-element__orange,
+    .card-element__red,
+    .card-element__violet {
+      &::after {
+        top: 9px;
+        left: 4px;
+
+        height: 18px;
+      }
+    }
+  }
+}

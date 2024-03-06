@@ -1,0 +1,50 @@
+.section__reviews {
+  position: relative;
+  padding: 0 0 90px;
+
+  h2 {
+    text-align: center;
+    margin: 35px 0;
+  }
+}
+
+.section__reviews .main-section_part-2 {
+  padding: 24px 0;
+  margin: 0 auto;
+  max-width: 540px;
+
+  .main-section_part-2_text {
+    text-align: center;
+
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.21;
+    letter-spacing: 0;
+    color: $lilac;
+
+    transition: all 0.3s;
+
+    &:hover {
+      color: #3e496a;
+    }
+
+    a {
+      display: block;
+    }
+  }
+}
+
+@include desktop {
+  .section__reviews {
+    padding: 0 0 82px;
+    h2 {
+      margin: 56px 0;
+
+      font-size: 64px;
+    }
+
+    .main-section_part-2 {
+      padding: 45px 0 0;
+    }
+  }
+}

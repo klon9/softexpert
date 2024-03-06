@@ -1,0 +1,40 @@
+.section__cases {
+  padding: 50px 0 0;
+
+  background: linear-gradient(
+    transparent 3%,
+    #e3e0f3 15%,
+    transparent 35%,
+    transparent 85%,
+    #e3e0f3 95%,
+    transparent 100%
+  );
+
+  h2 {
+    text-align: center;
+  }
+
+  .main-form_title {
+    padding: 14px 0 30px;
+  }
+
+  .main-form_subtitle__small {
+    letter-spacing: 0;
+  }
+
+  .main-section_decor {
+    position: absolute;
+    bottom: -222px;
+    right: -110px;
+  }
+
+  @include desktop {
+    padding: 93px 0 0;
+
+    .main-section_decor {
+      position: absolute;
+      bottom: -127px;
+      right: -135px;
+    }
+  }
+}
