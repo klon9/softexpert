@@ -382,4 +382,135 @@
   .swiper-button_next::before {
     transform: translate(calc(-50% + 4px), -50%) rotate(45deg);
   }
+
+  .main-slider.slider-reviews {
+    margin: 60px 0 0;
+
+    .slider-reviews_item {
+      padding: 43px 44px 20px;
+    }
+
+    .swiper-button_prev,
+    .swiper-button_next {
+      width: 72px;
+      transform: translateY(calc(-50% - 42px));
+    }
+
+    .swiper-button_prev {
+      left: -27px;
+    }
+
+    .swiper-button_next {
+      right: -19px;
+    }
+  }
+}
+
+@include mobile {
+  .main-slider {
+    padding: 10px 0;
+
+    .main-slider_item {
+      min-height: 100%;
+    }
+
+    .main-slider_item_back {
+      padding: 20px 10px 28px;
+      grid-row-gap: 0;
+
+      .main-slider_item_desc {
+        font-size: 11px;
+      }
+    }
+
+    .main-slider_item_front {
+      padding: 20px 10px 28px;
+      grid-template-rows: 28px 70px auto;
+    }
+
+    .main-slider_item_number {
+      font-size: 14px;
+      line-height: normal;
+    }
+
+    .main-slider_item_desc {
+      font-size: 13px;
+      line-height: normal;
+    }
+
+    .main-slider_item_icon {
+      height: 100%;
+      width: auto;
+      aspect-ratio: 1;
+      img {
+        max-width: 40px;
+      }
+    }
+  }
+
+  .swiper-button_prev,
+  .swiper-button_next {
+    width: 39px;
+  }
+
+  .swiper-button_prev {
+    left: 4px;
+  }
+
+  .swiper-button_next {
+    right: 4px;
+  }
+
+  .swiper-button_prev::before,
+  .swiper-button_next::before {
+    width: 6px;
+    height: 6px;
+  }
+
+  .swiper-button_prev::before {
+    transform: translate(calc(-50% - 2px), -50%) rotate(-135deg);
+  }
+
+  .swiper-button_next::before {
+    transform: translate(calc(-50% + 2px), -50%) rotate(45deg);
+  }
+
+  .swiper-button_prev::after,
+  .swiper-button_next::after {
+    width: 12px;
+  }
+
+  .main-slider_swiper.swiper {
+    padding: 0;
+  }
+
+  .main-slider.slider-reviews {
+    margin: 35px 0 0;
+
+    .slider-reviews_item {
+      padding: 43px 30px 25px;
+      font-size: 13px;
+      line-height: 1.53846;
+    }
+    .slider-reviews_author {
+      flex-direction: column;
+
+      font-size: 16px;
+      line-height: normal;
+    }
+
+    .swiper-button_prev,
+    .swiper-button_next {
+      width: 39px;
+      transform: translateY(calc(-50% - 7px));
+    }
+
+    .swiper-button_prev {
+      left: -15px;
+    }
+
+    .swiper-button_next {
+      right: -4px;
+    }
+  }
 }

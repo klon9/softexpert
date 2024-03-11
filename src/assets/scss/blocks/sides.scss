@@ -51,3 +51,10 @@
     bottom: 64px;
   }
 }
+
+@include mobile {
+  .main_left-side_wrapper,
+  .main_right-side_wrapper {
+    display: none;
+  }
+}

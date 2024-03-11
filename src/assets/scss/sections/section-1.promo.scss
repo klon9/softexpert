@@ -73,31 +73,59 @@
 
 @include small-tablet {
   .main-promo {
-    .main-promo_wrapper {
-      padding: 144px 0 230px;
+    .container {
+      padding: 0 70px;
     }
+  }
+  .main-promo_wrapper {
+    padding: 144px 0 230px;
+  }
 
-    .main-promo_description {
-      padding: 95px 45px 0 86px;
-      width: auto;
-      flex-shrink: unset;
+  .main-promo_description {
+    padding: 95px 45px 0 86px;
+    width: auto;
+    flex-shrink: unset;
 
-      letter-spacing: -0.56px;
+    letter-spacing: -0.56px;
+  }
+
+  .main-promo_title {
+    margin-bottom: 45px;
+  }
+
+  .main-promo_subtitle {
+    max-width: 315px;
+    line-height: normal;
+    margin: 45px 0;
+  }
+
+  .main-promo_arrow-to-bottom {
+    bottom: 0px;
+    margin: 0 0 0 17px;
+  }
+}
+
+@include mobile {
+  .main-promo {
+    .container {
+      padding: 0 30px;
     }
+  }
+  .main-promo_wrapper {
+    padding: 54px 0 110px;
+  }
 
-    .main-promo_title {
-      margin-bottom: 45px;
-    }
+  .main-promo_description {
+    padding: 95px 0 55px;
+  }
 
-    .main-promo_subtitle {
-      max-width: 315px;
-      line-height: normal;
-      margin: 45px 0;
-    }
+  .main-promo_title {
+    margin-bottom: 28px;
+    letter-spacing: 0;
+  }
 
-    .main-promo_arrow-to-bottom {
-      bottom: 0px;
-      margin: 0 0 0 17px;
-    }
+  .main-promo_subtitle {
+    margin: 28px 0;
+    letter-spacing: 0;
   }
 }

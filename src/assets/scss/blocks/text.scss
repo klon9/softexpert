@@ -28,14 +28,49 @@
       margin: 45px 0 22px;
     }
 
-    p{
+    p {
       line-height: 1.2;
     }
 
     .text-block_text-wrapper {
       padding: 10px 50px 14px 7px;
     }
+  }
 
+  @include small-tablet {
+    grid-template-columns: 5fr 11fr;
 
+    h4 {
+      margin: 40px 0 10px;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+    p {
+      margin: 12px 0;
+      line-height: 1.44;
+    }
+
+    .text-block_text-wrapper {
+      padding: 10px 35px 24px 16px;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+
+    h4 {
+      font-size: 24px;
+      line-height: normal;
+      margin: 12px 0;
+    }
+    .text-block_text-wrapper {
+      padding: 10px 35px 44px 16px;
+    }
+
+    .text-block_img-wrapper {
+      max-width: 70%;
+      margin: 0 auto;
+    }
   }
 }

@@ -37,4 +37,16 @@
       right: -135px;
     }
   }
+
+  @include small-tablet {
+    padding: 70px 0 0;
+    h2 {
+      text-align: start;
+      letter-spacing: -0.6px;
+    }
+  }
+
+  @include mobile {
+    padding: 36px 0 0;
+  }
 }

@@ -82,6 +82,15 @@ h6 {
   height: fit-content;
 }
 
+.button__mobile-menu {
+  display: none;
+  height: 37px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .button:hover,
 .button:focus,
 .button:active {
@@ -293,8 +302,65 @@ input[type="submit"] {
     font-size: 37px;
   }
 
-  h6{
+  h3 {
+    margin: 46px 0 20px;
+    font-size: 49.861px;
+    line-height: 1.19;
+  }
+
+  h6 {
     font-size: 20px;
-    letter-spacing: .1px;
+    letter-spacing: 0.1px;
+  }
+
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@include mobile {
+  .container {
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+    line-height: normal;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 1.4375;
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: normal;
+
+    margin: 46px 0 13px;
+  }
+
+  h6 {
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: normal;
+    &::placeholder {
+      font-size: 14px;
+      line-height: normal;
+    }
+  }
+
+  input[type="submit"] {
+    padding: 13px 20px 14px;
+
+    font-size: 10.56px;
+    line-height: normal;
+    letter-spacing: 0.106px;
   }
 }

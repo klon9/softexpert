@@ -32,3 +32,33 @@
     }
   }
 }
+
+@include small-tablet {
+  .section__get-started {
+    padding: 0 0 63px;
+    h2 {
+      font-size: 46px;
+      letter-spacing: 0;
+    }
+    .container {
+      padding: 0 50px;
+    }
+
+    .main-form {
+      margin: 0 -10px;
+    }
+  }
+}
+
+@include mobile{
+  .section__get-started{
+    padding: 0 0 58px;
+
+    .container{
+      padding: 0 30px;
+    }
+    h2{
+      font-size: 32px;
+    }
+  }
+}

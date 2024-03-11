@@ -20,4 +20,25 @@
       font-size: 16px;
     }
   }
+
+  @include small-tablet {
+    h2 {
+      margin: 53px 0 38px;
+    }
+    .main-section_description {
+      padding: 1px 0 56px;
+    }
+  }
+
+  @include mobile {
+    h2 {
+      margin: 53px 0 17px;
+    }
+
+    .main-section_description {
+      padding: 1px 0 30px;
+      font-size: 14px;
+      line-height: normal;
+    }
+  }
 }

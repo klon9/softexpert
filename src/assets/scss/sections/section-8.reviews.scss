@@ -48,3 +48,38 @@
     }
   }
 }
+
+@include small-tablet {
+  .section__reviews {
+    padding: 0 0 70px;
+    .main-section_part-2 {
+      .main-section_part-2_text {
+        max-width: 420px;
+        margin: 0 auto;
+
+        font-size: 19.773px;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .section__reviews {
+    padding: 0 0 106px;
+    h2 {
+      margin: 10px 0;
+      font-size: 32px;
+      line-height: 1.71875;
+    }
+
+    .main-section_part-2 {
+      padding: 75px 0 0;
+      .main-section_part-2_text {
+        max-width: 280px;
+        font-size: 19.773px;
+        line-height: normal;
+      }
+    }
+  }
+}

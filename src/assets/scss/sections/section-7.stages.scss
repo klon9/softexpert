@@ -20,9 +20,17 @@
       right: -154px;
       width: 670px;
 
-      img{
+      img {
         width: 100%;
       }
     }
+  }
+
+  @include small-tablet {
+    padding: 42px 0 87px;
+  }
+
+  @include mobile{
+    padding: 15px 0 31px;
   }
 }

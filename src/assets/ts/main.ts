@@ -18,7 +18,7 @@ const swiper1 = new Swiper(".main-advantages_slider.swiper", {
 
     375: {
       slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 10,
     },
     0: {
       slidesPerView: 1,

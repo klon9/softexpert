@@ -6,6 +6,8 @@
   font-size: 13.6px;
   color: #fff;
   background: #0000001a;
+
+  overflow-x: hidden;
 }
 
 .main-footer_part-1 {
@@ -122,8 +124,97 @@
       padding: 0 0 10px;
     }
 
-    .main-footer_socials-wrapper{
+    .main-footer_socials-wrapper {
       margin: -6px 0 0;
+    }
+  }
+}
+
+@include small-tablet {
+  .main-footer {
+    padding: 47px 0 38px;
+    .main-footer_logo-wrapper {
+      width: 285px;
+    }
+
+    .main-footer_phone-number {
+      font-size: 20.873px;
+      line-height: 0.77;
+      letter-spacing: 0.209px;
+
+      span {
+        font-size: 11.132px;
+        line-height: 1.4375;
+        letter-spacing: 0.111px;
+      }
+    }
+
+    .main-footer_phone-number::before {
+      height: 13.22px;
+      width: 13.22px;
+      left: -18px;
+      background-size: contain;
+    }
+
+    .main-footer_phone-title {
+      font-size: 13px;
+      line-height: 1.23;
+      letter-spacing: 0.2px;
+    }
+
+    .main-footer_part-2 {
+      padding: 30px 0 0;
+      margin: 0 0 0 -10px;
+    }
+
+    .main-footer_text-info {
+      max-width: 400px;
+    }
+  }
+
+  .main-footer_phones-wrapper {
+    grid-column-gap: 50px;
+  }
+  .main-footer_socials-wrapper {
+    grid-gap: 17px;
+    align-items: flex-end;
+  }
+  .main-footer_social {
+    min-width: 43px;
+    max-height: 43px;
+  }
+}
+
+@include mobile {
+  .main-footer {
+    padding: 47px 0 34px;
+    .main-footer_part-1 {
+      grid-auto-flow: row;
+      grid-gap: 17px;
+    }
+
+    .main-footer_phones-wrapper {
+      flex-direction: column;
+      padding: 0 15px;
+      grid-gap: 22px;
+    }
+
+    .main-footer_part-2 {
+      padding: 25px 0 0 10px;
+      flex-direction: column;
+      grid-gap: 32px;
+    }
+
+    .main-footer_text-info {
+      order: 2;
+    }
+
+    .main-footer_socials-wrapper {
+      order: 1;
+    }
+
+    .main-footer_copy {
+      padding: 0 0 22px;
     }
   }
 }

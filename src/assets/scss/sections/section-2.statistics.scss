@@ -49,14 +49,43 @@
 
 @include small-tablet {
   .section__statistics {
+    .container {
+      padding: 0 70px;
+    }
+    .main-block-decor {
+      left: -164px;
+      width: 61%;
+      top: 24px;
+    }
+
     .main-section_content-wrapper {
       max-width: 416px;
-      padding: 62px 0 4px 0;
+      padding: 62px 0 78px 0;
     }
 
-    .main-section_desc{
+    .main-section_desc {
       font-size: 20px;
+      line-height: 1.2;
     }
   }
+}
 
+@include mobile {
+  .section__statistics {
+    .container {
+      padding: 0 30px;
+    }
+
+    .main-section_content-wrapper {
+      margin: 0;
+      max-width: unset;
+      width: unset;
+      padding: 16px 0 25px 0;
+    }
+    .main-section_desc {
+      padding: 0 4px;
+      font-size: 16px;
+      line-height: normal;
+    }
+  }
 }
