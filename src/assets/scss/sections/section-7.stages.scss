@@ -28,9 +28,38 @@
 
   @include small-tablet {
     padding: 42px 0 87px;
+
+    .main-block-decor {
+      display: none;
+    }
+
+    .card-element__green,
+    .card-element__orange,
+    .card-element__violet,
+    .card-element__red {
+      &::after {
+        top: 5px;
+        left: 14px;
+        height: 20px;
+      }
+    }
+
+    .before {
+      .part-1 {
+        height: 39px;
+      }
+
+      .part-2 {
+        height: calc(100% - 39px);
+      }
+
+      .part-3{
+        top: 14px;
+      }
+    }
   }
 
-  @include mobile{
+  @include mobile {
     padding: 15px 0 31px;
   }
 }

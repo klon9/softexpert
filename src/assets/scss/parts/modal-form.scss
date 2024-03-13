@@ -1,0 +1,18 @@
+.main-modal_wrapper{
+    display: none;
+}
+
+.main-modal-form{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+}
+
+@include small-tablet{
+    .main-modal_wrapper{
+        display: block;
+    }
+}

@@ -48,5 +48,41 @@
 
   @include mobile {
     padding: 36px 0 0;
+
+    .before {
+      .part-1 {
+        width: calc(100% - 30px);
+        height: 30px;
+        margin-left: 30px;
+
+        border-radius: 20px 30px 0 0;
+
+        &::before {
+          border-radius: 20px 30px 0 0;
+        }
+      }
+
+      .part-2 {
+        height: calc(100% - 30px);
+        border-radius: 20px 0 30px 30px;
+
+        &::before {
+          border-radius: 20px 0 30px 30px;
+        }
+      }
+
+      .part-3 {
+        width: 22px;
+        left: 8px;
+        top: 8px;
+      }
+    }
+
+    .card-element__green::after {
+      top: 10px;
+      height: 16px;
+      top: 7px;
+      left: 5px;
+    }
   }
 }

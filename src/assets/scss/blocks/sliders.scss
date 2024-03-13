@@ -12,9 +12,9 @@
 }
 
 .main-slider_swiper.swiper {
-  padding: 0px 50px 35px 80px;
-  max-width: 1560px;
-  margin: 0;
+  padding: 0px 40px 35px;
+  max-width: 1475px;
+  margin: 0 auto 0 40px;
 }
 
 .main-slider_item {
@@ -236,6 +236,7 @@
 
   .main-slider_swiper.swiper {
     padding: 0 16px;
+    margin: 0;
   }
 
   .main-slider_item {
@@ -299,9 +300,14 @@
   }
 
   .slider-reviews_item {
-    margin: unset;
     padding: 57px 56px 35px;
     letter-spacing: 0.24px;
+  }
+}
+
+@include big-tablet {
+  .slider-reviews_item {
+    margin: unset;
   }
 }
 
@@ -510,7 +516,7 @@
     }
 
     .swiper-button_next {
-      right: -4px;
+      right: -8px;
     }
   }
 }

@@ -1,16 +1,26 @@
 .bg-promo {
   position: absolute;
   z-index: -1;
-  overflow: hidden;
 
   aspect-ratio: 1;
+}
+
+.background-block_wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+  overflow: hidden;
 }
 
 .bg-promo-purple {
   width: 890px;
   height: 890px;
   top: -133px;
-  left: -475px;
+  left: calc(50vw - 1200px);
   z-index: -2;
   background: #caaeee66;
 
@@ -22,7 +32,7 @@
   height: 684px;
   top: 56px;
   left: unset;
-  right: -280px;
+  right: calc(50vw - 1000px);
   z-index: -2;
 
   background: #ffdfdb99;
@@ -37,6 +47,6 @@
   left: calc(50% - 520px);
   z-index: -2;
 
-  background:#00a3ff11;
+  background: #00a3ff11;
   filter: blur(50px);
 }

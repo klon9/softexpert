@@ -37,9 +37,11 @@
     }
   }
 
-  @include small-tablet {
-    grid-template-columns: 5fr 11fr;
+  @include tablet {
+    grid-template-columns: 210px auto;
+  }
 
+  @include small-tablet {
     h4 {
       margin: 40px 0 10px;
       font-size: 30px;
@@ -55,6 +57,14 @@
     }
   }
 
+  @include big-mobile {
+    grid-template-columns: 170px auto;
+
+    .text-block_text-wrapper {
+      padding: 10px 15px 24px;
+    }
+  }
+
   @include mobile {
     grid-template-columns: 1fr;
     padding: 0 20px;
@@ -64,6 +74,7 @@
       line-height: normal;
       margin: 12px 0;
     }
+
     .text-block_text-wrapper {
       padding: 10px 35px 44px 16px;
     }

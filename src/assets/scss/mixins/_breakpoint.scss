@@ -1,15 +1,25 @@
 /* stylelint-disable */
 
-
-
 @mixin big-desktop {
-  @media (min-width: (1200px)) {
+  @media (max-width: (1840px)) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (max-width: (1600px)) {
+  @media (max-width: (1680px)) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (max-width: (1280px)) {
+    @content;
+  }
+}
+
+@mixin big-tablet {
+  @media (max-width: (1080px)) {
     @content;
   }
 }
@@ -22,6 +32,12 @@
 
 @mixin small-tablet {
   @media (max-width: (768px)) {
+    @content;
+  }
+}
+
+@mixin big-mobile {
+  @media (max-width: (680px)) {
     @content;
   }
 }

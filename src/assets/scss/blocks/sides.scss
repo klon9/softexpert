@@ -29,6 +29,17 @@
   justify-items: center;
 }
 
+@include big-desktop {
+  .main_right-side_wrapper {
+    right: -50px;
+  }
+
+  .main_left-side_wrapper {
+    left: -110px;
+    padding: 20px 28px 95px 17px;
+  }
+}
+
 @include desktop {
   .main_right-side_wrapper {
     right: 50px;

@@ -84,53 +84,54 @@
 @include desktop {
   .main-footer {
     padding: 47px 0;
-    .main-footer_logo-wrapper {
-      width: 347px;
-      img {
-        width: 100%;
-      }
-    }
-    .main-footer_phones-wrapper {
-      padding: 4px 0;
-    }
-    .main-footer_phone-number {
-      font-size: 28px;
-      letter-spacing: 0.1px;
+  }
 
-      span {
-        font-size: 14px;
-      }
+  .main-footer_logo-wrapper {
+    width: 347px;
+    img {
+      width: 100%;
+    }
+  }
+  .main-footer_phones-wrapper {
+    padding: 4px 0;
+  }
+  .main-footer_phone-number {
+    font-size: 28px;
+    letter-spacing: 0.1px;
 
-      &::before {
-        top: 7px;
-        left: -25px;
-      }
+    span {
+      font-size: 14px;
     }
 
-    .main-footer_phone-title {
-      letter-spacing: -0.7px;
+    &::before {
+      top: 7px;
+      left: -25px;
     }
+  }
 
-    .main-footer_part-2 {
-      padding: 37px 0 0;
-    }
+  .main-footer_phone-title {
+    letter-spacing: -0.7px;
+  }
 
-    .main-footer_text-info {
-      display: block;
-      font-size: 13px;
-    }
+  .main-footer_part-2 {
+    padding: 37px 0 0;
+  }
 
-    .main-footer_copy {
-      padding: 0 0 10px;
-    }
+  .main-footer_text-info {
+    display: block;
+    font-size: 13px;
+  }
 
-    .main-footer_socials-wrapper {
-      margin: -6px 0 0;
-    }
+  .main-footer_copy {
+    padding: 0 0 10px;
+  }
+
+  .main-footer_socials-wrapper {
+    margin: -6px 0 0;
   }
 }
 
-@include small-tablet {
+@include small-desktop {
   .main-footer {
     padding: 47px 0 38px;
     .main-footer_logo-wrapper {
@@ -185,18 +186,20 @@
   }
 }
 
+@include tablet {
+  .main-footer_phones-wrapper {
+    flex-direction: column;
+    padding: 0 20px;
+    grid-gap: 22px;
+  }
+}
+
 @include mobile {
   .main-footer {
     padding: 47px 0 34px;
     .main-footer_part-1 {
       grid-auto-flow: row;
       grid-gap: 17px;
-    }
-
-    .main-footer_phones-wrapper {
-      flex-direction: column;
-      padding: 0 15px;
-      grid-gap: 22px;
     }
 
     .main-footer_part-2 {

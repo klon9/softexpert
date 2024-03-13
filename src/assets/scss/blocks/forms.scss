@@ -9,6 +9,12 @@
   grid-template-columns: 3fr 5fr;
   border-radius: 45px;
   z-index: 1;
+  &.main-form-1,
+  &.main-form-2 {
+    input {
+      width: 100%;
+    }
+  }
 }
 
 .main-form_part-1 {
@@ -91,12 +97,24 @@
   }
 }
 
+@include tablet {
+  .main-form {
+    &.main-form-1 {
+      padding: 51px 55px 30px;
+    }
+  }
+}
+
 @include small-tablet {
   .main-form {
     padding: 51px 75px 30px 55px;
 
+    &.main-form-1 {
+      padding: 51px 75px 30px 55px;
+    }
+
     &.main-form-2 {
-      padding: 44px 7px 26px 57px;
+      padding: 44px 57px 26px;
       grid-gap: 20px;
 
       .main-form_subtitle {
@@ -104,8 +122,7 @@
       }
 
       .main-form_part-2 {
-        grid-template-columns: repeat(2, calc(50% - 25px));
-        grid-gap: 16px 10px;
+        grid-gap: 20px 10px;
       }
 
       .main-form_agreements {
@@ -120,8 +137,6 @@
 
   .main-form_part-2 {
     padding: 0 5px;
-
-    grid-template-columns: repeat(2, calc(50% - 45px));
     grid-gap: 10px 28px;
   }
 
@@ -133,14 +148,20 @@
   }
 }
 
+@include big-mobile {
+  .main-form_part-2 {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+
 @include mobile {
   .main-form {
     padding: 32px 29px 26px 29px;
     grid-gap: 18px;
 
-    .main-form_part-2 {
-      grid-template-columns: 1fr;
-      grid-gap: 20px;
+    &.main-form-1 {
+      padding: 32px 29px 26px 29px;
     }
   }
 
@@ -165,13 +186,13 @@
     grid-area: 4/1/4/1;
   }
 
-  .main-form.main-form-2{
+  .main-form.main-form-2 {
     padding: 19px 30px 20px 30px;
-    .main-form_title{
+    .main-form_title {
       padding: 14px 0 2px;
     }
 
-    .main-form_part-2{
+    .main-form_part-2 {
       grid-template-columns: 1fr;
     }
   }

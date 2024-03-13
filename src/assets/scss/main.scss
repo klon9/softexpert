@@ -4,6 +4,8 @@
 @import "/src/assets/scss/vars.scss";
 @import "/src/assets/scss/fonts";
 
+@import "/src/assets/scss/common.scss";
+
 @import "/src/assets/scss/blocks/backgronds.scss";
 @import "/src/assets/scss/blocks/cards.scss";
 @import "/src/assets/scss/blocks/forms.scss";
@@ -12,6 +14,7 @@
 @import "/src/assets/scss/blocks/sliders.scss";
 @import "/src/assets/scss/blocks/text.scss";
 
+@import "/src/assets/scss/parts/modal-form.scss";
 @import "/src/assets/scss/parts/main-header.scss";
 @import "/src/assets/scss/parts/main-footer.scss";
 
@@ -23,5 +26,3 @@
 @import "/src/assets/scss/sections/section-6.our-services.scss";
 @import "/src/assets/scss/sections/section-7.stages.scss";
 @import "/src/assets/scss/sections/section-8.reviews.scss";
-
-@import "/src/assets/scss/common.scss";

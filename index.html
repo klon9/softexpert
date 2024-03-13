@@ -26,9 +26,11 @@
               Mobile&software Development
             </div>
           </div>
-          <nav class="main-header_nav-wrapper">
+          <nav class="main-header_nav-wrapper active">
             <ul>
-              <li><a href="#" class="main-header_nav-item">Услуги</a></li>
+              <li class="active">
+                <a href="#" class="main-header_nav-item">Услуги</a>
+              </li>
               <li><a href="#" class="main-header_nav-item">Кейсы</a></li>
               <li><a href="#" class="main-header_nav-item">Наши сервисы</a></li>
               <li><a href="#" class="main-header_nav-item">Контакты</a></li>
@@ -36,6 +38,30 @@
                 >Оставить заявку</a
               >
             </ul>
+            <div class="main-header_contacts">
+              <div class="phones">
+                <div class="phones_phone-wrapper">
+                  <a href="tel:+78007751540" class="phones_phone-number"
+                    >8-800-775-15-40</a
+                  >
+                  <div class="phones_phone-title">по России бесплатно</div>
+                </div>
+              </div>
+
+              <div class="socials">
+                <a href="#" class="socials_item"
+                  ><img src="/src/assets/images/icons/socials/vk.svg" alt="vk"
+                /></a>
+                <a href="#" class="socials_item"
+                  ><img src="/src/assets/images/icons/socials/tg.svg" alt="tg"
+                /></a>
+                <a href="#" class="socials_item"
+                  ><img src="/src/assets/images/icons/socials/yt.svg" alt="yt"
+                /></a>
+              </div>
+
+              <a href="#" class="button button-default">Оставить заявку</a>
+            </div>
           </nav>
 
           <a href="#" class="button button__mobile-menu"
@@ -92,8 +118,6 @@
             ><img src="/src/assets/images/icons/socials/yt.svg" alt="yt"
           /></a>
         </div>
-        <div class="background-block bg-promo bg-promo-purple"></div>
-        <div class="background-block bg-promo bg-promo-orange"></div>
       </div>
     </section>
 
@@ -262,8 +286,8 @@
           </div>
         </div>
         <!-- navigation buttons -->
-        <div class="swiper-button_prev"></div>
-        <div class="swiper-button_next"></div>
+        <div class="swiper-button_prev swiper-button_prev__advantages"></div>
+        <div class="swiper-button_next swiper-button_next__advantages"></div>
       </div>
     </section>
 
@@ -374,7 +398,7 @@
               </picture>
             </div>
             <div class="grid_element_title">
-              Когда есть ТЗ или&nbsp;набор&nbsp;требований ...
+              Когда есть ТЗ или&nbsp;набор требований&nbsp;...
             </div>
             <div class="grid_element_desc">
               <p>
@@ -394,7 +418,7 @@
               </picture>
             </div>
             <div class="grid_element_title">
-              Когда требования корректируются ...
+              Когда требования корректируются&nbsp;...
             </div>
             <div class="grid_element_desc">
               <p>
@@ -1079,7 +1103,7 @@
                   </div>
 
                   <div class="slider-reviews_author-name">
-                    Арсений Алексейченко, Фитнес Холдинг
+                    1Арсений Алексейченко, Фитнес Холдинг
                   </div>
                 </div>
               </div>
@@ -1103,7 +1127,7 @@
                   </div>
 
                   <div class="slider-reviews_author-name">
-                    Арсений Алексейченко, Фитнес Холдинг
+                    2Арсений Алексейченко, Фитнес Холдинг
                   </div>
                 </div>
               </div>
@@ -1127,15 +1151,15 @@
                   </div>
 
                   <div class="slider-reviews_author-name">
-                    Арсений Алексейченко, Фитнес Холдинг
+                    3Арсений Алексейченко, Фитнес Холдинг
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- navigation buttons -->
-          <div class="swiper-button_prev"></div>
-          <div class="swiper-button_next"></div>
+          <div class="swiper-button_prev swiper-button_prev__reviews"></div>
+          <div class="swiper-button_next swiper-button_next__reviews"></div>
         </div>
         <div class="main-section_part-2">
           <h3>Связаться с нами</h3>
@@ -1200,8 +1224,11 @@
         </div>
       </div>
     </footer>
-
-    <div class="background-block bg-promo bg-promo-blue"></div>
+    <div class="background-block_wrapper">
+      <div class="background-block bg-promo bg-promo-purple"></div>
+      <div class="background-block bg-promo bg-promo-orange"></div>
+      <div class="background-block bg-promo bg-promo-blue"></div>
+    </div>
     <script type="module" src="/src/assets/ts/main.ts"></script>
   </body>
 </html>

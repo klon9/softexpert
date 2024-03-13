@@ -10,7 +10,7 @@
 }
 
 .main-promo_description {
-  padding-top: 198px;
+  padding-top: 188px;
   flex-shrink: 0;
   width: 900px;
 }
@@ -102,6 +102,15 @@
   .main-promo_arrow-to-bottom {
     bottom: 0px;
     margin: 0 0 0 17px;
+  }
+
+  .main-promo_image {
+    margin-left: 0;
+    position: absolute;
+    right: -50px;
+    width: 100%;
+    top: 50px;
+    z-index: -1;
   }
 }
 
