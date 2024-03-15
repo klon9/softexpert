@@ -26,7 +26,7 @@
               Mobile&software Development
             </div>
           </div>
-          <nav class="main-header_nav-wrapper active">
+          <nav class="main-header_nav-wrapper">
             <ul>
               <li class="active">
                 <a href="#" class="main-header_nav-item">Услуги</a>
@@ -34,7 +34,10 @@
               <li><a href="#" class="main-header_nav-item">Кейсы</a></li>
               <li><a href="#" class="main-header_nav-item">Наши сервисы</a></li>
               <li><a href="#" class="main-header_nav-item">Контакты</a></li>
-              <a href="#" class="button__hidden button button-default"
+              <a
+                href="#"
+                class="button__hidden button button-default"
+                data-role="modal-button"
                 >Оставить заявку</a
               >
             </ul>
@@ -60,22 +63,13 @@
                 /></a>
               </div>
 
-              <a href="#" class="button button-default">Оставить заявку</a>
+              <a href="#" class="button button-default" data-role="modal-button"
+                >Оставить заявку</a
+              >
             </div>
           </nav>
 
-          <a href="#" class="button button__mobile-menu"
-            ><svg
-              width="18"
-              height="8"
-              viewBox="0 0 18 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect y="6" width="18" height="2" rx="1" fill="white" />
-              <rect width="18" height="2" rx="1" fill="white" />
-            </svg>
-          </a>
+          <a href="#" class="button button__mobile-menu"></a>
         </div>
       </div>
     </header>
@@ -1228,6 +1222,77 @@
       <div class="background-block bg-promo bg-promo-purple"></div>
       <div class="background-block bg-promo bg-promo-orange"></div>
       <div class="background-block bg-promo bg-promo-blue"></div>
+    </div>
+
+    <div class="modal" data-role="modal-window">
+      <div class="container">
+        <div class="button button__close" data-role="modal-close"></div>
+        <form action="#" class="modal-form">
+          <div class="modal-form_title">Связаться с нами</div>
+          <div class="modal-form_subtitle">Выберите интересующие услуги</div>
+          <div class="checkbox-list">
+            <div class="checkbox-item">
+              <input type="checkbox" name="service-1" class="hidden" />
+              <div class="checkbox-item_title">Мобильная разработка</div>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="service-2" class="hidden" />
+              <div class="checkbox-item_title">Разработка ПО</div>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" name="service-3" class="hidden" />
+              <div class="checkbox-item_title">Аналитика</div>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" name="service-4" class="hidden" />
+              <div class="checkbox-item_title">Веб-разработка</div>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" name="service-5" class="hidden" />
+              <div class="checkbox-item_title">Дизайн</div>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" name="service-6" class="hidden" />
+              <div class="checkbox-item_title">Дизайн</div>
+            </div>
+          </div>
+
+          <div class="contact-form grid">
+            <div class="contact-form_part-1">
+              <div class="contact-form_desc">Контактные данные</div>
+              <input type="text" name="name" placeholder="Имя" />
+              <input type="tel" name="phone" placeholder="Телефон*" />
+              <input type="email" name="email" placeholder="email*" />
+              <input
+                type="text"
+                name="company"
+                placeholder="Название компании"
+              />
+            </div>
+
+            <div class="contact-form_part-2">
+              <div class="contact-form_desc">
+                Комментарии / Несколько слов о проекте
+              </div>
+              <textarea name="comment" placeholder="Необязятельно"></textarea>
+            </div>
+            <input
+              type="submit"
+              class="contact-form_part-3 button"
+              value="Отправить"
+            />
+
+            <div class="contact-form_part-4 contact-agreement">
+              Нажимая на кнопку, вы принимаете политику конфиденциальности и
+              даете согласие на обработку ваших
+              <a href="#">персональных данных</a>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
     <script type="module" src="/src/assets/ts/main.ts"></script>
   </body>

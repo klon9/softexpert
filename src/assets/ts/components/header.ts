@@ -21,9 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
   //
   const mobileMenu = document.querySelector(".main-header_nav-wrapper");
   const mobileMenuButton = document.querySelector(".button__mobile-menu");
-  if (!mobileMenu || !mobileMenuButton) return;
-  
-  mobileMenuButton.addEventListener("click", () => {
+  const body = document.querySelector("body");
+
+  mobileMenuButton?.addEventListener("click", () => {
+    if (!mobileMenu) return;
+    body?.classList.toggle("no-scroll");
+    mobileMenuButton.classList.toggle("active");
     mobileMenu.classList.toggle("active");
   });
 });
