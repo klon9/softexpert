@@ -27,6 +27,14 @@ body {
     max-height: 100vh;
     overflow: hidden;
   }
+  &.no-scroll__mobile-menu {
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  &.no-scroll__modal {
+    max-height: 100vh;
+    overflow: hidden;
+  }
 }
 
 a {
@@ -81,6 +89,11 @@ h6 {
 
   transition: all 0.3s linear;
   cursor: pointer;
+
+  &.button__hide-on-desk {
+    display: none;
+    margin: 0 0 0 auto;
+  }
 
   &.button__mobile-menu {
     position: relative;
@@ -201,6 +214,11 @@ h6 {
       transform: translate(calc(-50%), -50%) rotate(-45deg);
     }
   }
+
+  &.button__centered {
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .button-default {
@@ -250,7 +268,7 @@ textarea {
   color: currentColor;
 
   &::placeholder {
-    color: #6e74a8;
+    color: #d3d3d3;
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0em;

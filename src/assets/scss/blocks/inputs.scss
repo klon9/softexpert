@@ -1,0 +1,77 @@
+input {
+  &[type="text"],
+  &[type="tel"],
+  &[type="email"] {
+    background: #ffffff33;
+    border: 1px solid #ffffffcc;
+    padding: 18px 28px 18px;
+    border-radius: 50px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: currentColor;
+
+    &::placeholder {
+      color: #6e74a8;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0em;
+    }
+  }
+
+  &[type="submit"] {
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    background-color: #37374a;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  &.input__has-error{
+    &:focus{
+        outline: 1px solid #fff ;
+      }
+  }
+}
+
+textarea {
+  background: #ffffff33;
+  border: 1px solid #ffffffcc;
+  padding: 18px 28px 18px;
+  border-radius: 50px;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: currentColor;
+
+  &::placeholder {
+    color: #d3d3d3;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0em;
+  }
+}
+
+@include small-tablet {
+  input[type="text"],
+  input[type="tel"] {
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: normal;
+    &::placeholder {
+      font-size: 14px;
+      line-height: normal;
+    }
+  }
+
+  input[type="submit"] {
+    padding: 13px 20px 14px;
+
+    font-size: 10.56px;
+    line-height: normal;
+    letter-spacing: 0.106px;
+  }
+}
+
+

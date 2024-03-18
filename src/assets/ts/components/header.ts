@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mobileMenuButton?.addEventListener("click", () => {
     if (!mobileMenu) return;
-    body?.classList.toggle("no-scroll");
+    body?.classList.toggle("no-scroll__mobile-menu");
     mobileMenuButton.classList.toggle("active");
     mobileMenu.classList.toggle("active");
   });

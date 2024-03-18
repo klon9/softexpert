@@ -14,7 +14,7 @@
             <picture>
               <source
                 srcset="/src/assets/images/logo@375.svg"
-                media="(max-width:375px)"
+                media="(max-width:576px)"
               />
               <img
                 src="/src/assets/images/logo.svg"
@@ -70,6 +70,12 @@
           </nav>
 
           <a href="#" class="button button__mobile-menu"></a>
+          <a
+            href="#"
+            class="button button-default button__hide-on-desk"
+            data-role="modal-button"
+            >Оставить заявку</a
+          >
         </div>
       </div>
     </header>
@@ -1227,7 +1233,7 @@
     <div class="modal" data-role="modal-window">
       <div class="container">
         <div class="button button__close" data-role="modal-close"></div>
-        <form action="#" class="modal-form">
+        <form action="#" class="modal-form" id="modalForm1">
           <div class="modal-form_title">Связаться с нами</div>
           <div class="modal-form_subtitle">Выберите интересующие услуги</div>
           <div class="checkbox-list">
@@ -1256,16 +1262,16 @@
 
             <div class="checkbox-item">
               <input type="checkbox" name="service-6" class="hidden" />
-              <div class="checkbox-item_title">Дизайн</div>
+              <div class="checkbox-item_title">Другое</div>
             </div>
           </div>
 
-          <div class="contact-form grid">
+          <div class="contact-form grid card">
             <div class="contact-form_part-1">
               <div class="contact-form_desc">Контактные данные</div>
-              <input type="text" name="name" placeholder="Имя" />
-              <input type="tel" name="phone" placeholder="Телефон*" />
-              <input type="email" name="email" placeholder="email*" />
+              <input type="text" name="name" placeholder="Имя"/>
+              <input type="tel" name="phone" placeholder="Телефон*"/>
+              <input type="email" name="email" placeholder="Email*" />
               <input
                 type="text"
                 name="company"
