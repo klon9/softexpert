@@ -1,129 +1,70 @@
-import IMask, { InputElement } from "imask";
-
-const patterns = {
-  tel: /^\+\d{1}\(\d{3}\)\d{3}-\d{2}-\d{2}$/,
-  email: /^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-};
-
-const masks = {
-  tel: {
-    mask: "+{7}(000)000-00-00",
-  },
-};
+import IMask, { InputElement, InputMaskElement } from "imask";
 
 export const inputsMask = () => {
   const inputsTel = document.querySelectorAll("input[type='tel']");
 
-  inputsTel.forEach((element) => {
+  inputsTel.forEach((element: any) => {
     const mask = IMask(element, masks.tel);
   });
 };
 
 export const validate = () => {
-  const forms = document.querySelectorAll("form");
-  let formsErrors = { forms: {}, messages: {} };
+  const inputs = document.querySelectorAll("input, textarea");
 
-  // forms.forEach((form) => {
-  //   const inputs = form.querySelectorAll("input");
-  //   const textareas = form.querySelectorAll("textarea");
-  //   let formErrors = { errors: {}, messages: {} };
-  //   inputs.forEach((input) => {
-  //     const inputType = input.type;
-  //     let errors = [];
+  inputs.forEach((input: any) => {
+    input.addEventListener("blur", (event: Event) => {
+      event.preventDefault();
 
-  //     input.addEventListener("blur", () => {
-  //       if (!checkInput(input)) {
-  //         //errors[] = input;
-  //         errors.inputs[input.name].message =
-  //           "Неккоректное значение, повторите снова";
-  //       } else {
-  //         delete errors.inputs[input.name];
-  //       }
-  //     });
+      validateInput(input, patterns.get(input.type));
+    });
 
-  //     if !errors.inputs
-  //     formErrors.inputs[input.name] = errors.inputs;
-  //     formErrors.messages[input.name] = errors.messages;
-  //   });
-  // });
+    input.addEventListener("input", (event: Event) => {
+      event.preventDefault();
+      let testedValue = input.value;
+      setTimeout(() => {
+        if (testedValue == input.value) {
+          validateInput(input, patterns.get(input.type));
+        }
+      }, 600);
+    });
+  });
 };
-
-function checkInput(input: InputElement) {
-  const errorClass = "input__has-error";
-
-  if (!patterns[input.type] || patterns[input.type].test(input.value)) {
-    input.classList.remove(errorClass);
-    return true;
-  }
-
-  input.classList.add(errorClass);
-  return false;
-}
 
 export const setFormsPreventDefault = () => {
   const forms = document.querySelectorAll("form");
   forms.forEach((form) => {
-    form.onsubmit = (event) => {
-      event.preventDefault();
+    if (form.id == "myForm_3") {
+      addActionsOnInputs(".checkbox-item");
+    }
 
-      if (form.classList.contains("form__has-error")) {
-        return;
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!testInputs(form)) actionForm(form, false);
+      else {
+        actionForm(form, true);
       }
-    };
+    });
   });
 };
 
-export const modalForm_1 = () => {
-  let modalForm = document.querySelector(`#modalForm1`);
+function testInputs(form: HTMLFormElement) {
+  let formIsValid = true;
+  form.querySelectorAll("input, textarea").forEach((input: any) => {
+    if (!validateInput(input, patterns.get(input.type))) formIsValid = false;
+  });
+  return formIsValid;
+}
 
-  if (modalForm) {
-    const formData = Array.from(modalForm.children);
-    modalForm.addEventListener(`submit`, (e) => {
-      if (!modalForm) {
-        return;
-      }
-      e.preventDefault();
+function validateInput(input: InputElement, pattern: RegExp | undefined) {
+  const errorClass = "input__has-error";
 
-      modalForm.classList.add(`card`);
-
-      const modalTitle = document.createElement("div");
-      modalTitle.classList.add("modal-form_title");
-      modalTitle.innerHTML = "Спасибо";
-
-      const modalSubtitle = document.createElement("div");
-      modalSubtitle.classList.add("modal-form_subtitle");
-      modalSubtitle.innerHTML =
-        "Наш менеджер свяжется с Вами в течении 15 минут";
-
-      const myButton = document.createElement("button");
-      myButton.classList.add("button", "button__centered");
-      myButton.innerHTML = "Отправить еще раз";
-
-      restoreForm(modalForm);
-
-      modalForm.appendChild(modalTitle);
-      modalForm?.appendChild(modalSubtitle);
-      modalForm?.appendChild(myButton);
-
-      myButton.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        if (!modalForm) {
-          return;
-        }
-
-        restoreForm(modalForm);
-
-        Array.from(formData).forEach((element) => {
-          modalForm?.appendChild(element);
-        });
-
-        modalForm.classList.remove("card");
-      });
-    });
-    addActionsOnInputs(".checkbox-item");
+  if (pattern && !pattern.test(input.value)) {
+    input.classList.add(errorClass);
+    return false;
   }
-};
+  input.classList.remove(errorClass);
+  return true;
+}
 
 function addActionsOnInputs(elements: string) {
   const inputsWrappers = document.querySelectorAll(elements);
@@ -137,8 +78,71 @@ function addActionsOnInputs(elements: string) {
   });
 }
 
-function restoreForm(form: HTMLElement) {
+function restoreForm(form: HTMLFormElement) {
   Array.from(form.children).forEach((element) => {
     element.remove();
   });
 }
+
+function actionForm(form: HTMLFormElement, isValid: boolean) {
+  if (!isValid) return false;
+  if (form.id == "myForm_3") {
+    actionOnMyForm_3(form);
+  } else {
+    alert("Форма отправлена");
+  }
+  return true;
+}
+
+function actionOnMyForm_3(form: HTMLFormElement) {
+  const formData = Array.from(form.children);
+  form.classList.add("card");
+
+  const modalTitle = document.createElement("div");
+  modalTitle.classList.add("modal-form_title");
+  modalTitle.innerHTML = "Спасибо";
+
+  const modalSubtitle = document.createElement("div");
+  modalSubtitle.classList.add("modal-form_subtitle");
+  modalSubtitle.innerHTML = "Наш менеджер свяжется с Вами в течении 15 минут";
+
+  const myButton = document.createElement("button");
+  myButton.classList.add("button", "button__centered");
+  myButton.innerHTML = "Отправить еще раз";
+
+  restoreForm(form);
+
+  form.appendChild(modalTitle);
+  form.appendChild(modalSubtitle);
+  form.appendChild(myButton);
+
+  myButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if (!form) {
+      return;
+    }
+
+    restoreForm(form);
+
+    Array.from(formData).forEach((element) => {
+      form.appendChild(element);
+    });
+
+    //form.reset();
+
+    form.classList.remove("card");
+  });
+  addActionsOnInputs(".checkbox-item");
+}
+
+const patterns = new Map([
+  ["tel", /^\+\d{1}\(\d{3}\)\d{3}-\d{2}-\d{2}$/],
+  ["email", /^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/],
+]);
+
+const masks = {
+  tel: {
+    mask: "+{7}(000)000-00-00",
+  },
+};

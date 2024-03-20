@@ -3,15 +3,13 @@ import "./components/sliders";
 import "./components/header";
 import "./components/modal";
 import {
-  setFormsPreventDefault,
   inputsMask,
   validate,
-  modalForm_1,
+  setFormsPreventDefault,
 } from "./components/form";
 
 document.addEventListener("DOMContentLoaded", () => {
   setFormsPreventDefault();
   inputsMask();
   validate();
-  modalForm_1();
 });
