@@ -99,11 +99,9 @@
               Помогаем создавать масштабные цифровые проекты
             </h6>
           </div>
-          <img
-            src="/src/assets/images/promo_img.png"
-            alt="Промо"
-            class="main-promo_image"
-          />
+          <video class="main-promo_image" autoplay loop preload="auto" muted>
+            <source src="/src/assets/videos/promo.webm" type="video/webm" />
+          </video>
 
           <a href="#to-bottom" class="main-promo_arrow-to-bottom"></a>
         </div>
@@ -441,9 +439,10 @@
             <div class="main-form_subtitle">Свяжитесь с нами</div>
           </div>
           <div class="main-form_part-2">
-            <input type="text" name="main-form-1_name" placeholder="Имя" />
-            <input type="tel" name="main-form-1_phone" placeholder="Телефон" />
+            <input type="text" name="name" placeholder="Имя*" />
+            <input type="tel" name="phone" placeholder="Телефон*" />
             <p class="main-form_agreements">
+              <input type="checkbox" name="privacy-politics" />
               Нажимая на кнопку, вы принимаете политику конфиденциальности и
               даете согласие на обработку ваших персональных данных
             </p>
@@ -844,9 +843,10 @@
             </div>
           </div>
           <div class="main-form_part-2">
-            <input type="text" name="main-form-1_name" placeholder="Имя" />
-            <input type="tel" name="main-form-1_phone" placeholder="Телефон*" />
+            <input type="text" name="name" placeholder="Имя*" />
+            <input type="tel" name="phone" placeholder="Телефон*" />
             <p class="main-form_agreements">
+              <input type="checkbox" name="privacy-politics" />
               Нажимая на кнопку, вы принимаете политику конфиденциальности и
               даете согласие на обработку ваших персональных данных
             </p>
@@ -1269,8 +1269,8 @@
           <div class="contact-form grid card">
             <div class="contact-form_part-1">
               <div class="contact-form_desc">Контактные данные</div>
-              <input type="text" name="name" placeholder="Имя"/>
-              <input type="tel" name="phone" placeholder="Телефон*"/>
+              <input type="text" name="name" placeholder="Имя" />
+              <input type="tel" name="phone" placeholder="Телефон*" />
               <input type="email" name="email" placeholder="Email*" />
               <input
                 type="text"
@@ -1292,7 +1292,7 @@
             />
 
             <div class="contact-form_part-4 contact-agreement">
-              <input type="checkbox" name="privacy-politics">
+              <input type="checkbox" name="privacy-politics" />
               Нажимая на кнопку, вы принимаете политику конфиденциальности и
               даете согласие на обработку ваших
               <a href="#">персональных данных</a>

@@ -109,16 +109,12 @@ h6 {
     border: 1px solid #c1c8df;
     background-color: #c1c8df;
 
-    &:hover {
-      filter: drop-shadow(0 0 5px #666);
-    }
-
     &::before {
       position: absolute;
       top: 50%;
       left: 50%;
 
-      transform: translate(-50%, calc(-50% - 4px));
+      transform: translate(-50%, calc(-50% - 3px));
 
       height: 2px;
       width: 18px;
@@ -134,7 +130,7 @@ h6 {
       top: 50%;
       left: 50%;
 
-      transform: translate(-50%, 4px);
+      transform: translate(-50%, 3px);
 
       height: 2px;
       width: 18px;
@@ -226,54 +222,6 @@ h6 {
   height: fit-content;
 }
 
-input {
-  &[type="text"],
-  &[type="tel"],
-  &[type="email"] {
-    background: #ffffff33;
-    border: 1px solid #ffffffcc;
-    padding: 18px 28px 18px;
-    border-radius: 50px;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0em;
-    color: currentColor;
-
-    &::placeholder {
-      color: #6e74a8;
-      font-size: 20px;
-      line-height: 24px;
-      letter-spacing: 0em;
-    }
-  }
-
-  &[type="submit"] {
-    padding: 20px;
-    border-radius: 50px;
-    border: none;
-    background-color: #37374a;
-    font-size: 16px;
-    color: #fff;
-  }
-}
-
-textarea {
-  background: #ffffff33;
-  border: 1px solid #ffffffcc;
-  padding: 18px 28px 18px;
-  border-radius: 50px;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0em;
-  color: currentColor;
-
-  &::placeholder {
-    color: #d3d3d3;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0em;
-  }
-}
 .hidden {
   display: none;
   opacity: 0;
@@ -459,25 +407,6 @@ textarea {
 
   .container {
     padding: 0 40px;
-  }
-
-  input[type="text"],
-  input[type="tel"] {
-    padding: 10px 20px;
-    font-size: 14px;
-    line-height: normal;
-    &::placeholder {
-      font-size: 14px;
-      line-height: normal;
-    }
-  }
-
-  input[type="submit"] {
-    padding: 13px 20px 14px;
-
-    font-size: 10.56px;
-    line-height: normal;
-    letter-spacing: 0.106px;
   }
 }
 

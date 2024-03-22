@@ -39,8 +39,9 @@ export const setFormsPreventDefault = () => {
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-      if (!testInputs(form)) actionForm(form, false);
-      else {
+      if (!testInputs(form)) {
+        actionForm(form, false);
+      } else {
         actionForm(form, true);
       }
     });
@@ -50,18 +51,32 @@ export const setFormsPreventDefault = () => {
 function testInputs(form: HTMLFormElement) {
   let formIsValid = true;
   form.querySelectorAll("input, textarea").forEach((input: any) => {
-    if (!validateInput(input, patterns.get(input.type))) formIsValid = false;
+    if (!validateInput(input, patterns.get(input.type))) {
+      formIsValid = false;
+    }
   });
   return formIsValid;
 }
 
-function validateInput(input: InputElement, pattern: RegExp | undefined) {
+function validateInput(input: InputElement | any, pattern: RegExp | undefined) {
+  if (input.type == "submit") return true;
   const errorClass = "input__has-error";
+  const formId = input.form?.id;
 
   if (pattern && !pattern.test(input.value)) {
     input.classList.add(errorClass);
     return false;
   }
+
+  if (formId) {
+    if (requiredInputs.get("forms")?.get(formId)?.includes(input.name)) {
+      if ((input.type == "checkbox" && !input.checked) || !input.value) {
+        input.classList.add(errorClass);
+        return false;
+      }
+    }
+  }
+
   input.classList.remove(errorClass);
   return true;
 }
@@ -89,8 +104,9 @@ function actionForm(form: HTMLFormElement, isValid: boolean) {
   if (form.id == "myForm_3") {
     actionOnMyForm_3(form);
   } else {
-    alert("Форма отправлена");
+    showMessage();
   }
+  form.reset();
   return true;
 }
 
@@ -129,11 +145,67 @@ function actionOnMyForm_3(form: HTMLFormElement) {
       form.appendChild(element);
     });
 
-    //form.reset();
-
     form.classList.remove("card");
   });
   addActionsOnInputs(".checkbox-item");
+}
+
+function showMessage(
+  title: string = "Спасибо!",
+  subtitle: string = "Наш менеджер свяжется с Вами в течении 15 минут"
+) {
+  const message = document.createElement("div");
+  message.classList.add("message");
+
+  const messageWrapper = document.createElement("div");
+  messageWrapper.classList.add("message-wrapper");
+  messageWrapper.classList.add("card-element");
+
+  const closeBtn = document.createElement("div");
+  closeBtn.classList.add("button");
+  closeBtn.classList.add("button__close");
+  closeBtn.setAttribute("data-role", "hideMessage");
+  closeBtn.onclick = (event) => {
+    event.preventDefault();
+    hideMessage();
+  };
+
+  const messageTitle = document.createElement("div");
+  messageTitle.classList.add("message-title");
+  messageTitle.textContent = title;
+
+  const messageText = document.createElement("div");
+  messageText.classList.add("message-text");
+  messageText.textContent = subtitle;
+
+  message.append(messageWrapper);
+  messageWrapper.append(messageTitle, messageText, closeBtn);
+
+  document.querySelector("body")?.appendChild(message);
+
+  setTimeout(() => {
+    message.classList.add("active");
+    messageWrapper.classList.add("active");
+  }, 300);
+}
+
+function hideMessage() {
+  const message = document.querySelector(".message");
+  if (message) {
+    const messageWrapper = message.querySelector(".message-wrapper");
+    message.classList.remove("active");
+    if (messageWrapper) {
+      messageWrapper.classList.remove("active");
+
+      setTimeout(() => {
+        message.remove();
+      }, 300);
+      return true;
+    }
+    message.remove();
+  }
+
+  return false;
 }
 
 const patterns = new Map([
@@ -146,3 +218,14 @@ const masks = {
     mask: "+{7}(000)000-00-00",
   },
 };
+
+const requiredInputs = new Map([
+  [
+    "forms",
+    new Map([
+      ["myForm_1", ["name", "phone", "privacy-politics"]],
+      ["myForm_2", ["name", "phone", "privacy-politics"]],
+      ["myForm_3", ["email", "phone", "privacy-politics"]],
+    ]),
+  ],
+]);
