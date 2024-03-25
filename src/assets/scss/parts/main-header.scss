@@ -185,28 +185,68 @@
     list-style: none;
 
     transition: color 0.2s linear;
+    overflow-x: clip;
 
     &::after {
       content: "";
       position: absolute;
       bottom: -25px;
-      left: calc(50% - 4.5px);
+      left: unset;
+      transform: translateX(-50%);
+      opacity: 0;
 
       height: 9px;
       width: 9px;
 
       border-radius: 50%;
       background-color: currentColor;
-      opacity: 0;
 
       transition: opacity 0.2s linear;
     }
 
-    &:hover,
+    &.active__new {
+      color: #4cc8af;
+    }
+
     &.active {
       &::after {
-        opacity: 1;
+        animation: show 0.3s linear 0s 1 forwards;
       }
+    }
+    &.active__scene-1 {
+      &::after {
+        animation: runNext 0.3s linear 0s 1 forwards;
+      }
+    }
+
+    &.active__scene-2 {
+      &::after {
+        //animation: runPrev 0.3s linear 0s 1 forwards;
+        animation: runPrev 0.3s forwards;
+      }
+    }
+
+    &.unactive {
+      &::after {
+        animation: hide 0.3s linear 0s 1 forwards;
+      }
+    }
+    &.unactive__scene-1 {
+      &::after {
+        //animation: runNext 0.3s linear 0s 1 forwards reverse;
+        animation: runNext 0.3s forwards;
+        animation-direction: reverse;
+      }
+    }
+
+    &.unactive__scene-2 {
+      &::after {
+        animation: runPrev 0.3s forwards;
+        animation-direction: reverse;
+      }
+    }
+
+    &:hover {
       color: #4cc8af;
     }
   }

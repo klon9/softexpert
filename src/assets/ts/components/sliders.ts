@@ -9,12 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
     breakpoints: {
       1680: {
         slidesPerView: 4,
+        spaceBetween: 100,
       },
-      1024: {
+      1280: {
         slidesPerView: 3,
-        spaceBetween: 20,
+        spaceBetween: 50,
       },
-      768:{
+      768: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
@@ -37,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     loop: true,
     slideClass: "main-slider_item",
-    spaceBetween: 100,
   });
 
   const swiper2 = new Swiper(".slider-reviews .swiper", {

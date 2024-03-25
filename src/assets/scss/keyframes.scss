@@ -1,0 +1,47 @@
+@keyframes runNext {
+  from {
+    opacity: 1;
+    left: -20px;
+  }
+
+  to {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+@keyframes runPrev {
+  from {
+    opacity: 1;
+    right: -20px;
+  }
+
+  to {
+    opacity: 1;
+    right: 50%;
+  }
+}
+
+@keyframes hide {
+  from {
+    left: 50%;
+    opacity: 1;
+  }
+
+  to {
+    left: 50%;
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  from {
+    left: 50%;
+    opacity: 0;
+  }
+
+  to {
+    left: 50%;
+    opacity: 1;
+  }
+}

@@ -28,12 +28,38 @@
           </div>
           <nav class="main-header_nav-wrapper">
             <ul>
-              <li class="active">
-                <a href="#" class="main-header_nav-item">Услуги</a>
+              <li data-order="1">
+                <a
+                  href="#services"
+                  class="main-header_nav-item"
+                  data-role="navigation-link"
+                  >Услуги</a
+                >
               </li>
-              <li><a href="#" class="main-header_nav-item">Кейсы</a></li>
-              <li><a href="#" class="main-header_nav-item">Наши сервисы</a></li>
-              <li><a href="#" class="main-header_nav-item">Контакты</a></li>
+              <li data-order="2">
+                <a
+                  href="#cases"
+                  class="main-header_nav-item"
+                  data-role="navigation-link"
+                  >Кейсы</a
+                >
+              </li>
+              <li data-order="3">
+                <a
+                  href="#our_services"
+                  class="main-header_nav-item"
+                  data-role="navigation-link"
+                  >Наши сервисы</a
+                >
+              </li>
+              <li data-order="4">
+                <a
+                  href="#contacts"
+                  class="main-header_nav-item"
+                  data-role="navigation-link"
+                  >Контакты</a
+                >
+              </li>
               <a
                 href="#"
                 class="button__hidden button button-default"
@@ -123,162 +149,179 @@
       <div class="container">
         <div class="main-slider_swiper swiper main-advantages_slider">
           <div class="main-slider_swiper-wrapper swiper-wrapper">
-            <div class="main-slider_item">
-              <div class="main-slider_item_back">
-                <div class="main-slider_item_number">01</div>
-                <div class="main-slider_item_desc">
-                  Мы обладаем опытом&nbsp;работы с&nbsp;широким спектром
-                  технологий и&nbsp;инструментов, что позволяет нам
-                  разрабатывать программное обеспечение быстро
-                  и&nbsp;эффективно.
-                </div>
-              </div>
-
-              <div class="main-slider_item_front">
-                <div class="main-slider_item_number">01</div>
-                <div class="main-slider_item_icon">
-                  <img
-                    src="/src/assets/images/icons/block-1/engine.svg"
-                    alt="icon"
-                  />
-                </div>
-                <div class="main-slider_item_desc">
-                  Опыт работы с&nbsp;разнообразными технологиями
-                  и&nbsp;инструментами
-                </div>
-              </div>
-            </div>
-
-            <div class="main-slider_item">
-              <div class="main-slider_item_back">
-                <div class="main-slider_item_number">02</div>
-                <div class="main-slider_item_desc">
-                  Мы предлагаем полный спектр услуг по разработке ПО, от идеи до
-                  готового продукта, что делает нас идеальным партнером для
-                  вашего бизнеса.
-                </div>
-              </div>
-
-              <div class="main-slider_item_front">
-                <div class="main-slider_item_number">02</div>
-                <div class="main-slider_item_icon">
-                  <img
-                    src="/src/assets/images/icons/block-1/puzzle.svg"
-                    alt="icon"
-                  />
-                </div>
-                <div class="main-slider_item_desc">Комплексный подход</div>
-              </div>
-            </div>
-
-            <div class="main-slider_item">
-              <div class="main-slider_item_back">
-                <div class="main-slider_item_number">03</div>
-                <div class="main-slider_item_desc">
-                  Мы способны адаптироваться к изменяющимся требованиям и
-                  условиям, благодаря чему наше ПО всегда актуально и отвечает
-                  современным требованиям.
-                </div>
-              </div>
-
-              <div class="main-slider_item_front">
-                <div class="main-slider_item_number">03</div>
-                <div class="main-slider_item_icon">
-                  <img
-                    src="/src/assets/images/icons/block-1/devices.svg"
-                    alt="icon"
-                  />
-                </div>
-                <div class="main-slider_item_desc">
-                  Гибкость и&nbsp;адаптивность
-                </div>
-              </div>
-            </div>
-
-            <div class="main-slider_item">
-              <div class="main-slider_item_back">
-                <div class="main-slider_item_number">04</div>
-                <div class="main-slider_item_desc">
-                  Мы разрабатываем ПО с учетом особенностей и требований вашего
-                  бизнеса, что обеспечивает высокую эффективность и
-                  результативность решений.
-                </div>
-              </div>
-
-              <div class="main-slider_item_front">
-                <div class="main-slider_item_number">04</div>
-                <div class="main-slider_item_icon">
-                  <img
-                    src="/src/assets/images/icons/block-1/person.svg"
-                    alt="icon"
-                  />
-                </div>
-                <div class="main-slider_item_desc">Индивидуальный подход</div>
-              </div>
-            </div>
-
             <div class="main-slider_item swiper-slide">
-              <div class="main-slider_item_back">
-                <div class="main-slider_item_number">05</div>
-                <div class="main-slider_item_desc">
-                  Наша команда постоянно совершенствует свои навыки и знания,
-                  чтобы предлагать вам самые передовые и инновационные решения.
+              <div class="main-slider_item-wrapper">
+                <div class="main-slider_item_back">
+                  <div class="main-slider_item_number">01</div>
+                  <div class="main-slider_item_desc">
+                    Мы обладаем опытом&nbsp;работы с&nbsp;широким спектром
+                    технологий и&nbsp;инструментов, что позволяет нам
+                    разрабатывать программное обеспечение быстро
+                    и&nbsp;эффективно.
+                  </div>
                 </div>
-              </div>
 
-              <div class="main-slider_item_front">
-                <div class="main-slider_item_number">05</div>
-                <div class="main-slider_item_icon">
-                  <img
-                    src="/src/assets/images/icons/block-1/learning.svg"
-                    alt="icon"
-                  />
-                </div>
-                <div class="main-slider_item_desc">
-                  Постоянное обучение и развитие
+                <div class="main-slider_item_front">
+                  <div class="main-slider_item_number">01</div>
+                  <div class="main-slider_item_icon">
+                    <img
+                      src="/src/assets/images/icons/block-1/engine.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div class="main-slider_item_desc">
+                    Опыт работы с&nbsp;разнообразными технологиями
+                    и&nbsp;инструментами
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="main-slider_item swiper-slide">
-              <div class="main-slider_item_back">
-                <div class="main-slider_item_number">06</div>
-                <div class="main-slider_item_desc">
-                  Мы заботимся о качестве наших продуктов и услуг, поэтому
-                  предоставляем гарантию на все наши разработки.
+              <div class="main-slider_item-wrapper">
+                <div class="main-slider_item_back">
+                  <div class="main-slider_item_number">02</div>
+                  <div class="main-slider_item_desc">
+                    Мы предлагаем полный спектр услуг по разработке ПО, от идеи
+                    до готового продукта, что делает нас идеальным партнером для
+                    вашего бизнеса.
+                  </div>
                 </div>
-              </div>
 
-              <div class="main-slider_item_front">
-                <div class="main-slider_item_number">06</div>
-                <div class="main-slider_item_icon">
-                  <img
-                    src="/src/assets/images/icons/block-1/sertificate.svg"
-                    alt="icon"
-                  />
+                <div class="main-slider_item_front">
+                  <div class="main-slider_item_number">02</div>
+                  <div class="main-slider_item_icon">
+                    <img
+                      src="/src/assets/images/icons/block-1/puzzle.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div class="main-slider_item_desc">Комплексный подход</div>
                 </div>
-                <div class="main-slider_item_desc">Гарантия качества</div>
               </div>
             </div>
 
             <div class="main-slider_item swiper-slide">
-              <div class="main-slider_item_back">
-                <div class="main-slider_item_number">07</div>
-                <div class="main-slider_item_desc">
-                  Вы всегда будете в курсе процесса разработки вашего ПО и
-                  сможете контролировать его на всех этапах.
+              <div class="main-slider_item-wrapper">
+                <div class="main-slider_item_back">
+                  <div class="main-slider_item_number">03</div>
+                  <div class="main-slider_item_desc">
+                    Мы способны адаптироваться к изменяющимся требованиям и
+                    условиям, благодаря чему наше ПО всегда актуально и отвечает
+                    современным требованиям.
+                  </div>
+                </div>
+
+                <div class="main-slider_item_front">
+                  <div class="main-slider_item_number">03</div>
+                  <div class="main-slider_item_icon">
+                    <img
+                      src="/src/assets/images/icons/block-1/devices.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div class="main-slider_item_desc">
+                    Гибкость и&nbsp;адаптивность
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div class="main-slider_item_front">
-                <div class="main-slider_item_number">07</div>
-                <div class="main-slider_item_icon">
-                  <img
-                    src="/src/assets/images/icons/block-1/search.svg"
-                    alt="icon"
-                  />
+            <div class="main-slider_item swiper-slide">
+              <div class="main-slider_item-wrapper">
+                <div class="main-slider_item_back">
+                  <div class="main-slider_item_number">04</div>
+                  <div class="main-slider_item_desc">
+                    Мы разрабатываем ПО с учетом особенностей и требований
+                    вашего бизнеса, что обеспечивает высокую эффективность и
+                    результативность решений.
+                  </div>
                 </div>
-                <div class="main-slider_item_desc">Прозрачность и контроль</div>
+
+                <div class="main-slider_item_front">
+                  <div class="main-slider_item_number">04</div>
+                  <div class="main-slider_item_icon">
+                    <img
+                      src="/src/assets/images/icons/block-1/person.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div class="main-slider_item_desc">Индивидуальный подход</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="main-slider_item swiper-slide">
+              <div class="main-slider_item-wrapper">
+                <div class="main-slider_item_back">
+                  <div class="main-slider_item_number">05</div>
+                  <div class="main-slider_item_desc">
+                    Наша команда постоянно совершенствует свои навыки и знания,
+                    чтобы предлагать вам самые передовые и инновационные
+                    решения.
+                  </div>
+                </div>
+
+                <div class="main-slider_item_front">
+                  <div class="main-slider_item_number">05</div>
+                  <div class="main-slider_item_icon">
+                    <img
+                      src="/src/assets/images/icons/block-1/learning.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div class="main-slider_item_desc">
+                    Постоянное обучение и развитие
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="main-slider_item swiper-slide">
+              <div class="main-slider_item-wrapper">
+                <div class="main-slider_item_back">
+                  <div class="main-slider_item_number">06</div>
+                  <div class="main-slider_item_desc">
+                    Мы заботимся о качестве наших продуктов и услуг, поэтому
+                    предоставляем гарантию на все наши разработки.
+                  </div>
+                </div>
+
+                <div class="main-slider_item_front">
+                  <div class="main-slider_item_number">06</div>
+                  <div class="main-slider_item_icon">
+                    <img
+                      src="/src/assets/images/icons/block-1/sertificate.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div class="main-slider_item_desc">Гарантия качества</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="main-slider_item swiper-slide">
+              <div class="main-slider_item-wrapper">
+                <div class="main-slider_item_back">
+                  <div class="main-slider_item_number">07</div>
+                  <div class="main-slider_item_desc">
+                    Вы всегда будете в курсе процесса разработки вашего ПО и
+                    сможете контролировать его на всех этапах.
+                  </div>
+                </div>
+
+                <div class="main-slider_item_front">
+                  <div class="main-slider_item_number">07</div>
+                  <div class="main-slider_item_icon">
+                    <img
+                      src="/src/assets/images/icons/block-1/search.svg"
+                      alt="icon"
+                    />
+                  </div>
+                  <div class="main-slider_item_desc">
+                    Прозрачность и контроль
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -289,7 +332,7 @@
       </div>
     </section>
 
-    <section class="main-section section__statistics">
+    <section class="main-section section__statistics" data-role="navigation-target">
       <div class="container">
         <div class="main-block-decor">
           <picture>
@@ -312,7 +355,7 @@
           </div>
           <div class="grid grid__type-1">
             <div
-              class="grid_element card-element card-element__with-angle card-element__orange"
+              class="grid_element card-elementcard-element__with-angle card-element__orange"
             >
               <div class="before">
                 <div class="part-1"></div>
@@ -329,7 +372,7 @@
             </div>
 
             <div
-              class="grid_element card-element card-element__with-angle card-element__red"
+              class="grid_element card-elementcard-element__with-angle card-element__red"
             >
               <div class="before">
                 <div class="part-1"></div>
@@ -346,7 +389,7 @@
             </div>
 
             <div
-              class="grid_element card-element card-element__with-angle card-element__green"
+              class="grid_element card-elementcard-element__with-angle card-element__green"
             >
               <div class="before">
                 <div class="part-1"></div>
@@ -368,7 +411,7 @@
       </div>
     </section>
 
-    <section class="main-section section__get-started">
+    <section class="main-section section__get-started" data-role="navigation-target">
       <div class="container">
         <h2>С чего начать?</h2>
         <div class="grid grid__type-2">
@@ -452,7 +495,11 @@
       </div>
     </section>
 
-    <section class="main-section section__services">
+    <section
+      id="services"
+      class="main-section section__services"
+      data-role="navigation-target"
+    >
       <div class="container">
         <div class="main-block-decor">
           <picture>
@@ -541,11 +588,15 @@
       </div>
     </section>
 
-    <section class="main-section section__cases">
+    <section
+      id="cases"
+      class="main-section section__cases"
+      data-role="navigation-target"
+    >
       <div class="container">
         <h2>Кейсы SoftExpert</h2>
         <div class="grid grid__type-4">
-          <div class="grid_element card-element grid_element__long">
+          <div class="grid_element card-element">
             <div class="grid_element_logo-wrapper">
               <picture>
                 <img src="/src/assets/images/block-4/element-1/logo.png" />
@@ -559,6 +610,10 @@
 
             <div class="grid_element_picture-wrapper">
               <picture>
+                <source
+                  srcset="/src/assets/images/block-4/element-1/picture-2.png"
+                  media="(max-width:1680px)"
+                />
                 <img src="/src/assets/images/block-4/element-1/picture.png" />
               </picture>
             </div>
@@ -577,6 +632,10 @@
 
             <div class="grid_element_picture-wrapper">
               <picture>
+                <source
+                  srcset="/src/assets/images/block-4/element-2/picture-2.png"
+                  media="(max-width:1680px)"
+                />
                 <img src="/src/assets/images/block-4/element-2/picture.png" />
               </picture>
             </div>
@@ -594,14 +653,20 @@
               питания в&nbsp;HoReCa
             </div>
 
-            <div class="grid_element_picture-wrapper">
+            <div
+              class="grid_element_picture-wrapper grid_element_picture-wrapper__original"
+            >
               <picture>
+                <source
+                  srcset="/src/assets/images/block-4/element-3/picture-2.png"
+                  media="(max-width:1680px)"
+                />
                 <img src="/src/assets/images/block-4/element-3/picture.png" />
               </picture>
             </div>
           </div>
 
-          <div class="grid_element card-element grid_element__long">
+          <div class="grid_element card-element">
             <div class="grid_element_logo-wrapper">
               <picture>
                 <img src="/src/assets/images/block-4/element-4/logo.png" />
@@ -619,7 +684,7 @@
             </div>
           </div>
 
-          <div class="grid_element card-element grid_element__long">
+          <div class="grid_element card-element">
             <div class="grid_element_logo-wrapper">
               <picture>
                 <img src="/src/assets/images/block-4/element-5/logo.png" />
@@ -674,7 +739,7 @@
             </div>
           </div>
 
-          <div class="grid_element card-element grid_element__long">
+          <div class="grid_element card-element">
             <div class="grid_element_logo-wrapper">
               <picture>
                 <img src="/src/assets/images/block-4/element-8/logo.png" />
@@ -693,7 +758,7 @@
             </div>
           </div>
 
-          <div class="grid_element card-element grid_element__long">
+          <div class="grid_element card-element">
             <div class="grid_element_logo-wrapper">
               <picture>
                 <img src="/src/assets/images/block-4/element-9/logo.png" />
@@ -749,7 +814,7 @@
             </div>
           </div>
 
-          <div class="grid_element card-element grid_element__long">
+          <div class="grid_element card-element">
             <div class="grid_element_logo-wrapper">
               <picture>
                 <img src="/src/assets/images/block-4/element-12/logo.png" />
@@ -767,7 +832,7 @@
             </div>
           </div>
 
-          <div class="grid_element card-element grid_element__long">
+          <div class="grid_element card-element">
             <div class="grid_element_logo-wrapper">
               <picture>
                 <img src="/src/assets/images/block-4/element-13/logo.png" />
@@ -856,7 +921,11 @@
       </div>
     </section>
 
-    <section class="main-section section__our-services">
+    <section
+      id="our_services"
+      class="main-section section__our-services"
+      data-role="navigation-target"
+    >
       <div class="container">
         <h2 class="centered-text">Готовые сервисы</h2>
         <div class="main-section_description cursive-text centered-text">
@@ -956,7 +1025,7 @@
         <h2>Этапы разработки</h2>
         <div class="grid grid__type-6">
           <div
-            class="grid_element card-element card-element__with-angle card-element__orange"
+            class="grid_element card-elementcard-element__with-angle card-element__orange"
           >
             <div class="before">
               <div class="part-1"></div>
@@ -972,7 +1041,7 @@
           </div>
 
           <div
-            class="grid_element card-element card-element__with-angle card-element__green"
+            class="grid_element card-elementcard-element__with-angle card-element__green"
           >
             <div class="before">
               <div class="part-1"></div>
@@ -989,7 +1058,7 @@
           </div>
 
           <div
-            class="grid_element card-element card-element__with-angle card-element__red"
+            class="grid_element card-elementcard-element__with-angle card-element__red"
           >
             <div class="before">
               <div class="part-1"></div>
@@ -1005,7 +1074,7 @@
           </div>
 
           <div
-            class="grid_element card-element card-element__with-angle card-element__violet"
+            class="grid_element card-elementcard-element__with-angle card-element__violet"
           >
             <div class="before">
               <div class="part-1"></div>
@@ -1021,7 +1090,7 @@
           </div>
 
           <div
-            class="grid_element card-element card-element__with-angle card-element__green"
+            class="grid_element card-elementcard-element__with-angle card-element__green"
           >
             <div class="before">
               <div class="part-1"></div>
@@ -1037,7 +1106,7 @@
           </div>
 
           <div
-            class="grid_element card-element card-element__with-angle card-element__violet"
+            class="grid_element card-elementcard-element__with-angle card-element__violet"
           >
             <div class="before">
               <div class="part-1"></div>
@@ -1053,7 +1122,7 @@
           </div>
 
           <div
-            class="grid_element card-element card-element__with-angle card-element__orange"
+            class="grid_element card-elementcard-element__with-angle card-element__orange"
           >
             <div class="before">
               <div class="part-1"></div>
@@ -1173,7 +1242,7 @@
       </div>
     </section>
 
-    <footer class="main-footer">
+    <footer id="contacts" class="main-footer" data-role="navigation-target">
       <div class="container">
         <div class="main-footer_part-1">
           <div class="main-footer_logo-wrapper">
