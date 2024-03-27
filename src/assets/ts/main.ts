@@ -8,8 +8,12 @@ import {
   setFormsPreventDefault,
 } from "./components/form";
 
+import { runObserv } from "./observers/main";
+
 document.addEventListener("DOMContentLoaded", () => {
   setFormsPreventDefault();
   inputsMask();
   validate();
+
+  runObserv();
 });

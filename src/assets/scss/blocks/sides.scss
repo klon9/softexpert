@@ -4,20 +4,45 @@
   bottom: 0;
   left: -171px;
   display: flex;
-  padding: 75px 0 0 29px;
   grid-column-gap: 31px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   height: 100%;
+  width: 72px;
+  overflow: clip;
+  padding: 75px 0 0 29px;
   justify-content: center;
-  border: 1px solid #fff;
-  border-width: 0 0 0 3px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: #fff;
+  }
+
+  &.not-active {
+    opacity: 0;
+  }
+
+  &:not(.not-active) {
+    animation: toBottom 1.5s;
+  }
 }
 
 .main_left-side_item {
   font-size: 20px;
   line-height: 24px;
   cursor: default;
+
+  &.not-active {
+    opacity: 0;
+  }
+
+  &:not(.not-active) {
+    animation: toLeft 0.4s linear;
+  }
 }
 
 .main_right-side_wrapper {
@@ -27,6 +52,14 @@
   grid-row-gap: 27px;
   right: -190px;
   justify-items: center;
+
+  .main_right-side_item {
+    &:hover {
+      img {
+        filter: hue-rotate(180deg);
+      }
+    }
+  }
 }
 
 @include big-desktop {

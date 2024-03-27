@@ -40,6 +40,10 @@
   border-width: 0 1px 1px 0;
   rotate: 45deg;
   transform: translate(-50%, -50%);
+
+   animation: 1.5s linear infinite slickToBottom2;
+  // animation: 1.5s ease-out infinite slickToBottom;
+  // animation-timing-function: steps(5, end);
 }
 
 @include desktop {
@@ -149,6 +153,5 @@
     right: -155px;
     top: unset;
     bottom: 0;
-  
   }
 }

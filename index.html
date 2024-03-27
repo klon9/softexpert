@@ -28,37 +28,19 @@
           </div>
           <nav class="main-header_nav-wrapper">
             <ul>
-              <li data-order="1">
-                <a
-                  href="#services"
-                  class="main-header_nav-item"
-                  data-role="navigation-link"
-                  >Услуги</a
-                >
+              <li data-order="1" data-role="navigation-link">
+                <a href="#services" class="main-header_nav-item">Услуги</a>
               </li>
-              <li data-order="2">
-                <a
-                  href="#cases"
-                  class="main-header_nav-item"
-                  data-role="navigation-link"
-                  >Кейсы</a
-                >
+              <li data-order="2" data-role="navigation-link">
+                <a href="#cases" class="main-header_nav-item">Кейсы</a>
               </li>
-              <li data-order="3">
-                <a
-                  href="#our_services"
-                  class="main-header_nav-item"
-                  data-role="navigation-link"
+              <li data-order="3" data-role="navigation-link">
+                <a href="#our_services" class="main-header_nav-item"
                   >Наши сервисы</a
                 >
               </li>
-              <li data-order="4">
-                <a
-                  href="#contacts"
-                  class="main-header_nav-item"
-                  data-role="navigation-link"
-                  >Контакты</a
-                >
+              <li data-order="4" data-role="navigation-link">
+                <a href="#contacts" class="main-header_nav-item">Контакты</a>
               </li>
               <a
                 href="#"
@@ -66,6 +48,7 @@
                 data-role="modal-button"
                 >Оставить заявку</a
               >
+              <div class="nav-pointer"></div>
             </ul>
             <div class="main-header_contacts">
               <div class="phones">
@@ -95,7 +78,10 @@
             </div>
           </nav>
 
-          <a href="#" class="button button__mobile-menu"></a>
+          <div class="mobile-menu_button-wrapper">
+            <a href="#" class="button button__mobile-menu"></a>
+          </div>
+
           <a
             href="#"
             class="button button-default button__hide-on-desk"
@@ -108,12 +94,12 @@
 
     <section class="main-promo">
       <div class="container">
-        <div class="main_left-side_wrapper">
-          <div class="main_left-side_item">Web</div>
-          <div class="main_left-side_item">Mobile</div>
-          <div class="main_left-side_item">Analytics</div>
-          <div class="main_left-side_item">Design</div>
-          <div class="main_left-side_item">ML</div>
+        <div class="main_left-side_wrapper not-active" id="left-side">
+          <div class="main_left-side_item not-active">Web</div>
+          <div class="main_left-side_item not-active">Mobile</div>
+          <div class="main_left-side_item not-active">Analytics</div>
+          <div class="main_left-side_item not-active">Design</div>
+          <div class="main_left-side_item not-active">ML</div>
         </div>
         <div class="main-promo_wrapper">
           <div class="main-promo_description">
@@ -332,7 +318,10 @@
       </div>
     </section>
 
-    <section class="main-section section__statistics" data-role="navigation-target">
+    <section
+      class="main-section section__statistics"
+      data-role="navigation-target"
+    >
       <div class="container">
         <div class="main-block-decor">
           <picture>
@@ -411,7 +400,10 @@
       </div>
     </section>
 
-    <section class="main-section section__get-started" data-role="navigation-target">
+    <section
+      class="main-section section__get-started"
+      data-role="navigation-target"
+    >
       <div class="container">
         <h2>С чего начать?</h2>
         <div class="grid grid__type-2">
@@ -1233,7 +1225,7 @@
         <div class="main-section_part-2">
           <h3>Связаться с нами</h3>
           <div class="main-section_part-2_text">
-            <a href="#form"
+            <a href="#form" data-role="modal-button"
               >Заполните форму и мы ответим вам в&nbsp;ближайшее время
               <span class="with-arrow">&nbsp;</span></a
             >

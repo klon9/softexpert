@@ -8,6 +8,25 @@
   display: none;
 }
 
+.mobile-menu_button-wrapper {
+  position: relative;
+  width: 100%;
+  margin-right: -80px;
+  margin-left: auto;
+  right: 0;
+  transition: width 0.3s;
+  &.active {
+    margin-right: 0;
+    width: 0;
+    z-index: 107;
+  }
+  &.fixed {
+    z-index: 107;
+    margin-right: 100px;
+    top: 50px;
+  }
+}
+
 .main-header_active {
   padding: 6px 0;
   background: rgba(238, 241, 250, 0.9);
@@ -132,7 +151,8 @@
     z-index: 101;
     overflow-y: auto;
 
-    border: 1px solid #fff;
+    outline: 1px solid #fff;
+    outline-style: auto;
     background: linear-gradient(
       116deg,
       rgb(235 225 242) 1.9%,
@@ -165,6 +185,7 @@
     }
   }
   & > ul {
+    position: relative;
     margin: 0;
     display: grid;
     grid-auto-flow: column;
@@ -187,68 +208,33 @@
     transition: color 0.2s linear;
     overflow-x: clip;
 
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -25px;
-      left: unset;
-      transform: translateX(-50%);
-      opacity: 0;
-
-      height: 9px;
-      width: 9px;
-
-      border-radius: 50%;
-      background-color: currentColor;
-
-      transition: opacity 0.2s linear;
-    }
-
-    &.active__new {
-      color: #4cc8af;
-    }
-
-    &.active {
-      &::after {
-        animation: show 0.3s linear 0s 1 forwards;
-      }
-    }
-    &.active__scene-1 {
-      &::after {
-        animation: runNext 0.3s linear 0s 1 forwards;
-      }
-    }
-
-    &.active__scene-2 {
-      &::after {
-        //animation: runPrev 0.3s linear 0s 1 forwards;
-        animation: runPrev 0.3s forwards;
-      }
-    }
-
-    &.unactive {
-      &::after {
-        animation: hide 0.3s linear 0s 1 forwards;
-      }
-    }
-    &.unactive__scene-1 {
-      &::after {
-        //animation: runNext 0.3s linear 0s 1 forwards reverse;
-        animation: runNext 0.3s forwards;
-        animation-direction: reverse;
-      }
-    }
-
-    &.unactive__scene-2 {
-      &::after {
-        animation: runPrev 0.3s forwards;
-        animation-direction: reverse;
-      }
-    }
-
+    &.active,
     &:hover {
       color: #4cc8af;
     }
+  }
+}
+
+.nav-pointer {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+
+  height: 9px;
+  width: 9px;
+
+  border-radius: 50%;
+  background-color: currentColor;
+
+  transition: 0.3s;
+
+  &.active {
+    display: block;
+    opacity: 1;
+    background-color: #4cc8af;
   }
 }
 
