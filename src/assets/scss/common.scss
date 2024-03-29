@@ -10,6 +10,20 @@
 .fixed {
   position: fixed !important;
 }
+.flex{
+  display: flex;
+}
+
+a {
+  transition: color 0.3s;
+  &:hover {
+    color: #4cc8af;
+    path {
+      transition: fill .3s;
+      fill: #4cc8af;
+    }
+  }
+}
 
 .container {
   width: 100%;
@@ -109,7 +123,7 @@ h6 {
     align-items: center;
     justify-content: center;
     padding: 0;
-
+    z-index: 102;
     color: #fff;
     border: 1px solid #c1c8df;
     background-color: #c1c8df;
@@ -147,9 +161,7 @@ h6 {
     }
 
     &.active {
-      animation: rotate 1s;
-      //animation-composition: add;
-
+      transform: rotate(180deg);
       border: 1px solid #37374a;
       background-color: #37374a;
 
@@ -358,6 +370,29 @@ h6 {
   bottom: -225px;
   right: -110px;
   z-index: 0;
+}
+
+#special-circle {
+  position: fixed;
+  top: 100%;
+  left: 100%;
+  border-radius: 50%;
+  height: auto;
+  width: 0;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  transition: height, width 1.5s;
+  background: linear-gradient(
+    116deg,
+    rgb(235, 225, 242) 1.9%,
+    rgb(236, 245, 246) 98.27%
+  );
+
+  &.active {
+    width: calc((100vh + 100vw) * 1.5);
+  }
 }
 
 @include desktop {

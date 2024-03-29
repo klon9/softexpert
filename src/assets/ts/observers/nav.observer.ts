@@ -7,7 +7,13 @@ export const navObserver = () => {
   });
 };
 
-let options = {};
+const trash = (80 / document.body.clientHeight) * 100;
+console.log(trash);
+
+let options = {
+  rootMargin: "80px",
+  trashold: 0.5,
+};
 const navPointer = document.querySelector(".nav-pointer");
 let activeMenuItem = getActiveMenuItem();
 
@@ -59,12 +65,10 @@ function hide(element: any) {
 
 function moveX(element: any, range: number) {
   element.style.right = "unset";
-  console.log(range);
   element.style.left = range + "px";
   return true;
 }
 
 function calcRange(element: any): number {
-  console.log(element.offsetWidth);
   return element.offsetLeft + element.offsetWidth / 2;
 }

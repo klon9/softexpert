@@ -19,29 +19,47 @@ document.addEventListener("DOMContentLoaded", () => {
   //
   // show and hide mobile menu
   //
-  const mobileMenu = document.querySelector(".main-header_nav-wrapper");
+
   const mobileMenuButton = document.querySelector(".button__mobile-menu");
-  const body = document.querySelector("body");
 
   mobileMenuButton?.addEventListener("click", () => {
-    if (!mobileMenu) return;
-    body?.classList.toggle("no-scroll__mobile-menu");
+    const body = document.querySelector("body");
+    const mobileMenu = document.querySelector(".main-header_nav-wrapper");
+    const specialCirle = document.querySelector("#special-circle");
+
+    if (!mobileMenu || !body) return;
+    body.classList.toggle("no-scroll__mobile-menu");
 
     if (mobileMenuButton.parentElement?.classList.contains("active")) {
-      mobileMenuButton.parentElement?.classList.toggle("fixed");
+      mobileMenuButton.parentElement.classList.toggle("fixed");
       mobileMenuButton.classList.toggle("active");
       mobileMenu.classList.toggle("active");
 
       setTimeout(() => {
         mobileMenuButton.parentElement?.classList.toggle("active");
+
+        setTimeout(() => {
+          if (specialCirle) {
+            specialCirle.classList.remove("active");
+          }
+        }, 300);
       }, 500);
     } else {
-      mobileMenuButton.parentElement?.classList.toggle("active");
-      setTimeout(() => {
-        mobileMenuButton.parentElement?.classList.toggle("fixed");
+      if (specialCirle) {
+        setNewPotition(specialCirle, mobileMenuButton);
+        setTimeout(() => {
+          specialCirle.classList.add("active");
+        }, 300);
+      }
 
-        mobileMenu.classList.toggle("active");
+      setTimeout(() => {
+        mobileMenuButton.parentElement?.classList.toggle("active");
+        setTimeout(() => {
+          mobileMenuButton.parentElement?.classList.toggle("fixed");
+          mobileMenu.classList.toggle("active");
+        }, 500);
       }, 500);
+
       mobileMenuButton.classList.toggle("active");
     }
   });
@@ -58,17 +76,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // parent?.parentElement
-      //   ?.querySelector("li.active")
-      //   ?.classList.remove("active");
-
-      // parent?.classList.add("active");
       const href = link.getAttribute("href");
       if (href) {
         const target = document.querySelector(href);
         if (target) {
-          const headerHeight =
-            document.getElementById("main-header")?.clientHeight || 0;
+          const headerHeight =0;
 
           window.scrollTo({
             top:
@@ -82,3 +94,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+function setNewPotition(target: Element, parent: Element) {
+  target.setAttribute(
+    "style",
+    `top:calc(${parent.getBoundingClientRect().y}px + ${
+      parent.getBoundingClientRect().height
+    }px /2); left:calc(${parent.getBoundingClientRect().x}px + ${
+      parent.getBoundingClientRect().width
+    }px / 2);`
+  );
+}

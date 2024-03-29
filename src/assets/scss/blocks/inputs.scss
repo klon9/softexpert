@@ -35,16 +35,17 @@ input {
 
   &.input__has-error {
     border-color: rgb(255, 102, 102);
-    &[type="checkbox"]{
-      &::before{
+    &[type="checkbox"] {
+      &::before {
         border-color: rgb(255, 102, 102);
       }
     }
   }
 
   &[type="checkbox"] {
+    cursor: pointer;
     padding: 0;
-    margin: 0 6px 0 0;
+    margin: 2px 10px 2px 2px;
     width: 17px;
     height: 17px;
     position: relative;
@@ -75,13 +76,13 @@ input {
       background: #fff;
       content: "";
     }
-    &:checked{
-      &::before{
-        border-color: #4CC8AF;
+    &:checked {
+      &::before {
+        border-color: #4cc8af;
       }
-      &::after{
-        background: #4CC8AF;
-        box-shadow: 0px 0px 4px 0px rgba(76, 200, 175, 0.60);
+      &::after {
+        background: #4cc8af;
+        box-shadow: 0px 0px 4px 0px rgba(76, 200, 175, 0.6);
       }
     }
   }

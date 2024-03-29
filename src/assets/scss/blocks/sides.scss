@@ -41,7 +41,7 @@
   }
 
   &:not(.not-active) {
-    animation: toLeft 0.4s linear;
+    animation: toLeft .75s linear;
   }
 }
 
