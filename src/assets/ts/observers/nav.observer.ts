@@ -1,5 +1,7 @@
 export const navObserver = () => {
-  let observer = new IntersectionObserver(observerCollback, options);
+  let observer = new IntersectionObserver(observerCollback, {
+    threshold: [0.15, 0.4, 0.6, 0.85],
+  });
   let sections =
     document.querySelectorAll("[data-role='navigation-target']") || null;
   sections.forEach((section: any) => {
@@ -7,21 +9,18 @@ export const navObserver = () => {
   });
 };
 
-const trash = (80 / document.body.clientHeight) * 100;
-console.log(trash);
-
-let options = {
-  rootMargin: "80px",
-  trashold: 0.5,
-};
 const navPointer = document.querySelector(".nav-pointer");
 let activeMenuItem = getActiveMenuItem();
 
 const observerCollback = (entries: any) => {
   entries.forEach((entry: any) => {
     const section = entry.target;
-    activeMenuItem = getActiveMenuItem();
+    console.log(section);
+    if (!navPointer) return;
     if (entry.isIntersecting) {
+      console.log(section.id);
+      console.log(section.getBoundingClientRect());
+      activeMenuItem = getActiveMenuItem();
       const currentMenuItem = document.querySelector(
         `li[data-role='navigation-link']:has([href='#${section.id}'])`
       );
@@ -46,19 +45,19 @@ function getActiveMenuItem() {
   return document.querySelector("li.active[data-role='navigation-link']");
 }
 
-function setActiveMenuItem(item: any) {
+function setActiveMenuItem(item: Element | null) {
   document
     .querySelector("li.active[data-role='navigation-link']")
     ?.classList.remove("active");
   item?.classList.add("active");
 }
 
-function show(element: any) {
+function show(element: Element) {
   element.classList.add("active");
   return true;
 }
 
-function hide(element: any) {
+function hide(element: Element) {
   element.classList.remove("active");
   return true;
 }

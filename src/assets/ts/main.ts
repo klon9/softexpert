@@ -2,6 +2,7 @@ import "../scss/main.scss";
 import "./components/sliders";
 import "./components/header";
 import "./components/modal";
+import { preloader } from "./components/preloader";
 import {
   inputsMask,
   validate,
@@ -11,9 +12,12 @@ import {
 import { runObserv } from "./observers/main";
 
 document.addEventListener("DOMContentLoaded", () => {
-  setFormsPreventDefault();
-  inputsMask();
-  validate();
+  preloader();
+  setTimeout(() => {
+    setFormsPreventDefault();
+    inputsMask();
+    validate();
 
-  runObserv();
+    runObserv();
+  }, 200);
 });

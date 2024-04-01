@@ -24,6 +24,7 @@ input {
   }
 
   &[type="submit"] {
+    position: relative;
     padding: 20px;
     border-radius: 50px;
     border: none;
@@ -31,6 +32,18 @@ input {
     font-size: 16px;
     color: #fff;
     cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 4px 14px 0px #9eaacf40;
+      background: linear-gradient(
+          180deg,
+          rgba(149, 51, 215, 0.1) 1.9%,
+          rgba(72, 244, 255, 0.056) 98.27%,
+          rgba(255, 0, 127, 0.1) 98.28%
+        ),
+        linear-gradient(180deg, #ffffff 0%, #e5e9f6 100%);
+      color: #6e74a8;
+    }
   }
 
   &.input__has-error {

@@ -1,4 +1,5 @@
 @keyframes toBottom {
+  // leftSideWrapper
   from {
     margin-top: -100%;
   }
@@ -9,6 +10,7 @@
 }
 
 @keyframes slickToBottom {
+  // promo_arrowToBottom
   from {
     margin-bottom: 15px;
   }
@@ -19,6 +21,7 @@
 }
 
 @keyframes slickToBottom2 {
+  // promo_arrowToBottom
   0% {
     opacity: 0;
     margin-bottom: 15px;
@@ -45,6 +48,7 @@
 }
 
 @keyframes toLeft {
+  // leftSide_items
   0% {
     margin-right: 100px;
   }
@@ -59,11 +63,33 @@
 }
 
 @keyframes rotate {
+  // mobileMenuButton
   from {
     transform: rotate(0);
   }
 
   to {
     rotate: (360deg);
+  }
+}
+
+@keyframes show {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
   }
 }

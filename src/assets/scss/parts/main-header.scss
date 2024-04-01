@@ -69,6 +69,7 @@
 
 .main-header_nav-wrapper {
   z-index: 1;
+  transition: opacity 0.3s;
   .main-header_contacts {
     display: none;
     justify-content: center;
@@ -117,19 +118,17 @@
     line-height: 1.04638;
     letter-spacing: 0.32px;
     text-decoration-line: underline;
+  }
 
-    &::before {
-      position: absolute;
-      top: 6px;
-      left: -46px;
-      height: 26px;
-      aspect-ratio: 1;
+  .phone-icon_wrapper {
+    position: absolute;
+    top: 6px;
+    left: -46px;
+    height: 26px;
+    aspect-ratio: 1;
 
-      filter: invert(1);
-
-      content: "";
-      background: url(/src/assets/images/phone.svg) 100% no-repeat;
-      background-size: contain;
+    path{
+      fill: currentColor;
     }
   }
 
@@ -141,26 +140,21 @@
     letter-spacing: 0.2px;
   }
 
+  &.visible {
+    opacity: 1;
+  }
+
   &.active {
-    display: block;
     padding: 120px 0 40px;
     position: fixed;
-
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    min-height: 100vh;
-    z-index: 101;
     overflow-y: auto;
 
     outline: 1px solid #fff;
     outline-style: auto;
-    // background: linear-gradient(
-    //   116deg,
-    //   rgb(235 225 242) 1.9%,
-    //   rgb(236 245 246) 98.27%
-    // );
 
     > ul {
       grid-auto-flow: row;
@@ -182,11 +176,13 @@
         display: none;
       }
     }
+
     .main-header_contacts {
       display: grid;
       justify-items: center;
     }
   }
+
   & > ul {
     position: relative;
     margin: 0;
@@ -200,6 +196,7 @@
     font-size: 15px;
     letter-spacing: 0.1px;
   }
+
   li {
     position: relative;
     margin: 0;
@@ -283,6 +280,10 @@
     &.active {
       display: none;
     }
+  }
+
+  .main-header_nav-wrapper {
+    opacity: 0;
   }
   .main-header {
     .container {

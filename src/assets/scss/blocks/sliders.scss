@@ -20,6 +20,12 @@
 .main-slider_item {
   position: relative;
   min-height: 382px;
+  cursor: grab;
+  cursor: -webkit-grab;
+  &:active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+  }
   &:hover {
     &:hover {
       .main-slider_item-wrapper {
@@ -221,6 +227,12 @@
   font-size: 20px;
   line-height: 1.45;
   letter-spacing: 0;
+  cursor: grab;
+  cursor: -webkit-grab;
+  &:active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+  }
 }
 
 .slider-reviews_author {
