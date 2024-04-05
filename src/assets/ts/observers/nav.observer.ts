@@ -1,7 +1,5 @@
 export const navObserver = () => {
-  let observer = new IntersectionObserver(observerCollback, {
-    threshold: [0.15, 0.4, 0.6, 0.85],
-  });
+  let observer = new IntersectionObserver(observerCollback, {});
   let sections =
     document.querySelectorAll("[data-role='navigation-target']") || null;
   sections.forEach((section: any) => {
@@ -15,11 +13,8 @@ let activeMenuItem = getActiveMenuItem();
 const observerCollback = (entries: any) => {
   entries.forEach((entry: any) => {
     const section = entry.target;
-    console.log(section);
     if (!navPointer) return;
     if (entry.isIntersecting) {
-      console.log(section.id);
-      console.log(section.getBoundingClientRect());
       activeMenuItem = getActiveMenuItem();
       const currentMenuItem = document.querySelector(
         `li[data-role='navigation-link']:has([href='#${section.id}'])`

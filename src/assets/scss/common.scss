@@ -3,13 +3,34 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-#path {
-  fill: none;
+#preloader{
+  transition: opacity .6s;
+}
+
+#preloaderPath {
+  fill: $green;
+  fill-opacity: 0;
   stroke: $green;
-  stroke-width: 2;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: draw 6s infinite;
+  stroke-width: 1;
+  stroke-dasharray: 336.131591796875;
+  stroke-dashoffset: 336.131591796875;
+  animation: draw 3s 1 forwards;
+}
+
+#preloaderRect {
+  animation: showFill 1.5s ease-in 3s 1 normal forwards;
+}
+
+#preloaderText {
+  transform: translate(-100%, 0);
+  animation: showPreloadText 0.9s ease-in 3.3s 1 normal forwards;
+}
+
+.preload-wrapper {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main-section {

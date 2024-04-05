@@ -89,7 +89,39 @@
 }
 
 @keyframes draw {
-  100% {
+  0%{
+    stroke-dashoffset: 336.131591796875;
+  }
+  80% {
     stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  100%{
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+@keyframes showFill{
+  0%{
+    fill-opacity: 0;
+  }
+
+  25%{
+    fill-opacity: 1;
+  }
+
+  75%{
+    fill-opacity: 1;
+  }
+
+  100%{
+    fill-opacity: 0;
+  }
+}
+
+@keyframes showPreloadText{
+  100%{
+    transform: translate(0,0);
   }
 }
