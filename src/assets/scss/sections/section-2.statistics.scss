@@ -36,6 +36,7 @@
       left: -44px;
       width: 45%;
       max-width: 570px;
+      min-width: 470px;
     }
     .main-section_content-wrapper {
       max-width: 500px;
@@ -94,11 +95,6 @@
     .container {
       padding: 0 70px;
     }
-    .main-block-decor {
-      left: -164px;
-      width: 475px;
-      top: 24px;
-    }
 
     .main-section_content-wrapper {
       max-width: 416px;
@@ -114,6 +110,13 @@
 
 @include mobile {
   .section__statistics {
+    .main-block-decor {
+      left: -120px;
+      width: 350px;
+      min-width: unset;
+      top: unset;
+      bottom: 50px;
+    }
     .container {
       padding: 0 30px;
     }

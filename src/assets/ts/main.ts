@@ -12,14 +12,12 @@ import {
 import { runObserv } from "./observers/main";
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  setFormsPreventDefault();
-  inputsMask();
-  validate();
-
-  runObserv();
   setTimeout(() => {
-
     preloader();
+    setFormsPreventDefault();
+    inputsMask();
+    validate();
+  
+    runObserv();
   }, 4500);
 });

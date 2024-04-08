@@ -1,10 +1,31 @@
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+
+  scrollbar-width: 4px;
+  scrollbar-color: $dark-lilac rgba(149, 51, 215, 0.1);
+  scrollbar-track-color: $dark-lilac;
+  scrollbar-arrow-color: $green;
 }
 
-#preloader{
-  transition: opacity .6s;
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: $dark-lilac;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: rgba(149, 51, 215, 0.1);
+}
+
+#preloader {
+  transition: opacity 0.6s;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 #preloaderPath {
@@ -28,7 +49,7 @@
 
 .preload-wrapper {
   position: absolute;
-  top: calc(50% - 100px);
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -136,7 +157,7 @@ h6 {
   line-height: 19.2px;
   letter-spacing: 0.1px;
 
-  transition: all 0.3s linear;
+  transition: 0.3s;
   cursor: pointer;
 
   &.button__hide-on-desk {
@@ -205,13 +226,12 @@ h6 {
   }
 
   &:hover {
-    &:not(.button__mobile-menu) {
+    &:not(:is(.button__mobile-menu, .button__close)) {
       box-shadow: 0px 4px 14px 0px #9eaacf40;
       background: linear-gradient(
           180deg,
           rgba(149, 51, 215, 0.1) 1.9%,
-          rgba(72, 244, 255, 0.056) 98.27%,
-          rgba(255, 0, 127, 0.1) 98.28%
+          rgba(72, 244, 255, 0.056) 98.27%
         ),
         linear-gradient(180deg, #ffffff 0%, #e5e9f6 100%);
       color: #6e74a8;
@@ -488,6 +508,14 @@ h6 {
   }
 }
 
+@include big-mobile {
+  #preloader {
+    svg {
+      transform: scale(0.8);
+    }
+  }
+}
+
 @include mobile {
   .container {
     padding: 0 20px;
@@ -513,5 +541,11 @@ h6 {
   h6 {
     font-size: 18px;
     line-height: normal;
+  }
+
+  #preloader {
+    svg {
+      transform: scale(0.5);
+    }
   }
 }

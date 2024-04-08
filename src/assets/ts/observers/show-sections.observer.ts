@@ -15,6 +15,7 @@ function transform(
   const types = new Map([
     ["slickX", "translateX"],
     ["slickY", "translateY"],
+    ["none", "none"],
   ]);
 
   element.setAttribute(
@@ -51,7 +52,7 @@ function transform(
 export const showSections = () => {
   tryTransformElement(".main-promo_description");
   tryTransformElement(".main-promo_image", "slickX", -1);
-  tryTransformElement(".main_right-side_wrapper", "slickX", -1);
+  tryTransformElement(".main_right-side_wrapper", "none", -1);
 
   tryTransformElement(".main-slider_swiper");
   tryTransformElement(".section__statistics .main-block-decor");

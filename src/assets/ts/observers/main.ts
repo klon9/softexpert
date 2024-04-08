@@ -5,5 +5,5 @@ import { showSections } from "./show-sections.observer";
 export const runObserv = () => {
   navObserver();
   leftSideObserver();
-  showSections();
+  if (window.innerWidth > 320) showSections();
 };

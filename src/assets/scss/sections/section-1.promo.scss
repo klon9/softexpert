@@ -6,7 +6,9 @@
 
 .main-promo_wrapper {
   display: flex;
-  padding: 144px 0 180px;
+  align-items: center;
+  height: 100dvh;
+  max-height: 1020px;
 }
 
 .main-promo_description {
@@ -41,14 +43,14 @@
   rotate: 45deg;
   transform: translate(-50%, -50%);
 
-   animation: 1.5s linear infinite slickToBottom2;
+  animation: 1.5s linear infinite slickToBottom2;
   // animation: 1.5s ease-out infinite slickToBottom;
   // animation-timing-function: steps(5, end);
 }
 
 @include desktop {
   .main-promo_wrapper {
-    padding: 144px 0 150px;
+    // padding: 144px 0 150px;
   }
   .main-promo_description {
     padding: 86px 75px 0;
@@ -83,14 +85,17 @@
   }
 }
 
+@include big-tablet {
+  .main-promo_wrapper {
+    max-height: 768px;
+  }
+}
+
 @include small-tablet {
   .main-promo {
     .container {
       padding: 0 70px;
     }
-  }
-  .main-promo_wrapper {
-    padding: 144px 0 230px;
   }
 
   .main-promo_description {
@@ -113,7 +118,6 @@
 
   .main-promo_arrow-to-bottom {
     bottom: 0px;
-    margin: 0 0 0 17px;
   }
 
   .main-promo_image {
@@ -129,7 +133,7 @@
     }
   }
   .main-promo_wrapper {
-    padding: 54px 0 110px;
+    max-height: 580px;
   }
 
   .main-promo_description {

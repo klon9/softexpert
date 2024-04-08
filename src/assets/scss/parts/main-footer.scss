@@ -76,7 +76,7 @@
   border-radius: 50%;
   border: 1px solid #fff;
   color: #fff;
-  transition: .3s;
+  transition: 0.3s;
   &:hover {
     border-color: $green;
     color: $green;
@@ -146,37 +146,9 @@
       width: 285px;
     }
 
-    .main-footer_phone-number {
-      font-size: 20.873px;
-      line-height: 0.77;
-      letter-spacing: 0.209px;
-
-      span {
-        font-size: 11.132px;
-        line-height: 1.4375;
-        letter-spacing: 0.111px;
-      }
-    }
-
-    .main-footer_phone-number .phone-icon_wrapper {
-      height: 13.22px;
-      width: 13.22px;
-      left: -18px;
-    }
-
-    .main-footer_phone-title {
-      font-size: 13px;
-      line-height: 1.23;
-      letter-spacing: 0.2px;
-    }
-
     .main-footer_part-2 {
       padding: 30px 0 0;
       margin: 0 0 0 -10px;
-    }
-
-    .main-footer_text-info {
-      max-width: 400px;
     }
   }
 
@@ -193,15 +165,60 @@
   }
 }
 
-@include tablet {
-  .main-footer_phones-wrapper {
-    flex-direction: column;
-    padding: 0 20px;
-    grid-gap: 22px;
+@include big-tablet {
+  .main-footer_phone-number {
+    font-size: 20.873px;
+    line-height: 0.77;
+    letter-spacing: 0.209px;
+
+    span {
+      font-size: 11.132px;
+      line-height: 1.4375;
+      letter-spacing: 0.111px;
+    }
+  }
+
+  .main-footer_phone-number .phone-icon_wrapper {
+    height: 13.22px;
+    width: 13.22px;
+    left: -18px;
+  }
+
+  .main-footer_phone-title {
+    font-size: 13px;
+    line-height: 1.23;
+    letter-spacing: 0.2px;
   }
 }
 
-@include mobile {
+@include tablet {
+  .main-footer_phones-wrapper {
+    // flex-direction: column;
+    // padding: 0 20px;
+    // grid-gap: 22px;
+  }
+
+  .main-footer_text-info {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 880px) {
+  .main-footer_part-1 {
+    grid-auto-flow: row;
+    grid-gap: 20px;
+  }
+
+  .main-footer_phones-wrapper {
+    padding: 0 15px;
+  }
+  
+  .main-footer .main-footer_part-2{
+    margin: 0;
+  }
+}
+
+@include big-mobile {
   .main-footer {
     padding: 47px 0 34px;
     .main-footer_part-1 {
@@ -213,6 +230,7 @@
       padding: 25px 0 0 10px;
       flex-direction: column;
       grid-gap: 32px;
+      margin: 0 -10px;
     }
 
     .main-footer_text-info {
@@ -226,5 +244,12 @@
     .main-footer_copy {
       padding: 0 0 22px;
     }
+  }
+}
+
+@include mobile{
+  .main-footer_phones-wrapper{
+    flex-direction: column;
+    grid-gap: 10px;
   }
 }
