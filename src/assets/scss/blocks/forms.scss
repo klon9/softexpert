@@ -9,8 +9,14 @@
   grid-template-columns: 3fr 5fr;
   border-radius: 45px;
   z-index: 1;
+  transform: translate3d(0, 0, 0);
   &.main-form-1,
   &.main-form-2 {
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    
     input:not([type="checkbox"]) {
       width: 100%;
     }

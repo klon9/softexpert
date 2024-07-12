@@ -1,0 +1,566 @@
+.promo {
+  overflow: hidden;
+  position: relative;
+
+  $height: calc(100vh - 67px);
+  height: $height;
+
+
+  &__slider {
+    //height: calc(100vh - 80px);
+    margin: 0;
+  }
+
+  .slick-dotted.slick-slider {
+    margin: 0;
+  }
+
+  &__slide {
+    height: 100%;
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+    }
+
+    @supports (object-fit: cover) {
+      video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+  }
+
+  &__slide-inner {
+    height: $height;
+    display: flex;
+    align-items: center;
+    @include sfx-background(cover, center bottom, no-repeat);
+    padding-bottom: 150px;
+
+    @include sfx-media-down(xl) {
+      padding-bottom: 100px;
+    }
+  }
+
+  .slick-dots {
+    bottom: 90px;
+    li {
+      button {
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+
+        &:before {
+          content: '';
+          width: 9px;
+          height: 9px;
+          background-color: #ffffff;
+          opacity: 0.65;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      &.slick-active {
+        button {
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__inner {
+    max-width: 1330px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.36);
+    color: #ffffff;
+    font-size: 90px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 110px;
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  &__title-2 {
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.36);
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: uppercase;
+    transform: translateY(100px);
+    opacity: 0;
+    font-size: 80px;
+    line-height: 95px;
+  }
+
+  &__subtitle {
+    text-shadow: 0 3px 7px rgba(0, 0, 0, 0.58);
+    color: #ffffff;
+    font-size: 37px;
+    font-weight: 500;
+    line-height: 42px;
+    padding: 0 0 20px 0;
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  &__tag {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 50px;
+    height: 50px;
+    padding: 0 25px;
+    background-color: $color-red;
+    align-items: center;
+    margin: 80px 0 40px 0;
+    display: inline-block;
+  }
+
+  &__text {
+    max-width: 810px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px;
+  }
+
+  .slick-current {
+    .promo__title, .promo__title-2, .promo__subtitle {
+      transform: translateY(0);
+      opacity: 1;
+      transition: opacity .3s ease, transform .3s ease;
+    }
+  }
+
+  .slick-prev, .slick-next {
+    width: 55px;
+    height: 55px;
+    font-size: 0;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      width: 32px;
+      height: 55px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  .slick-prev {
+    left: 25px;
+    &:before {
+      background-image: url(images/icon-arrow-left.svg);
+    }
+  }
+  .slick-next {
+    right: 25px;
+    &:before {
+      background-image: url(images/icon-arrow-right.svg);
+    }
+  }
+
+
+
+  @include sfx-media-down(1550px) {
+    .slick-prev {
+      left: 0;
+    }
+    .slick-next {
+      right: 0;
+    }
+    &__inner {
+      padding: 0 60px;
+    }
+  }
+
+
+  @include sfx-media-down(xl) {
+    $height: calc(100vh - 56px);
+    height: $height;
+
+    &__slide-inner {
+      min-height: 600px;
+      height: $height;
+    }
+
+    &__inner {
+      max-width: 992px;
+      padding: 0 15px;
+      &:before {
+        width: 62px;
+        height: 62px;
+        top: -60px;
+        left: -25px;
+      }
+    }
+
+    &__title {
+      font-size: 68px;
+      line-height: 78px;
+    }
+
+    &__title-2 {
+      font-size: 58px;
+      line-height: 68px;
+    }
+
+    &__subtitle {
+      font-size: 28px;
+      line-height: 36px;
+      padding: 0 0 15px 0;
+    }
+
+    &__tag {
+      font-size: 17px;
+      line-height: 39px;
+      height: 39px;
+      padding: 0 20px;
+      margin: 60px 0 30px 0;
+    }
+
+    &__text {
+      font-size: 15px;
+      line-height: 27px;
+      max-width: 600px;
+    }
+
+    .slick-dots {
+      bottom: 40px;
+    }
+  }
+
+
+  @include sfx-media-down(lg) {
+    &__slide-inner {
+      min-height: 500px;
+    }
+
+    &__inner {
+      max-width: 768px;
+      &:before {
+        width: 49px;
+        height: 49px;
+        top: -45px;
+        left: 30px;
+      }
+    }
+
+    &__title {
+      font-size: 63px;
+      line-height: 73px;
+    }
+
+    &__title-2 {
+      font-size: 53px;
+      line-height: 63px;
+    }
+
+    &__subtitle {
+      font-size: 26px;
+      line-height: 36px;
+      padding: 0 0 15px 0;
+    }
+
+    &__tag {
+      font-size: 15px;
+      padding: 0 20px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+
+    .slick-prev, .slick-next {
+      width: 28px;
+      height: 28px;
+      &:before {
+        width: 17px;
+        height: 28px;
+      }
+    }
+
+    .slick-dots {
+      bottom: 40px;
+    }
+
+    .slick-prev {
+      left: 10px;
+    }
+    .slick-next {
+      right: 10px;
+    }
+  }
+
+
+  @include sfx-media-down(md) {
+    $height: calc(100vh - 46px);
+    height: $height;
+
+    &__slide-inner {
+      min-height: 530px;
+      height: $height;
+    }
+
+    &__slide-inner {
+      min-height: 400px;
+    }
+    &__inner {
+      max-width: 576px;
+    }
+
+    &__title {
+      font-size: 48px;
+      line-height: 58px;
+    }
+
+    &__title-2 {
+      font-size: 38px;
+      line-height: 48px;
+    }
+
+    &__subtitle {
+      font-size: 22px;
+      line-height: 32px;
+      padding: 0 0 15px 0;
+    }
+
+    &__tag {
+      font-size: 13px;
+      padding: 0 15px;
+      height: 31px;
+      line-height: 31px;
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+    .slick-dots {
+      bottom: 25px;
+    }
+
+    .slick-prev {
+      left: 0;
+    }
+
+    .slick-next {
+      right: 0;
+    }
+  }
+
+
+  @include sfx-media-down(sm) {
+    height: calc(100vh - 65px);
+
+    &__slide-inner {
+      height: calc(100vh - 65px);
+    }
+
+    .slick-prev, .slick-next {
+      display: none !important;
+    }
+
+    &__inner {
+      padding: 0 15px;
+
+      &:before {
+        top: -60px;
+        left: 40px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      line-height: 26px;
+      padding: 0 0 15px 0;
+    }
+
+    &__title {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    &__title-2 {
+      font-size: 38px;
+      line-height: 48px;
+    }
+
+    &__text {
+      font-size: 11px;
+      line-height: 18px;
+      padding-top: 30px;
+    }
+
+    &__tag {
+      font-size: 12px;
+      line-height: 30px;
+      height: auto;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.slider-progress {
+  width: 100%;
+  height: 30px;
+  background: #1c7430;
+}
+.slider-progress .progress {
+  width: 0%;
+  height: 30px;
+  background: #000;
+}
+
+
+.radial-progress {
+  $circle-size: 74px;
+  $circle-color: #f93235;
+  $inset-size: 175px;
+  $inset-color: #fbfbfb;
+  $transition-length: 0.03s;
+  margin: 0 auto 0 auto;
+  width: $circle-size;
+  height: $circle-size;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #a0a0a0;
+  position: absolute;
+  left: 50%;
+  bottom: 150px;
+  transform: translateX(-50%);
+
+  .circle {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+
+    .mask, .fill, .shadow {
+      width: $circle-size;
+      height: $circle-size;
+      position: absolute;
+      border-radius: 50%;
+    }
+    .mask, .fill {
+      -webkit-backface-visibility: hidden;
+      transition: -webkit-transform $transition-length cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: -ms-transform $transition-length cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: transform $transition-length cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    .mask {
+      clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+      .fill {
+        clip: rect(0px, $circle-size/2, $circle-size, 0px);
+        background-color: transparent;
+        border: 2px solid $circle-color;
+      }
+    }
+  }
+
+
+  @include sfx-media-down(xl) {
+    $circle-size: 60px;
+    width: $circle-size;
+    height: $circle-size;
+    bottom: 80px;
+
+    .circle {
+      .mask, .fill, .shadow {
+        width: $circle-size;
+        height: $circle-size;
+      }
+      .mask {
+        clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+        .fill {
+          clip: rect(0px, $circle-size/2, $circle-size, 0px);
+        }
+      }
+    }
+  }
+
+
+  @include sfx-media-down(lg) {
+    $circle-size: 55px;
+    width: $circle-size;
+    height: $circle-size;
+    bottom: 80px;
+
+    .circle {
+      .mask, .fill, .shadow {
+        width: $circle-size;
+        height: $circle-size;
+      }
+      .mask {
+        clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+        .fill {
+          clip: rect(0px, $circle-size/2, $circle-size, 0px);
+        }
+      }
+    }
+  }
+
+
+  @include sfx-media-down(md) {
+    $circle-size: 47px;
+    width: $circle-size;
+    height: $circle-size;
+    bottom: 65px;
+
+    .circle {
+      .mask, .fill, .shadow {
+        width: $circle-size;
+        height: $circle-size;
+      }
+      .mask {
+        clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+        .fill {
+          clip: rect(0px, $circle-size/2, $circle-size, 0px);
+        }
+      }
+    }
+  }
+}
+
+

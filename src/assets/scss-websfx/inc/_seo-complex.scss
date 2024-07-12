@@ -1,0 +1,152 @@
+.seo-complex {
+
+  .positive-block {
+    padding-top: 100px;
+
+    @include sfx-media-down(xl) {
+      padding-top: 80px;
+    }
+  }
+
+
+  .seo-include {
+    //border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 0px;
+    overflow: hidden;
+
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__col-1 {
+      @include sfx-col-flex-custom(30%);
+      padding-right: 30px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include sfx-media-down(xl) {
+        @include sfx-col-flex-custom(100%);
+        padding-right: 0;
+      }
+    }
+
+    &__col-2 {
+      @include sfx-col-flex-custom(70%);
+
+      @include sfx-media-down(xl) {
+        @include sfx-col-flex-custom(100%);
+      }
+    }
+
+    &__title {
+      @include sfx-title();
+
+      @include sfx-media-down(xl) {
+        padding-bottom: 30px;
+      }
+    }
+
+    &__stage {
+      display: flex;
+      margin: 0 -24px;
+      flex-wrap: wrap;
+
+      @include sfx-media-down(md) {
+        margin: 0;
+      }
+
+      &-item {
+        @include sfx-col-flex(6);
+        padding: 0 24px;
+
+        span {
+          display: block;
+        }
+
+        @include sfx-media-down(md) {
+          @include sfx-col-flex(12);
+          padding: 0 0 30px 0;
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      &-inner {
+        height: 100%;
+        display: block;
+        background-color: $color-red;
+        padding: 40px 40px 40px 40px;
+
+        &.gray {
+          background-color: #383838;
+        }
+
+        @include sfx-media-down(sm) {
+          padding: 40px 25px 40px 25px;
+        }
+      }
+
+      &-number {
+        color: #ffffff;
+        font-size: 46px;
+        font-weight: 500;
+        line-height: 52px;
+        padding-bottom: 40px;
+
+        @include sfx-media-down(md) {
+          padding-bottom: 20px;
+        }
+      }
+
+      &-name {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        padding-bottom: 40px;
+
+        @include sfx-media-down(md) {
+          padding-bottom: 25px;
+          br {
+            display: none;
+          }
+        }
+      }
+
+      &-link {
+        background: url(images/icon-arrow-more.png) no-repeat center;
+        background-size: cover;
+        width: 27px;
+        height: 27px;
+      }
+    }
+  }
+
+  .advantages-block {
+    padding-bottom: 20px;
+  }
+
+  .steps-block {
+    padding-bottom: 40px;
+    @include sfx-media-down(md) {
+      padding-bottom: 40px;
+    }
+  }
+
+  .seo-features {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+
+  .download-example {
+    @include sfx-media-down(xl) {
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+  }
+}

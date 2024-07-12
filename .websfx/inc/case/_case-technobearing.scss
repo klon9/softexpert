@@ -1,0 +1,27 @@
+.case-technobearing {
+
+  .positive-block {
+    padding-top: 0;
+
+    .c-col-50 {
+      @include sfx-col-flex(6);
+      margin-bottom: 30px;
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+  }
+
+  .positive-block__item-image {
+    height: 72px;
+    width: 76px;
+
+    img {
+      max-height: 72px;
+    }
+  }
+
+
+}
+

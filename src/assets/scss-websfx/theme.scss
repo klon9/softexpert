@@ -1,0 +1,136 @@
+$sfx-font: "Nekst", sans-serif;
+$sfx-font-icon: "fl-bigmug-line";
+$sfx-root-font-size: 10px;
+$sfx-font-size: 16px;
+$sfx-text-color: #272727;
+$sfx-line-height: 1.6;
+
+$color-red: #4cc8af;
+$color-white: #ffffff;
+
+$color-lilac: #6e74a8;
+$color-dark-lilac: #3e496a;
+$color-green: #4cc8af;
+$color-gray: #3e496ab2;
+
+$color-light-gray: rgba(238, 241, 250, 0.3);
+
+// @import "bootstrap/scss/functions";
+// @import "bootstrap/scss/variables";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+body.post-template-post {
+  background: linear-gradient(
+      180deg,
+      #ebeff2 calc(100% - 1200px),
+      #cedae2 calc(100% - 505px),
+      #b7bcc0 calc(100% - 50px)
+    )
+    no-repeat;
+}
+
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1245px,
+);
+
+// @import "bootstrap/scss/bootstrap";
+
+$sfx-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$sfx-content-size: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1245px,
+);
+
+:root {
+  @each $point, $value in $sfx-breakpoints {
+    --sfx-breakpoint-#{$point}: #{$value};
+  }
+}
+
+.news-marker-text-2 {
+  position: relative;
+  padding-left: 25px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: $color-lilac;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 0;
+  }
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+@import "inc/_mixins";
+@import "inc/_reboot";
+
+@import "inc/_font";
+@import "inc/grid-framework";
+
+// @import "inc/base";
+// @import "inc/header";
+// @import "inc/footer";
+// @import "inc/modal";
+
+// @import "inc/blocks";
+// @import "inc/portfolio/portfolio";
+// @import "inc/index";
+// @import "inc/contacts";
+// @import "inc/online-store";
+// @import "inc/develop-sites";
+// @import "inc/corp-site";
+// @import "inc/visit-site";
+// @import "inc/lending-site";
+// @import "inc/seo-main";
+// @import "inc/seo-trafik";
+// @import "inc/seo-position";
+// @import "inc/seo-complex";
+// @import "inc/usability";
+// @import "inc/tech-audit";
+// @import "inc/support";
+// @import "inc/bitrix24";
+// @import "inc/mobile-dev";
+// @import "inc/analitic";
+// @import "inc/portfolio-page";
+// @import "inc/portfolio-page";
+@import "inc/case/case";
+@import "inc/blocks/positive-block";
+@import "grid";
+@import "inc/blocks/stages-dev";
+// @import "inc/infoblog-page";
+// @import "inc/animation";
+// @import "inc/article";
+// @import "inc/reviews";
+// @import "inc/inform-portal";
+// @import "inc/lang-select";
+// @import "inc/seo-context";
+// @import "inc/seo-target";
+// @import "inc/seo-smm";
+// @import "inc/video";
+// @import "inc/chatbot";

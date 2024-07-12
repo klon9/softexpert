@@ -1,0 +1,86 @@
+.seo-main {
+
+  .steps-block {
+
+    @include sfx-media-down(xl) {
+      padding-bottom: 60px;
+    }
+
+    @include sfx-media-down(sm) {
+      padding-bottom: 0;
+    }
+
+    &__col {
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(6);
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+  }
+
+  .stages-dev {
+    @include sfx-media-down(sm) {
+      padding-bottom: 0;
+      padding-top: 40px;
+    }
+  }
+
+  .order-banner {
+    &__price {
+      @include sfx-media-down(xl) {
+        font-size: 48px;
+        line-height: 52px;
+      }
+
+      @include sfx-media-down(md) {
+        font-size: 32px;
+        line-height: 36px;
+      }
+
+      @include sfx-media-down(sm) {
+        padding-bottom: 20px;
+      }
+    }
+
+    &__tag {
+      @include sfx-media-down(md) {
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+
+    &__text.padding-bottom {
+      @include sfx-media-down(md) {
+        padding-bottom: 40px;
+      }
+    }
+
+    .col-xl-6.col-lg-6.col-12 {
+      @include sfx-media-down(sm) {
+        &:last-child {
+          padding-top: 80px;
+        }
+      }
+
+      .order-banner__text {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+
+
+  .stages-dev {
+    &__text {
+      color: #777777;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 22px;
+    }
+  }
+}

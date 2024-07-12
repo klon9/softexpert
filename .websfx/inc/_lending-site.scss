@@ -1,0 +1,42 @@
+.lending-site {
+
+  .steps-block {
+    @include sfx-media-down(sm) {
+      padding-bottom: 80px;
+    }
+
+    &__col {
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(6);
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+  }
+
+  .positive-block {
+    .c-col {
+      @include sfx-col-flex(6);
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+  }
+
+  .stages-dev {
+    @include sfx-media-down(sm) {
+      padding-bottom: 40px;
+    }
+
+    &__title {
+      br {
+        display: none;
+      }
+    }
+  }
+}

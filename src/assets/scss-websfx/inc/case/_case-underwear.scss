@@ -1,0 +1,203 @@
+.case-underwear {
+  &__image {
+    margin-top: -60px;
+    position: relative;
+
+    img {
+      position: relative;
+      z-index: 2;
+    }
+
+    @include sfx-media-down(lg) {
+      max-width: 300px;
+      margin: -20px auto 0 auto;
+    }
+  }
+
+  &__row {
+    @include sfx-media-down(lg) {
+      .case__col:nth-child(1) {
+        order: 1;
+      }
+      .case__col:nth-child(2) {
+        order: 0;
+      }
+    }
+  }
+
+  &__shadow {
+    &-title {
+      color: $color-dark-lilac;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 30px;
+      padding-bottom: 70px;
+    }
+
+    &-text {
+      color: $color-lilac;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 30px;
+      padding: 60px 0 0 0;
+    }
+
+    &-row {
+      display: flex;
+      margin: 0 -15px;
+
+      @include sfx-media-down(md) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &-col {
+      padding: 0 15px;
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+        margin-bottom: 45px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-item {
+      &-value {
+        span {
+          color: $color-dark-lilac;
+          font-size: 60px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: -1.5px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+
+      &-num {
+        position: relative;
+        display: inline-block;
+
+        &:after {
+          content: "";
+          width: 31px;
+          height: 31px;
+          background-color: $color-green;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          top: -17px;
+          right: -8px;
+          z-index: 1;
+        }
+      }
+
+      &-text {
+        padding: 35px 0 0 0;
+        color: $color-lilac;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: -0.4px;
+
+        @include sfx-media-down(md) {
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+
+  &__result {
+    padding-top: 30px;
+
+    &-title {
+      color: $color-dark-lilac;
+      font-size: 24px;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 30px;
+      text-transform: uppercase;
+      letter-spacing: -0.6px;
+      padding-bottom: 50px;
+    }
+
+    &-row {
+      display: flex;
+      margin: 0 -30px;
+      flex-wrap: wrap;
+    }
+
+    &-col {
+      padding: 0 30px;
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-item {
+      &-title {
+        color: $color-dark-lilac;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: 0.14px;
+
+        @include sfx-media-down(sm) {
+          font-size: 24px;
+          line-height: 28px;
+        }
+      }
+
+      &-value {
+        color: $color-dark-lilac;
+        font-size: 55px;
+        font-weight: 600;
+        line-height: 48px;
+        letter-spacing: -1.38px;
+        padding: 0 0 0 40px;
+        background-position: 0 5px;
+        background-repeat: no-repeat;
+
+        &.up {
+          background-image: url(images/case-plants/case-plants-arrow-up.png);
+        }
+
+        &.down {
+          background-image: url(images/case-plants/case-plants-arrow-down.png);
+        }
+      }
+
+      &-text {
+        color: $color-lilac;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 30px;
+        padding: 15px 0 0 0;
+      }
+    }
+  }
+}
+
+.case__red-block--underwear {
+  padding-bottom: 150px;
+  margin-bottom: -140px;
+  margin-top: -20px;
+}
+
+.case__text ul.case-underwear__ul {
+  padding-top: 40px;
+  li {
+    margin-bottom: 30px;
+  }
+}

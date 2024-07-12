@@ -2,24 +2,15 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 
-  scrollbar-width: 4px;
-  scrollbar-color: $dark-lilac rgba(149, 51, 215, 0.1);
-  scrollbar-track-color: $dark-lilac;
-  scrollbar-arrow-color: $green;
+  scroll-behavior: smooth;
 }
 
-*::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+* {
+  @include scrollbar($dark-lilac);
 }
 
-*::-webkit-scrollbar-thumb {
-  background: $dark-lilac;
-  border-radius: 5px;
-}
-
-*::-webkit-scrollbar-track {
-  background-color: rgba(149, 51, 215, 0.1);
+#detach-button-host {
+  display: none;
 }
 
 #preloader {
@@ -226,7 +217,7 @@ h6 {
   }
 
   &:hover {
-    &:not(:is(.button__mobile-menu, .button__close)) {
+    &:not(:is(.button__mobile-menu, .button__close, .button-type-1)) {
       box-shadow: 0px 4px 14px 0px #9eaacf40;
       background: linear-gradient(
           180deg,
@@ -549,3 +540,112 @@ h6 {
     }
   }
 }
+
+.posts-nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+
+  @include mobile {
+  }
+}
+
+.button-type-1 {
+  padding: 9px 21px;
+  min-width: 160px;
+  position: relative;
+  display: flex;
+  border-radius: 15px 15px 0px 15px;
+  border-image-slice: 1;
+  background: #eef1fa;
+  cursor: pointer;
+  color: $dark-lilac;
+
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.3s;
+  background: linear-gradient(93deg, #eef1fa 35%, #ff8d23 45.29%, #ffb800 90%);
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-position: 0%;
+  box-shadow: inset 0 1px #fff, 0 2px 1px #e5e9f6;
+
+  &:hover {
+    color: $dark-lilac;
+    background-position: 85%;
+    &::after {
+      background-size: 0px;
+    }
+  }
+}
+
+.post-type-case {
+  background: #ebeff2;
+
+  .background-block_wrapper {
+    display: none;
+  }
+}
+
+.button-active {
+  background: linear-gradient(93deg, #ff8d23 15.29%, #ffb800 95.7%);
+
+  &::after {
+    background: linear-gradient(93deg, #ff8d23 15.29%, #ffb800 95.7%);
+  }
+
+  color: $dark-lilac;
+  &:hover {
+    color: $dark-lilac;
+  }
+}
+
+.arrow-1 {
+  position: relative;
+  width: 38px;
+  height: 17px;
+  margin: 0 14px;
+  transition: 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    background-color: $dark-lilac;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 50%;
+    left: 0;
+    background: none;
+    transform: translateY(-50%) rotateZ(45deg);
+    border: 2px solid $dark-lilac;
+    border-width: 0 0 2px 2px;
+  }
+
+  &.arrow-reverse {
+    &::before {
+      left: auto;
+      right: 0;
+
+      border-width: 2px 2px 0 0;
+    }
+  }
+}
+
+// *:hover {
+//   & > .arrow-1 {
+//     width: 70px;
+//   }
+// }

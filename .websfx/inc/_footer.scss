@@ -1,0 +1,592 @@
+.footer {
+  padding: 80px 0 0 0;
+  background-color: #383838;
+
+  $self: '.footer';
+
+  &__col-1 {
+    flex: 0 0 22%;
+    max-width: 22%;
+    padding: 0 15px;
+
+    @include sfx-media-down(xl) {
+      @include sfx-col-flex-custom(25%);
+    }
+
+    @include sfx-media-down(lg) {
+      @include sfx-col-flex-custom(36%);
+    }
+
+    @include sfx-media-down(md) {
+      @include sfx-col-flex-custom(48%);
+    }
+
+    @include sfx-media-down(sm) {
+      @include sfx-col-flex-custom(100%);
+    }
+  }
+
+  &__col-2 {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding: 0 15px;
+
+    @include sfx-media-down(xl) {
+      @include sfx-col-flex-custom(75%);
+    }
+
+    @include sfx-media-down(lg) {
+      @include sfx-col-flex-custom(64%);
+    }
+
+    @include sfx-media-down(md) {
+      @include sfx-col-flex-custom(52%);
+    }
+
+    @include sfx-media-down(sm) {
+      display: none;
+    }
+  }
+
+  &__col-3 {
+    flex: 0 0 18%;
+    max-width: 18%;
+    padding: 0 15px;
+
+    @include sfx-media-down(xl) {
+      @include sfx-col-flex-custom(100%);
+    }
+
+    @include sfx-media-down(md) {
+      display: none;
+    }
+  }
+
+  &__col-1-2 {
+    display: none;
+  }
+
+
+  &__row-menu {
+    display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+  }
+
+  &__col-menu {
+    flex: 0 0 33.3333333%;
+    max-width: 33.3333333%;
+    padding: 0 15px;
+
+    @include sfx-media-down(lg) {
+      @include sfx-col-flex-custom(50%);
+    }
+
+    @include sfx-media-down(md) {
+      @include sfx-col-flex-custom(100%);
+    }
+  }
+
+  .col-order-0 {
+    order: 0;
+  }
+  .col-order-1 {
+    order: 1;
+  }
+  .col-order-2 {
+    order: 2;
+  }
+  .col-order-3 {
+    order: 3;
+  }
+
+
+  &__logo {
+    margin: 0 0 35px 0;
+    img {
+      max-width: 207px;
+      width: 100%;
+    }
+  }
+
+  &__phone {
+    padding: 0 0 25px 0;
+    text-align: right;
+    &-number {
+      color: #b9b9b9;
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: -0.24px;
+
+      a {
+        color: #b9b9b9;
+      }
+
+      &:hover {
+        color: #b9b9b9;
+      }
+    }
+
+    @include sfx-media-down(xl) {
+      text-align: left;
+      display: none;
+      &-number {
+        margin: 0 auto 0 0;
+      }
+    }
+  }
+
+  &__order-link {
+    @include sfx-button(160px, 39px, 13px);
+    margin: 0 0 0 auto;
+
+    @include sfx-media-down(xl) {
+      display: none;
+    }
+  }
+
+  &__phone-mobile {
+    display: none;
+
+    @include sfx-media-down(xl) {
+      display: block;
+
+      #{$self}__phone {
+        display: block;
+      }
+
+      #{$self}__order-link {
+        margin: 0 auto 0 0;
+        display: flex;
+      }
+    }
+  }
+
+
+
+  &__adr {
+    color: #8eb95b;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    a, a:hover {
+      color: #8eb95b;
+    }
+  }
+
+
+  &__col-full {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 15px 0 15px;
+
+    @include sfx-media-down(md) {
+      margin-top: -100px;
+    }
+
+    @include sfx-media-down(sm) {
+      margin-top: 40px;
+    }
+  }
+
+  &__copyright {
+    color: #a9a9a9;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 500;
+    padding: 38px 0 0 48px;
+
+    a {
+      color: #a9a9a9;
+    }
+
+    @include sfx-media-down(md) {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+
+      @include sfx-media-down(md) {
+        display: block;
+        padding: 0;
+        margin-top: 140px;
+      }
+
+      @include sfx-media-down(sm) {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &__year20 {
+    padding: 25px 15px 0 15px;
+    align-items: center;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 1.1px;
+    background-color: $color-red;
+    height: 120px;
+    width: 117px;
+
+    @include sfx-media-down(sm) {
+      height: 95px;
+    }
+  }
+
+
+  &__mobile-menu {
+    &-ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    &-item {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px 0;
+    }
+    &-link {
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 500;
+      &:hover {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &-item {
+      list-style: none;
+      padding: 0 0 22px 0;
+      margin: 0;
+      line-height: 18px;
+    }
+
+    &-link {
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: -0.13px;
+
+      &:hover {
+        color: #cdcdcd;
+      }
+
+      &.parent {
+        text-transform: uppercase;
+      }
+    }
+
+    @include sfx-media-down(md) {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .social {
+    padding: 125px 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+
+    @include sfx-media-down(xl) {
+      padding: 0;
+      position: relative;
+      top: 65px;
+      top: 15px;
+    }
+
+    @include sfx-media-down(md) {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+      position: static;
+
+      @include sfx-media-down(md) {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 60px;
+      }
+    }
+
+
+    &__link {
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0 20px 0 0;
+      display: block;
+
+      &:last-child {
+        margin: 0;
+      }
+
+
+      &.vk {
+        background-image: url(images/vk-logo.svg);
+      }
+      &.fb {
+        background-image: url(images/facebook-logo.svg);
+      }
+      &.tw {
+        background-image: url(images/twitter-logo.svg);
+      }
+      &.drib {
+        background-image: url(images/dribbble-logo.svg);
+      }
+      &.inst {
+        background-image: url(images/instagram-logo.svg);
+      }
+    }
+
+    &.social-show-xl {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    @include sfx-flex-col-100();
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__iso {
+    display: flex;
+    align-items: center;
+    @include sfx-flex-col-auto();
+    width: 270px;
+    color: #a9a9a9;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: -0.16px;
+
+    img {
+      width: 48px;
+      height: 40px;
+      margin-right: 14px;
+    }
+
+    @include sfx-media-down(md) {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+      width: 100%;
+
+      @include sfx-media-down(md) {
+        display: flex;
+        margin-top: 60px;
+        font-size: 12px;
+        line-height: 17px;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+
+
+  &--en {
+    overflow: hidden;
+
+    #{$self}__menu {
+      min-width: 500px;
+      width: auto;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 5px;
+
+      @include sfx-media-down(xl) {
+        min-width: 450px;
+      }
+
+      @include sfx-media-down(md) {
+        display: block;
+      }
+
+      &-item {
+        @include sfx-media-down(md) {
+          display: block;
+        }
+      }
+    }
+
+    .social {
+      padding: 32px 0 0 0;
+      @include sfx-flex-col-auto();
+      width: 155px;
+
+      @include sfx-media-down(xl) {
+        top: 0;
+      }
+
+      &.mobile {
+        @include sfx-media-down(md) {
+          margin-top: 0;
+          padding-top: 0;
+        }
+      }
+    }
+
+    #{$self}__iso {
+      width: 35%;
+      padding-bottom: 34px;
+
+      @include sfx-media-down(md) {
+        width: 100%;
+        margin: 30px 0 0 0;
+        padding-bottom: 30px;
+      }
+    }
+
+    #{$self}__col-1 {
+      @include sfx-media-down(xl) {
+        @include sfx-col-flex-custom(22%);
+      }
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex-custom(36%);
+      }
+      @include sfx-media-down(md) {
+        @include sfx-col-flex-custom(48%);
+      }
+      @include sfx-media-down(sm) {
+        @include sfx-col-flex-custom(100%);
+      }
+    }
+
+    #{$self}__col-2 {
+      @include sfx-media-down(xl) {
+        @include sfx-col-flex-custom(57%);
+      }
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex-custom(64%);
+      }
+      @include sfx-media-down(md) {
+        @include sfx-col-flex-custom(52%);
+      }
+      @include sfx-media-down(sm) {
+        display: none;
+      }
+    }
+
+    #{$self}__col-3 {
+      @include sfx-media-down(xl) {
+        @include sfx-col-flex-custom(21%);
+      }
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex-custom(100%);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 15px;
+      }
+
+      @include sfx-media-down(md) {
+        display: none;
+      }
+    }
+
+    #{$self}__col-full {
+      @include sfx-media-down(md) {
+        margin-top: 0;
+      }
+    }
+
+    #{$self}__phone {
+      @include sfx-media-down(xl) {
+        display: block;
+        text-align: right;
+      }
+      @include sfx-media-down(lg) {
+        //display: none;
+        padding: 0;
+      }
+
+      @include sfx-media-down(md) {
+        text-align: left;
+        padding-bottom: 15px;
+      }
+    }
+
+    #{$self}__phone-mobile {
+      @include sfx-media-down(xl) {
+        display: none;
+      }
+      @include sfx-media-down(md) {
+        display: block;
+
+        #{$self}__phone {
+          display: block;
+        }
+
+        #{$self}__order-link {
+          display: flex;
+        }
+      }
+    }
+
+    #{$self}__order-link {
+      @include sfx-media-down(xl) {
+        display: flex;
+      }
+      @include sfx-media-down(lg) {
+        //display: none;
+        margin: 0 0 0 40px;
+      }
+
+      @include sfx-media-down(md) {
+        margin: 0;
+      }
+    }
+
+    #{$self}__copyright {
+      @include sfx-media-down(lg) {
+        padding: 38px 38px 0 23px;
+      }
+
+      &.mobile {
+        @include sfx-media-down(md) {
+          margin: 15px 0 15px 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+}
+
+
+.up-button {
+  width: 39px;
+  height: 39px;
+  background: url(images/up.png) no-repeat center;
+  background-size: cover;
+  position: fixed;
+  bottom: 40px;
+  right: 15px;
+  cursor: pointer;
+  display: none;
+  z-index: 100;
+}
+
+

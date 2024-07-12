@@ -1,0 +1,205 @@
+.modal {
+  .modal-dialog {
+    max-width: 937px;
+    margin-top: 100px;
+
+    @include sfx-media-down(lg) {
+      max-width: 580px;
+    }
+  }
+
+  .form-result {
+    background-color: #f8f8f8;
+  }
+
+  .modal-content {
+    border-radius: 0;
+    border: 0;
+    background-color: #f8f8f8;
+  }
+
+  .modal-header {
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-wrap: wrap;
+    min-height: 40px;
+    position: relative;
+  }
+
+  .modal-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+
+    &:before, &:after {
+      position: absolute;
+      left: 16px;
+      content: ' ';
+      height: 25px;
+      width: 2px;
+      background-color: #676767;
+      top: 4px;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .modal-body {
+    padding: 20px 60px 40px 60px;
+
+    .title {
+      line-height: 30px;
+      padding: 0 0 30px 0;
+      text-align: left;
+      color: #383838;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    .text {
+      padding: 0 0 0 0;
+      text-align: left;
+      position: relative;
+      margin: 0 0 40px 0;
+      color: #2b2b2b;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .error {
+      width: 100%;
+      overflow: hidden;
+      font-size: 14px;
+      color: #ff6872;
+      padding: 20px 0 0 0;
+      text-align: center;
+    }
+
+    .result {
+      padding: 50px 0 20px 0;
+      color: #2b2b2b;
+      font-size: 18px;
+      line-height: 24px;
+      display: none;
+      text-align: center;
+    }
+
+  }
+
+
+  .modal-form {
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      //width: 100%;
+      margin: 0 -10px;
+    }
+
+    .sfx-form-group:last-child {
+      @include sfx-media-down(xl) {
+        padding-bottom: 0;
+      }
+      @include sfx-media-down(lg) {
+        padding-bottom: 15px;
+      }
+    }
+
+    &__col {
+      @include sfx-col-flex(6);
+      padding: 0 10px;
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(12);
+      }
+
+      &.relative {
+        position: relative;
+        padding-bottom: 53px;
+      }
+    }
+
+    &__textarea {
+      height: 130px;
+    }
+
+    &__agree {
+      color: #898989;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 17px;
+      padding: 0px 0 0 0;
+
+      a {
+        color: $color-red;
+      }
+    }
+
+    &__send {
+      @include sfx-button(175px, 43px, 13px);
+      position: absolute;
+      left: 10px;
+      bottom: 0;
+    }
+  }
+
+
+  @include sfx-media-down(sm) {
+
+    .modal-dialog {
+      margin-top: 10px;
+    }
+
+    .modal-close {
+      right: 15px;
+      top: 15px;
+    }
+
+    .modal-body {
+      padding: 0 25px 25px 25px;
+
+      .title {
+        font-size: 24px;
+        line-height: 24px;
+      }
+
+      .text {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+
+
+
+  &.bitrix24-modal {
+    .modal-dialog {
+      max-width: 1280px;
+      margin-top: 100px;
+
+      @include sfx-media-down(lg) {
+        max-width: 1280px;
+      }
+    }
+
+    .modal-body {
+      padding: 20px 35px 40px 35px;
+
+      @include sfx-media-down(lg) {
+        padding: 20px 15px 40px 15px;
+      }
+    }
+  }
+}
+
+

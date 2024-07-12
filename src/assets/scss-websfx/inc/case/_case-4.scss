@@ -1,0 +1,81 @@
+.case-4 {
+  .case__col-text {
+    padding-top: 15px;
+  }
+
+  .case__col-image.b--abs img.case-4__img-1 {
+    /*width: 920px;
+    top: -50px;
+    left: -50px;*/
+    top: -15px;
+    left: -50px;
+    height: 600px;
+    max-width: 100%;
+
+    @include sfx-media-down(xl) {
+      //width: 586px;
+      top: -26px;
+      height: auto;
+    }
+
+    @include sfx-media-down(lg) {
+      width: 100%;
+      max-width: 700px;
+      max-width: 450px;
+      max-height: 100%;
+      height: auto;
+    }
+  }
+
+  .case__col-image.b--abs img.case-4__img-2 {
+    /*width: 920px;
+    top: -80px;
+    right: -50px;*/
+
+    width: 850px;
+    top: -80px;
+    right: -90px;
+
+    @include sfx-media-down(xl) {
+      width: 578px;
+      top: -21px;
+    }
+
+    @include sfx-media-down(lg) {
+      width: 100%;
+      max-width: 700px;
+      max-height: 100%;
+    }
+  }
+
+  .pbt50 {
+    padding-top: 80px;
+
+    @include sfx-media-down(lg) {
+        padding-top: 30px;
+    }
+  }
+
+  .pbt0 {
+    padding-top: 0;
+  }
+
+  .case__row {
+    &.b--reverse {
+      .case__col {
+        &:nth-child(1) {
+          @include sfx-media-down(lg) {
+            order: 1;
+          }
+        }
+
+        &:nth-child(2) {
+          @include sfx-media-down(lg) {
+            order: 0;
+          }
+        }
+      }
+    }
+  }
+}
+

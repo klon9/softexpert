@@ -1,0 +1,82 @@
+.visit-site {
+
+  .steps-block {
+    padding-bottom: 0;
+  }
+
+  .more-services {
+
+    &__row {
+      margin: 0 -45px;
+
+      @include sfx-media-down(lg) {
+        margin: 0 -15px;
+      }
+    }
+
+    .c-col-1 {
+      @include sfx-col-flex-custom(50%);
+      padding: 0 45px;
+
+      @include sfx-media-down(lg) {
+        padding: 0 15px;
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex-custom(100%);
+      }
+    }
+
+    .c-col-2 {
+      @include sfx-col-flex-custom(50%);
+      padding: 0 45px;
+
+      @include sfx-media-down(lg) {
+        padding: 0 15px;
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex-custom(100%);
+      }
+    }
+
+    .params {
+
+      @include sfx-media-down(md) {
+        padding-top: 60px;
+      }
+
+      &__item {
+        @include sfx-col-flex(4);
+
+        @include sfx-media-down(xl) {
+          @include sfx-col-flex(6);
+        }
+
+        @include sfx-media-down(md) {
+          @include sfx-col-flex(4);
+        }
+
+        @include sfx-media-down(sm) {
+          @include sfx-col-flex(6);
+        }
+
+        &:nth-child(4) {
+          background-color: #383838;
+          color: #ffffff;
+        }
+        &:nth-child(5) {
+          background-color: #c42134;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .services-block {
+    @include sfx-media-down(xl) {
+      padding-bottom: 0px;
+      padding-top: 50px;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.usability {
+
+  .positive-block {
+    .c-col {
+      @include sfx-col-flex(6);
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+  }
+
+  .steps-block {
+
+    @include sfx-media-down(xl) {
+      padding-bottom: 10px;
+    }
+
+    &__col {
+      @include sfx-col-flex(6);
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(6);
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+
+    &__text {
+      color: #727272;
+    }
+  }
+
+
+  .services-block {
+    padding: 30px 0 10px 0;
+
+    @include sfx-media-down(xl) {
+      padding: 30px 0 0 0;
+    }
+  }
+
+  .advantages-block {
+    padding-bottom: 30px;
+  }
+
+  .positive-block {
+    padding-top: 10px;
+    padding-bottom: 0;
+
+    @include sfx-media-down(md) {
+      padding-bottom: 40px;
+    }
+  }
+
+  .steps-block {
+    padding-top: 0;
+    padding-bottom: 40px;
+
+    @include sfx-media-down(md) {
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .positive-block.positive-bold .positive-block__item-text {
+    font-weight: 400;
+  }
+
+  /*.download-example {
+    @include sfx-button(160px, 39px, 13px);
+    max-width: 315px;
+    width: 100%;
+  }*/
+}

@@ -1,0 +1,64 @@
+.partners-index {
+  padding: 60px 0 75px 0;
+  background: #f7f9f9;
+
+  .partner-list {
+    padding: 70px 0 60px 0;
+
+    &__item {
+      margin: 0 15px;
+    }
+
+    &__inner {
+      height: 70px;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    &__image {
+      max-width: 100%;
+    }
+
+    .slick-list {
+      margin: 0 -15px;
+    }
+  }
+
+  .partner-slider {
+    margin: 0;
+  }
+
+  .slick-dots {
+    bottom: -60px;
+    li {
+      button {
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+
+        &:before {
+          content: '';
+          width: 6px;
+          height: 6px;
+          background-color: #84927e;
+          opacity: 0.5;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      &.slick-active {
+        button {
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

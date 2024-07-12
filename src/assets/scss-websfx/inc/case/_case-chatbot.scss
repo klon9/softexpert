@@ -1,0 +1,28 @@
+.case-chatbot-1 {
+  .case__red-block {
+    .case__col {
+      &:nth-child(1), &:nth-child(2) {
+        margin-bottom: 80px;
+      }
+    }
+
+    .case__red-block-title {
+      padding-bottom: 0;
+    }
+  }
+}
+
+
+.case-chatbot-2 {
+  .case__red-block {
+    .case__col {
+      &:nth-child(1), &:nth-child(2) {
+        margin-bottom: 80px;
+      }
+    }
+
+    .case__red-block-title {
+      padding-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.infoblog-page {
+
+  padding: 90px 0 90px 0;
+
+  @include sfx-media-down(sm) {
+    padding-top: 50px;
+  }
+
+  h2 {
+    color: #101010;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    padding: 0 0 35px 0;
+  }
+
+  .infoblog {
+    padding-top: 40px;
+  }
+
+  @media (max-width:991.98px) {
+    .infoblog__item-wrap {
+      margin-bottom: 22px;
+    }
+  }
+}

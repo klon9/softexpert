@@ -1,0 +1,121 @@
+.order-form-wrap {
+  padding: 100px 0 100px 0;
+
+  @include sfx-media-down(xl) {
+    padding-bottom: 55px;
+  }
+
+  @include sfx-media-down(lg) {
+    padding-top: 45px;
+  }
+
+  .order-form {
+    &__desc {
+      background-color: #dfe3e4;
+      padding: 55px 45px;
+      height: 100%;
+
+      @include sfx-media-down(xl) {
+        height: auto;
+      }
+
+      @include sfx-media-down(lg) {
+        margin-bottom: 80px;
+      }
+
+      @include sfx-media-down(sm) {
+        padding: 45px 25px;
+        margin-bottom: 50px;
+      }
+    }
+
+    &__title {
+      @include sfx-title();
+      color: #383838;
+      padding-bottom: 40px;
+    }
+
+    &__text {
+      color: #898989;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 21px;
+
+      p {
+        margin: 0 0 15px 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @include sfx-media-down(sm) {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+
+    &__form {
+
+    }
+
+    &__form-inner {
+      display: flex;
+      flex-wrap: wrap;
+      //width: 100%;
+      margin: 0 -10px;
+      position: relative;
+    }
+
+    &__col {
+      @include sfx-col-flex(6);
+      padding: 0 10px;
+
+      @include sfx-media-down(xl) {
+        @include sfx-col-flex(12);
+      }
+
+      &.relative {
+        //position: relative;
+        //padding-bottom: 53px;
+      }
+    }
+
+    &__group {
+
+    }
+
+    &__label {
+
+    }
+
+    &__input {
+
+    }
+
+    &__textarea {
+      height: 130px;
+    }
+
+    &__agree {
+      color: #898989;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 17px;
+      padding: 0px 0 0 0;
+
+      a {
+        color: $color-red;
+      }
+    }
+
+    &__send {
+      @include sfx-button(175px, 43px, 13px);
+      position: absolute;
+      left: 10px;
+      bottom: 0;
+    }
+
+  }
+
+}

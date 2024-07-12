@@ -1,0 +1,96 @@
+.seo-target {
+
+  .services-block {
+    padding: 0px 0 50px 0;
+
+    @include sfx-media-down(xl) {
+      padding-bottom: 0;
+    }
+
+    .c-col-6.text {
+      padding-left: 15px;
+    }
+  }
+
+  .positive-block {
+    .c-col {
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(6);
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+  }
+
+
+  .who-suits {
+    @include sfx-media-down(sm) {
+      padding-top: 40px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .seo-stages {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include sfx-media-down(xl) {
+      padding-bottom: 20px;
+    }
+
+    @include sfx-media-down(sm) {
+      padding-top: 40px;
+    }
+
+    &__title {
+      text-transform: none;
+      padding-bottom: 30px;
+    }
+  }
+
+  .seo-stages__images img {
+    margin-bottom: 45px;
+  }
+
+
+  .steps-block {
+    padding-bottom: 0;
+    overflow: hidden;
+
+    @include sfx-media-down(xl) {
+      padding-bottom: 0px;
+    }
+
+    @include sfx-media-down(sm) {
+      padding-bottom: 0;
+    }
+
+    &__col {
+      @include sfx-col-flex(6);
+      padding: 0 35px;
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(6);
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+
+    &__list {
+      margin: 0 -35px;
+    }
+
+    &__item {
+      background-size: 36px 35px;
+      padding: 70px 0 0 0;
+      margin-bottom: 70px;
+    }
+  }
+
+}

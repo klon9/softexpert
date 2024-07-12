@@ -1,0 +1,544 @@
+.video {
+  .services-block {
+    padding-top: 30px;
+  }
+
+  .positive-block__info-title {
+    padding-bottom: 60px;
+  }
+
+
+  .order-banner__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 750px;
+    margin: 34px auto 60px auto;
+
+    @include sfx-media-down(sm) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    div {
+      padding: 0 0 0 55px;
+      background: url(images/marker-check.png) no-repeat 0 0;
+      background-size: 24px 23px;
+      min-height: 24px;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 22px;
+
+      @include sfx-media-down(sm) {
+        width: 100%;
+        text-align: left;
+        margin: 0 0 15px 0;
+      }
+    }
+  }
+
+
+  &_types {
+    padding: 80px 0 60px 0;
+    background-color: #f7f7f7;
+
+    @include sfx-media-down(xl) {
+      padding: 80px 0 60px 0;
+    }
+
+    @include sfx-media-down(lg) {
+      padding: 60px 0 60px 0;
+    }
+
+    @include sfx-media-down(md) {
+      padding: 50px 0 50px 0;
+    }
+
+    @include sfx-media-down(sm) {
+      padding: 50px 0 30px 0;
+    }
+
+    &__title {
+      width: 100%;
+      padding: 0 0 100px 0;
+
+      @include sfx-media-down(lg) {
+        padding: 0 0 50px 0;
+      }
+
+      @include sfx-media-down(md) {
+        padding: 0 0 50px 0;
+      }
+
+      h2 {
+        color: #101010;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 32px;
+        margin: 0;
+
+        @include sfx-media-down(lg) {
+          font-size: 42px;
+          line-height: 58px;
+        }
+
+        @include sfx-media-down(sm) {
+          font-size: 26px;
+          line-height: 38px;
+        }
+      }
+    }
+
+    &__list {
+      overflow: hidden;
+
+      &-row {
+        display: flex;
+        margin: 0 -20px;
+        flex-wrap: wrap;
+
+        @include sfx-media-down(xl) {
+          margin: 0 -30px;
+        }
+
+        @include sfx-media-down(lg) {
+          margin: 0 -15px;
+        }
+      }
+
+      &-col {
+        @include sfx-col-flex(4);
+        padding: 0 20px 40px 20px;
+
+        @include sfx-media-down(xl) {
+          @include sfx-col-flex(6);
+          padding: 0 30px 60px 30px;
+        }
+
+        @include sfx-media-down(lg) {
+          padding: 0 15px 30px 15px;
+        }
+
+        @include sfx-media-down(md) {
+          @include sfx-col-flex(12);
+        }
+      }
+
+      &-item {
+        height: 510px;
+        position: relative;
+        overflow: hidden;
+
+        @include sfx-media-down(lg) {
+          height: 400px;
+        }
+
+        &:hover {
+          .video_types__list-content {
+            transform: translateY(0px);
+            transition: all .4s cubic-bezier(0.7, 0, 0.3, 1);
+          }
+          .video_types__list-image {
+            transform: translateY(-25px);
+            transition: all .4s cubic-bezier(0.7, 0, 0.3, 1);
+          }
+          .video_types__list-video {
+            opacity: 1;
+            transition: all .4s cubic-bezier(0.7, 0, 0.3, 1);
+          }
+        }
+      }
+
+      &-video {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all .4s cubic-bezier(0.7, 0, 0.3, 1);
+
+        &:after {
+          content: '';
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          display: block;
+          position: absolute;
+          background: rgba(0, 0, 0, 0.2);
+        }
+
+        video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+
+          @supports (object-fit: cover) {
+            object-fit: cover;
+          }
+        }
+      }
+
+      &-image {
+        height: 530px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: all .4s cubic-bezier(0.7, 0, 0.3, 1);
+      }
+
+      &-content {
+        padding: 0 40px 40px 40px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transform: translateY(calc(100% - 108px - 32px));
+        transition: all .4s cubic-bezier(0.7, 0, 0.3, 1);
+        z-index: 2;
+
+        @include sfx-media-down(xl) {
+          transform: translateY(calc(100% - 108px - 28px));
+        }
+
+        @include sfx-media-down(lg) {
+          padding: 0 30px 30px 30px;
+          transform: translateY(calc(100% - 108px - 9px));
+        }
+
+        @include sfx-media-down(sm) {
+          padding: 0 15px 15px 15px;
+        }
+      }
+
+      &-title {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        height: 100px;
+
+        @include sfx-media-down(xl) {
+          font-size: 24px;
+          line-height: 30px;
+          height: 96px;
+        }
+
+        @include sfx-media-down(lg) {
+          font-size: 23px;
+          line-height: 27px;
+          height: 87px;
+        }
+      }
+
+      &-text {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 40px 0 0 0;
+
+        @include sfx-media-down(xl) {
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        @include sfx-media-down(lg) {
+          font-size: 14px;
+          line-height: 20px;
+          padding: 30px 0 0 0;
+        }
+      }
+    }
+  }
+
+
+  &_advantages {
+    padding: 100px 0 130px 0;
+    background-color: #383838;
+
+    @include sfx-media-down(xl) {
+      padding: 50px 0 50px 0;
+    }
+
+    @include sfx-media-down(md) {
+      padding: 40px 0 50px 0;
+    }
+
+    @include sfx-media-down(sm) {
+      padding: 30px 0 40px 0;
+    }
+
+    &__title {
+      width: 100%;
+      padding: 0 0 70px 0;
+
+      @include sfx-media-down(xl) {
+        padding: 0 0 60px 0;
+      }
+
+      @include sfx-media-down(md) {
+        padding: 0 0 40px 0;
+      }
+
+      @include sfx-media-down(sm) {
+        padding: 0 0 30px 0;
+      }
+
+      h2 {
+        color: #ffffff;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: 0.56px;
+        margin: 0;
+
+        @include sfx-media-down(sm) {
+          font-size: 22px;
+          line-height: 30px;
+        }
+      }
+    }
+
+    &__list {
+      overflow: hidden;
+
+      &-row {
+        display: flex;
+        margin: 0 -50px;
+        flex-wrap: wrap;
+
+        @include sfx-media-down(xl) {
+          margin: 0 -20px;
+        }
+      }
+
+      &-col {
+        padding: 0 50px;
+        @include sfx-col-flex(6);
+
+        @include sfx-media-down(xl) {
+          padding: 0 20px;
+        }
+
+        @include sfx-media-down(lg) {
+          @include sfx-col-flex(12);
+        }
+
+        &:nth-child(1), &:nth-child(2) {
+          margin-bottom: 120px;
+
+          @include sfx-media-down(xl) {
+            margin-bottom: 80px;
+          }
+
+          @include sfx-media-down(lg) {
+            margin-bottom: 40px;
+          }
+
+          @include sfx-media-down(md) {
+            margin-bottom: 50px;
+          }
+        }
+
+        &:nth-child(3) {
+          @include sfx-media-down(lg) {
+            margin-bottom: 40px;
+          }
+
+          @include sfx-media-down(md) {
+            margin-bottom: 50px;
+          }
+        }
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+      }
+
+      &-image {
+        @include sfx-flex-col-auto();
+        width: 120px;
+        overflow: hidden;
+
+        @include sfx-media-down(sm) {
+          width: 75px;
+        }
+
+        .lord-icon-1, .lord-icon-2, .lord-icon-3, .lord-icon-4 {
+          width: 148px;
+          height: 148px;
+
+          @include sfx-media-down(xl) {
+            width: 130px;
+            height: 130px;
+          }
+
+          @include sfx-media-down(sm) {
+            width: 100px;
+            height: 100px;
+          }
+        }
+
+        .lord-icon-1 {
+          margin-left: -15px;
+        }
+        .lord-icon-2 {
+          margin-left: -15px;
+        }
+        .lord-icon-3 {
+          margin-left: -12px;
+        }
+        .lord-icon-4 {
+          margin-left: -15px;
+        }
+      }
+
+      &-text {
+        @include sfx-flex-col-100();
+        padding: 0 0 0 70px;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 34px;
+
+        @include sfx-media-down(xl) {
+          font-size: 20px;
+          line-height: 39px;
+          padding: 0 0 0 30px;
+        }
+
+        @include sfx-media-down(sm) {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+
+  &_portfolio__list {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-title {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 36px;
+      position: absolute;
+      width: 100%;
+      bottom: 40px;
+      left: 0;
+      padding: 0 40px;
+      z-index: 2;
+
+      @include sfx-media-down(lg) {
+        font-size: 22px;
+        line-height: 30px;
+        padding: 0 30px;
+        bottom: 30px;
+      }
+
+      @include sfx-media-down(sm) {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0 15px;
+        bottom: 20px;
+      }
+    }
+
+    &-col {
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(xl) {
+        @include sfx-col-flex(6);
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+
+      .video-block {
+        height: 440px;
+
+        @include sfx-media-down(lg) {
+          height: 400px;
+        }
+
+        @include sfx-media-down(md) {
+          height: 330px;
+        }
+
+        @include sfx-media-down(sm) {
+          height: 280px;
+        }
+      }
+    }
+
+    &-item {
+      .youtube {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: absolute;
+          z-index: 1;
+          background: #000000;
+          opacity: 0.2;
+        }
+      }
+
+      .video-block {
+        position: relative;
+        display: flex;
+
+        iframe {
+          height: 100% !important;
+        }
+      }
+
+      .play {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 146px;
+        height: 146px;
+        background: url(images/icon-play.svg) no-repeat center;
+        background-size: cover;
+        border: 0;
+        position: absolute;
+
+        @include sfx-media-down(lg) {
+          width: 96px;
+          height: 96px;
+        }
+      }
+    }
+  }
+
+}

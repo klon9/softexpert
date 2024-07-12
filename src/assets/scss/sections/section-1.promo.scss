@@ -79,6 +79,12 @@
   }
 }
 
+@include desktop-1420 {
+  .t-hidden {
+    display: none;
+  }
+}
+
 @include small-desktop {
   .main-promo_image {
     width: 570px;

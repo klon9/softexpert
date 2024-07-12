@@ -1,0 +1,219 @@
+.case-spares {
+  overflow: hidden;
+
+  &__img-1 {
+    overflow: visible;
+
+    @include sfx-media-down(lg) {
+      margin-bottom: 15px;
+    }
+
+    img {
+      transform: translateX(-59px) translateY(-37px);
+
+      @include sfx-media-down(xl) {
+        transform: translateX(-34px) translateY(-28px);
+      }
+
+      @include sfx-media-down(lg) {
+        transform: none;
+      }
+    }
+  }
+
+  &__img-2 {
+    overflow: visible;
+    position: relative;
+    height: 655px;
+
+    @include sfx-media-down(xl) {
+      height: 444px;
+    }
+
+    @include sfx-media-down(md) {
+      height: auto;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 960px;
+      height: 655px;
+      max-width: none;
+      max-height: none;
+
+      @include sfx-media-down(xl) {
+        width: 650px;
+        height: 444px;
+      }
+
+      @include sfx-media-down(lg) {
+        position: static;
+      }
+
+      @include sfx-media-down(md) {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  &__vcenter {
+    align-items: center;
+    display: flex;
+  }
+
+  &__col-title {
+    position: relative;
+    color: #2c2c2c;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 0 0 0 75px;
+    margin: 20px 0 40px 0;
+
+    @include sfx-media-down(lg) {
+      margin: 20px 0 20px 0;
+    }
+
+    @include sfx-media-down(sm) {
+      padding: 0 0 0 55px;
+    }
+
+    span {
+      color: #252525;
+      font-size: 60px;
+      font-weight: 500;
+      line-height: 50.8px;
+      letter-spacing: -1.06px;
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+
+      @include sfx-media-down(sm) {
+        font-size: 40px;
+        line-height: 40px;
+        bottom: 2px;
+      }
+    }
+  }
+
+  &__resort {
+    @include sfx-media-down(lg) {
+      .case__col {
+        &:nth-child(3) {
+          order: 3;
+        }
+        &:nth-child(4) {
+          order: 2;
+        }
+      }
+    }
+  }
+
+  &__col-img {
+    img {
+      margin: -180px auto -20px auto;
+      display: block;
+
+      @include sfx-media-down(lg) {
+        margin: 0 auto -20px auto;
+        max-width: 280px;
+      }
+    }
+  }
+
+  &__shadow {
+    &-title {
+      padding-bottom: 50px;
+      text-align: center;
+
+      @include sfx-media-down(sm) {
+        padding-top: 10px;
+      }
+
+      span {
+        color: #ffffff;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0.14px;
+        display: inline-block;
+        padding: 3px 18px;
+        background-color: #c4262e;
+
+        @include sfx-media-down(sm) {
+          font-size: 22px;
+          line-height: 26px;
+        }
+      }
+    }
+
+    &-row {
+      display: flex;
+      margin: 0 -25px;
+
+      @include sfx-media-down(lg) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &-col {
+      padding: 0 25px;
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(12);
+        margin-bottom: 45px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-item {
+      &-value {
+        color: #252525;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 48px;
+        letter-spacing: -0.7px;
+
+        @include sfx-media-down(sm) {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+
+      &-text {
+        padding: 30px 0 0 0;
+        color: #191d38;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: -0.4px;
+
+        @include sfx-media-down(lg) {
+          padding-top: 15px;
+        }
+
+        @include sfx-media-down(sm) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  .case__text ul li {
+    @include sfx-media-down(sm) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+}

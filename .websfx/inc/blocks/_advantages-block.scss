@@ -1,0 +1,91 @@
+.advantages-block {
+  padding: 90px 0 70px 0;
+
+  @include sfx-media-down(lg) {
+    padding-top: 65px;
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    @include sfx-title();
+  }
+
+  &__text {
+    @include sfx-text();
+
+    a {
+      color: #c4262e;
+    }
+
+    p {
+      margin: 0 0 15px 0;
+      padding: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .consultation {
+    background-color: #c4262e;
+    padding: 50px 60px;
+    text-align: center;
+    min-height: 295px;
+    //height: 100%;
+
+    @include sfx-media-down(xl) {
+      padding: 50px 25px;
+    }
+
+    @include sfx-media-down(md) {
+      margin-top: 50px;
+      min-height: auto;
+    }
+
+    @include sfx-media-down(sm) {
+      padding: 40px 15px;
+    }
+
+    &__title {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 50px;
+
+      @include sfx-media-down(xl) {
+        font-size: 25px;
+        line-height: 30px;
+      }
+
+      @include sfx-media-down(sm) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+
+    &__text {
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 21px;
+      padding: 30px 0;
+
+      @include sfx-media-down(xl) {
+        padding: 25px 0;
+      }
+
+      @include sfx-media-down(sm) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &__link {
+      button {
+        @include sfx-button(161px, 39px, 13px);
+        border: 2px solid #ffffff;
+        margin: 0 auto;
+      }
+    }
+  }
+}

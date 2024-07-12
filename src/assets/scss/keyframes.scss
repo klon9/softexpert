@@ -78,39 +78,56 @@
 }
 
 @keyframes draw {
-  0%{
+  0% {
     stroke-dashoffset: 336.131591796875;
   }
   80% {
     stroke-dashoffset: 0;
     fill-opacity: 0;
   }
-  100%{
+  100% {
     stroke-dashoffset: 0;
     fill-opacity: 1;
   }
 }
 
-@keyframes showFill{
-  0%{
+@keyframes showFill {
+  0% {
     fill-opacity: 0;
   }
 
-  25%{
+  25% {
     fill-opacity: 1;
   }
 
-  75%{
+  75% {
     fill-opacity: 1;
   }
 
-  100%{
+  100% {
     fill-opacity: 0;
   }
 }
 
-@keyframes showPreloadText{
-  100%{
-    transform: translate(0,0);
+@keyframes showPreloadText {
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes pulseRegular {
+  0% {
+    opacity: 1;
+    transform: scale(.6);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
   }
 }

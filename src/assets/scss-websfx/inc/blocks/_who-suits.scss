@@ -1,0 +1,55 @@
+.who-suits {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @include sfx-media-down(xl) {
+    padding-bottom: 60px;
+  }
+
+  @include sfx-media-down(md) {
+    padding-top: 70px;
+  }
+
+
+  &__title {
+    @include sfx-title();
+    padding-bottom: 80px;
+    margin: 0;
+  }
+  &__list {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    @include sfx-col-flex(3);
+    padding: 0 15px;
+
+    @include sfx-media-down(xl) {
+      @include sfx-col-flex(6);
+      margin-bottom: 30px;
+    }
+
+    @include sfx-media-down(md) {
+      @include sfx-col-flex(12);
+    }
+  }
+
+  &__item {
+    padding: 0 0 0 55px;
+    background: url(images/marker-check.png) no-repeat 0 0;
+    background-size: 24px 23px;
+    min-height: 30px;
+    color: #727272;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+
+    .text-small {
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+}

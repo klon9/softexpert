@@ -1,0 +1,85 @@
+.order-banner {
+  padding: 100px 0 100px 0;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include sfx-media-down(md) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 35px;
+    padding: 0 0 35px 0;
+
+    @include sfx-media-down(sm) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__text {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    padding: 0 0 40px 0;
+
+    &.padding-bottom {
+      padding-bottom: 80px;
+    }
+  }
+
+  &__price {
+    color: #ffffff;
+    font-size: 70px;
+    font-weight: 300;
+    line-height: 52px;
+    padding: 20px 0 60px 0;
+
+    @include sfx-media-down(lg) {
+      font-size: 48px;
+    }
+
+    @include sfx-media-down(md) {
+      padding: 0px 0 40px 0;
+    }
+
+    @include sfx-media-down(sm) {
+      font-size: 38px;
+      line-height: 48px;
+    }
+  }
+
+  &__link {
+    button {
+      @include sfx-button(161px, 39px, 13px);
+      margin: 0 auto;
+    }
+  }
+
+  &__tag {
+    color: $color-white;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    padding: 5px 12px;
+    background-color: $color-red;
+    display: inline-block;
+    margin: 0 auto 24px auto;
+
+    &:hover {
+      color: #fff;
+    }
+
+    @include sfx-media-down(sm) {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+}

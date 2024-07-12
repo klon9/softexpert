@@ -1,0 +1,79 @@
+.inform-portal {
+
+  .positive-block {
+    padding-bottom: 20px;
+
+    .c-row {
+      margin: 0 -30px;
+    }
+    .c-col {
+      padding: 0 30px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 20px 0 0 0;
+
+      li {
+        list-style: none;
+        position: relative;
+        padding: 0 0 0 39px;
+        color: #212121;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        margin: 0 0 15px 0;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 24px;
+          height: 24px;
+          background: url(images/marker-check.png) no-repeat 0 0;
+          background-size: 24px;
+          position: absolute;
+          top: -3px;
+          left: 0;
+        }
+      }
+    }
+  }
+
+
+  .mini-title {
+    color: #242424;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
+  }
+
+  .req {
+    color: $color-red;
+  }
+
+
+  .steps-block {
+    border: 1px solid #e8e8e8;
+    padding-top: 60px;
+
+    @include sfx-media-down(xl) {
+      padding-bottom: 60px;
+    }
+
+    &__col {
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(6);
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+  }
+
+
+
+
+}

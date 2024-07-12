@@ -1,0 +1,111 @@
+.seo-context {
+
+  .services-block {
+    padding: 0px 0 50px 0;
+
+    @include sfx-media-down(xl) {
+      padding-bottom: 0;
+    }
+
+    .c-col-6.text {
+      padding-left: 15px;
+    }
+  }
+
+  .positive-block {
+    .c-col {
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(6);
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+  }
+
+
+  .who-suits {
+    @include sfx-media-down(sm) {
+      padding-top: 40px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .seo-stages {
+    border: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include sfx-media-down(xl) {
+      padding-bottom: 20px;
+    }
+
+    @include sfx-media-down(sm) {
+      padding-top: 40px;
+    }
+
+    &__title {
+      text-transform: none;
+      padding-bottom: 30px;
+    }
+  }
+
+  .seo-stages__images img {
+    margin-bottom: 45px;
+  }
+
+
+  .steps-block {
+    padding-bottom: 0;
+
+    @include sfx-media-down(xl) {
+      padding-bottom: 0px;
+    }
+
+    @include sfx-media-down(sm) {
+      padding-bottom: 0;
+    }
+
+    &__col {
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(6);
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+
+
+      &:last-child {
+        .steps-block__item {
+          position: relative;
+          padding: 0 45px 0 45px;
+
+          &:after {
+            content: '';
+            background: #c4262e;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: calc(100% + 40px);
+            top: -20px;
+            left: 0;
+          }
+        }
+
+        .steps-block__text {
+          z-index: 3;
+          position: relative;
+          color: #ffffff;
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,9 @@
+.case-3 {
+  .case__col-text {
+    padding-top: 40px;
+
+    @include sfx-media-down(lg) {
+      padding-top: 0;
+    }
+  }
+}

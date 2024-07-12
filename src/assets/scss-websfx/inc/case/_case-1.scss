@@ -1,0 +1,256 @@
+.case-1 {
+  .case__col-image {
+    padding-left: 30px;
+  }
+
+  .case__row {
+    padding-bottom: 60px;
+  }
+
+  .case__col-image {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+
+    @include sfx-media-down(xl) {
+      align-items: center;
+    }
+
+    @include sfx-media-down(lg) {
+      justify-content: center;
+    }
+
+    img {
+      position: relative;
+      margin-bottom: -100px;
+      z-index: 2;
+
+      @include sfx-media-down(lg) {
+        margin-bottom: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__full {
+    &-row {
+      display: flex;
+
+      @include sfx-media-down(md) {
+        margin: 0 -15px;
+      }
+    }
+
+    &-col {
+      @include sfx-col-flex(6);
+      position: relative;
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+
+      &.b--image {
+        background: #353535;
+        text-align: right;
+
+        @include sfx-media-down(md) {
+          display: none;
+        }
+
+        &:after {
+          content: "";
+          display: flex;
+          width: 3000px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: 100%;
+          background: #353535;
+
+          @include sfx-media-down(md) {
+            display: none;
+          }
+        }
+      }
+
+      &-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #ffffff;
+        padding: 0 0 40px 0;
+
+        @include sfx-media-down(xl) {
+          padding: 0 0 20px 0;
+        }
+      }
+
+      &.b--text {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 23px;
+        text-align: justify;
+        color: #ffffff;
+        background: #67d335;
+        padding: 0 0 0 60px;
+        display: flex;
+        align-items: center;
+
+        @include sfx-media-down(xl) {
+          padding: 0 0 0 15px;
+        }
+
+        @include sfx-media-down(lg) {
+          padding: 15px 0 15px 15px;
+        }
+
+        @include sfx-media-down(md) {
+          padding: 15px;
+
+          &:before {
+            content: "";
+            display: flex;
+            width: 3000px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            background: #67d335;
+          }
+        }
+
+        &:after {
+          content: "";
+          display: flex;
+          width: 3000px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          background: #67d335;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            list-style: none;
+            position: relative;
+            padding: 0 0 0 15px;
+            margin: 0 0 20px 0;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &:after {
+              content: "•";
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    &-list {
+      display: flex;
+      margin: 0 -15px;
+      justify-content: space-between;
+      padding: 100px 0 100px 0;
+
+      @include sfx-media-down(md) {
+        padding: 50px 0 50px 0;
+        flex-wrap: wrap;
+      }
+    }
+
+    &-item {
+      max-width: 385px;
+      padding: 0 15px;
+
+      @include sfx-media-down(xl) {
+        width: 300px;
+      }
+
+      @include sfx-media-down(lg) {
+        width: 238px;
+      }
+
+      @include sfx-media-down(md) {
+        width: 300px;
+        margin: 0 auto;
+      }
+
+      &.b--reverse {
+        padding-top: 80px;
+
+        @include sfx-media-down(md) {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .case-1__image-text {
+          padding: 0 0 30px 0;
+
+          @include sfx-media-down(md) {
+            order: 1;
+            padding: 30px 0 80px 0;
+          }
+        }
+
+        .case-1__image-img {
+          @include sfx-media-down(md) {
+            order: 0;
+          }
+        }
+      }
+    }
+
+    &-img {
+      height: 720px;
+      text-align: center;
+
+      @include sfx-media-down(xl) {
+        height: 550px;
+      }
+
+      @include sfx-media-down(lg) {
+        height: 420px;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: $color-lilac;
+      padding: 30px 0 0 0;
+      text-align: left;
+    }
+  }
+
+  &__result {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: $color-lilac;
+
+    @include sfx-media-down(xl) {
+      br {
+        display: none;
+      }
+    }
+  }
+}

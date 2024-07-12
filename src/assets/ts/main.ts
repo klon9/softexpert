@@ -1,23 +1,39 @@
 import "../scss/main.scss";
+// import "../scss-websfx/theme.scss";
 import "./components/sliders";
-import "./components/header";
+import { headerActions } from "./components/header";
 import "./components/modal";
 import { preloader } from "./components/preloader";
+import { getCookie, setCookie } from "./cookie";
 import {
   inputsMask,
-  validate,
-  setFormsPreventDefault,
+  //validate,
+  //setFormsPreventDefault,
 } from "./components/form";
-
+import { buildNavItems } from "./observers/nav.observer";
 import { runObserv } from "./observers/main";
+import { buttonsAction } from "./components/buttons";
 
 document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(() => {
-    preloader();
-    setFormsPreventDefault();
+  if (!getCookie("is_visited_page")) {
+    //setFormsPreventDefault();
     inputsMask();
-    validate();
-  
+    buildNavItems();
+    //validate();
+
+    setTimeout(() => {
+      headerActions();
+      runObserv();
+      preloader();
+      buttonsAction();
+    }, 4500);
+    setCookie("is_visited_page", "true");
+  } else {
+    preloader();
+    inputsMask();
+    buildNavItems();
+    headerActions();
     runObserv();
-  }, 4500);
+    buttonsAction();
+  }
 });

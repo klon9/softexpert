@@ -1,0 +1,15 @@
+@include keyframes(floating2) {
+  from {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(10px, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+
+.si-floating2 {
+  @include animation(floating2 infinite ease-in-out 5s);
+}

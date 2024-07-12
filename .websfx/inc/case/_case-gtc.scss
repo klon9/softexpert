@@ -1,0 +1,11 @@
+.case-gtc {
+  & .case__text--gtc {
+    padding-bottom: 40px;
+    & p {
+      margin-bottom: 0;
+    }
+    & .b-margin {
+      margin-bottom: 30px;
+    }
+  }
+}

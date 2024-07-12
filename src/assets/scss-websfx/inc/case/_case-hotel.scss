@@ -1,0 +1,28 @@
+.case-hotel {
+  .steps-block {
+    @include sfx-media-down(lg) {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
+    &__col {
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(6);
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+
+    &__text {
+      color: $color-lilac;
+    }
+  }
+
+  .positive-block {
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,59 @@
+.tech-audit {
+
+  .steps-block {
+
+    @include sfx-media-down(lg) {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
+    &__col {
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(6);
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+
+    &__text {
+      color: #727272;
+    }
+  }
+
+  .positive-block {
+    &__info-text {
+      background: $color-red;
+      padding: 3px 15px;
+      color: #ffffff;
+      display: inline-block;
+    }
+  }
+
+
+  .seo-features {
+    padding-bottom: 20px;
+    padding-top: 0;
+
+    @include sfx-media-down(lg) {
+      padding-bottom: 40px;
+      padding-top: 20px;
+    }
+  }
+
+  .steps-block {
+    padding-bottom: 10px;
+  }
+
+  .positive-block {
+    padding-top: 20px;
+  }
+
+
+  .download-example {
+    margin-top: 30px;
+  }
+}

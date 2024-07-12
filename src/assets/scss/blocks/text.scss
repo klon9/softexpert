@@ -1,4 +1,5 @@
 .text-block {
+  margin: 66px 30px 0;
   clip-path: none;
   box-shadow: 0px 3.1019434928894043px 34.121376037597656px 0px #9eaacf4d;
   display: grid;
@@ -23,6 +24,7 @@
 
   @include desktop {
     grid-template-columns: 2fr 6fr;
+    margin: 84px 30px 0;
 
     h4 {
       margin: 45px 0 22px;
@@ -37,13 +39,18 @@
     }
   }
 
+  @include big-tablet {
+    margin: 84px 0 0;
+  }
+
   @include tablet {
     grid-template-columns: 210px auto;
+    margin: 40px 0 0;
   }
 
   @include small-tablet {
     h4 {
-      margin: 40px 0 10px;
+      margin: 48px 0 10px;
       font-size: 30px;
       line-height: 1.2;
     }
@@ -59,6 +66,7 @@
 
   @include big-mobile {
     grid-template-columns: 170px auto;
+    margin: 30px 0 0;
 
     .text-block_text-wrapper {
       padding: 10px 15px 24px;
@@ -83,5 +91,53 @@
       max-width: 70%;
       margin: 0 auto;
     }
+  }
+}
+
+.hider {
+  position: relative;
+  margin: 0 0 90px;
+  display: flex;
+  justify-content: center;
+  background-size: 100% 200%;
+  background-position: top;
+  &.active {
+    background-position: bottom;
+  }
+  transform: translate3d(0, 0, 0);
+
+  .button {
+    transition-property: background-color;
+    width: 380px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 35px;
+  }
+  .in-progress {
+    color: transparent !important;
+  }
+
+  @include desktop {
+    margin: 0 0 67px;
+  }
+
+  @include small-tablet {
+    margin: 30px 0 46px;
+    .button {
+      width: 280px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      border-radius: 35px;
+    }
+  }
+
+  @include big-mobile {
+    margin: 0 0 39px;
   }
 }

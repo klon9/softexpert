@@ -1,0 +1,30 @@
+.portfolio-page {
+
+  .title-block {
+    background-color: #4a4a4a;
+    min-height: 430px;
+
+    &__menu {
+      &-item {
+        height: 37px;
+        border: 0;
+        padding: 0 20px;
+        line-height: 37px;
+        color: $color-white;
+        font-size: 15px;
+        font-weight: 500;
+        background-color: #656565;
+        margin: 0 10px 10px 0;
+        display: inline-block;
+
+        &:hover, &.active {
+          background-color: $color-red;
+          border: 0;
+          color: $color-white;
+          transition: background-color .3s ease, border .3s ease;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,120 @@
+.certificate {
+  padding: 50px 0 100px 0;
+  background: #ffffff;
+  overflow: hidden;
+
+  .cert {
+    &__slider {
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-bottom: 0px;
+      position: relative;
+
+      @include sfx-media-down(xl) {
+        padding-bottom: 50px;
+      }
+    }
+
+    &__item-slide {
+      width: 191px;
+      //height: 260px;
+
+      @include sfx-media-down(xl) {
+        //height: 360px;
+      }
+    }
+
+    &__item {
+      width: 191px;
+      height: 260px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.48);
+      margin: 0 auto;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(images/cert-border.png) no-repeat center;
+        background-size: cover;
+      }
+    }
+
+    &__name {
+      color: #8e8e8e;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 21px;
+      padding-top: 30px;
+      width: 191px;
+      margin: 0 auto;
+    }
+  }
+
+  .slick-dots {
+    bottom: 0;
+    li {
+      button {
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+
+        &:before {
+          content: '';
+          width: 9px;
+          height: 9px;
+          background-color: #dfe3e4;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 1;
+        }
+      }
+      &.slick-active {
+        button {
+          &:before {
+            opacity: 1;
+            background-color: #c42134;
+          }
+        }
+      }
+    }
+  }
+
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+
+
+  @include sfx-media-down(xl) {
+
+  }
+
+  @include sfx-media-down(lg) {
+
+  }
+
+
+  @include sfx-media-down(md) {
+
+  }
+
+
+  @include sfx-media-down(sm) {
+
+  }
+}

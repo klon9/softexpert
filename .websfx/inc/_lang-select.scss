@@ -1,0 +1,95 @@
+.lang-select {
+  position: relative;
+  margin: 0 0 0 0;
+
+  @include sfx-media-down(xl) {
+    margin: 0;
+  }
+
+  &__current {
+    width: 75px;
+    height: 39px;
+    background-color: #c4262e;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: -0.13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 15px 0 0;
+    cursor: pointer;
+
+    @include sfx-media-down(1685px) {
+      height: 28px;
+    }
+
+    @include sfx-media-down(1300px) {
+      width: 64px;
+    }
+
+    @include sfx-media-down(xl) {
+      display: none;
+    }
+
+    &:after {
+      content: '\25BE';
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      color: #ffffff;
+
+      @include sfx-media-down(1685px) {
+        top: 4px;
+      }
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 53px;
+    left: 0;
+    width: 160px;
+    border: 1px solid #e8e8e8;
+    background-color: #ffffff;
+    padding: 25px 30px;
+    display: none;
+
+    @include sfx-media-down(1685px) {
+      right: 0;
+      left: auto;
+      top: 28px;
+    }
+
+    @include sfx-media-down(xl) {
+      position: static;
+      padding: 15px 0 15px 30px;
+      border: 0;
+      display: block;
+    }
+
+    @include sfx-media-down(md) {
+      padding-left: 20px;
+    }
+  }
+
+  &__item {
+    color: #262626;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.13px;
+    display: block;
+    margin: 0 0 15px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.active {
+      color: #c4262e;
+    }
+  }
+}

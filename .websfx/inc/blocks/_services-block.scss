@@ -1,0 +1,100 @@
+.services-block {
+  padding: 80px 0 100px 0;
+  overflow: hidden;
+
+  @include sfx-media-down(lg) {
+    padding-bottom: 60px;
+  }
+
+  @include sfx-media-down(sm) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .c-row {
+    margin: 0 -45px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include sfx-media-down(lg) {
+      margin: 0 -15px 60px -15px;
+    }
+
+    @include sfx-media-down(md) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .c-col-6 {
+    @include sfx-col-flex-custom(50%);
+    padding: 0 45px;
+
+    @include sfx-media-down(lg) {
+      padding: 0 15px;
+    }
+
+    @include sfx-media-down(md) {
+      @include sfx-col-flex-custom(100%);
+
+      &.image {
+        margin-bottom: 60px;
+        order: 0;
+      }
+      &.text {
+        order: 1;
+      }
+    }
+  }
+
+  &__item {
+    height: 100%;
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  &__link {
+    display: block;
+    width: 27px;
+    height: 27px;
+    background: url(images/icon-arrow.png) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__title {
+    @include sfx-title();
+  }
+
+  &__text {
+    @include sfx-text();
+
+    p {
+      margin: 0 0 15px 0;
+      padding: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__image {
+    img {
+      max-width: 100%;
+
+      @include sfx-media-down(md) {
+        max-width: 340px;
+      }
+
+      @include sfx-media-down(sm) {
+        max-width: 100%;
+      }
+    }
+  }
+}

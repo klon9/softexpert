@@ -1,0 +1,264 @@
+.case-11 {
+  font-weight: 400;
+
+  .case__image {
+    margin: 50px 0 50px 0;
+
+    @include sfx-media-down(md) {
+      margin: 20px 0 20px 0;
+    }
+  }
+
+  &__row {
+    margin: 0 -40px 0 -40px;
+
+    .case__col {
+      padding: 0 40px;
+    }
+  }
+
+  .pbt50 {
+    padding-top: 50px;
+  }
+
+  .pbt0 {
+    padding-top: 0;
+  }
+
+  .case__col-image.b--abs {
+    img {
+      max-height: 100%;
+      width: auto;
+
+      @include sfx-media-down(lg) {
+        max-width: 100%;
+      }
+
+      @include sfx-media-down(md) {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  .case__row {
+    &.b--reverse {
+      .case__col {
+        &:nth-child(1) {
+          @include sfx-media-down(lg) {
+            order: 1;
+          }
+        }
+
+        &:nth-child(2) {
+          @include sfx-media-down(lg) {
+            order: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__img-block-1 {
+    height: 470px;
+    left: -60px;
+
+    @include sfx-media-down(xl) {
+      height: 370px;
+    }
+
+    @include sfx-media-down(md) {
+      height: auto;
+    }
+  }
+
+  &__img-block-2 {
+    height: 430px;
+    right: -60px;
+
+    @include sfx-media-down(xl) {
+      height: 330px;
+    }
+
+    @include sfx-media-down(md) {
+      height: auto;
+    }
+  }
+
+  &__img-block-3 {
+    height: 410px;
+    left: -60px;
+
+    @include sfx-media-down(xl) {
+      height: 310px;
+    }
+
+    @include sfx-media-down(md) {
+      height: auto;
+    }
+  }
+
+  .v-center {
+    align-items: center;
+    display: flex;
+    padding-bottom: 40px;
+  }
+
+  &__fluid {
+    background: #f5f6fb;
+    padding: 70px 0;
+  }
+
+  &__list-img {
+    &-item {
+      display: flex;
+      padding: 0 0 40px 0;
+
+      @include sfx-media-down(md) {
+        flex-wrap: wrap;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    &-image {
+      @include sfx-flex-col-auto();
+      width: 65px;
+      padding: 5px 0 0 0;
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &-text {
+      @include sfx-flex-col-100();
+      padding: 0 0 0 40px;
+      color: $color-lilac;
+      font-size: 15px;
+      line-height: 23px;
+      font-weight: 500;
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+        padding: 15px 0 0 0;
+      }
+    }
+  }
+
+  &__stack {
+    background: $color-green;
+    border-radius: 50px;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    margin: 30px 0 70px 0;
+
+    @include sfx-media-down(md) {
+      flex-wrap: wrap;
+      padding: 25px 30px;
+    }
+
+    &-col {
+      max-width: 560px;
+
+      @include sfx-media-down(xl) {
+        @include sfx-col-flex(6);
+        max-width: none;
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+
+      &:nth-child(1) {
+        padding-right: 15px;
+
+        @include sfx-media-down(md) {
+          padding: 0 0 30px 0;
+        }
+      }
+      &:nth-child(2) {
+        padding-left: 15px;
+
+        @include sfx-media-down(md) {
+          padding: 0 0 0 0;
+        }
+      }
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+      padding: 0 0 20px 0;
+    }
+
+    span {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  .fw600 {
+    font-weight: 600;
+  }
+
+  &__region {
+    padding: 30px 0 0 0;
+
+    &-row {
+      display: flex;
+      margin: 0 -15px;
+
+      @include sfx-media-down(md) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &-col {
+      @include sfx-col-flex(4);
+      padding: 0 15px;
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+        padding: 0 15px 40px 15px;
+      }
+    }
+
+    &-image {
+      height: 72px;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &-text {
+      padding: 40px 0 0 0;
+      font-weight: 400;
+      text-align: center;
+      color: $color-lilac;
+      font-size: 15px;
+      line-height: 23px;
+
+      @include sfx-media-down(md) {
+        padding: 15px 0 0 0;
+      }
+    }
+  }
+}

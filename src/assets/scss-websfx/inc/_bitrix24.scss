@@ -1,0 +1,1448 @@
+.bitrix24 {
+
+  .steps-block {
+    padding-bottom: 0;
+
+    &__col {
+      @include sfx-col-flex(4);
+
+      @include sfx-media-down(xl) {
+        @include sfx-col-flex(6);
+      }
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+  }
+
+  .services-block {
+    padding-bottom: 20px;
+  }
+
+
+  .consultation {
+    background-color: #c4262e;
+    padding: 50px 60px;
+    text-align: center;
+    min-height: 295px;
+    margin-top: 74px;
+    //height: 100%;
+
+    @include sfx-media-down(xl) {
+      padding: 50px 25px;
+    }
+
+    @include sfx-media-down(md) {
+      margin-top: 50px;
+      min-height: auto;
+    }
+
+    @include sfx-media-down(sm) {
+      padding: 40px 15px;
+    }
+
+    &__title {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 38px;
+      text-transform: uppercase;
+
+      @include sfx-media-down(xl) {
+        font-size: 25px;
+        line-height: 30px;
+      }
+
+      @include sfx-media-down(sm) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+
+    &__text {
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 21px;
+      padding: 30px 0;
+
+      @include sfx-media-down(xl) {
+        padding: 25px 0;
+      }
+
+      @include sfx-media-down(sm) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    &__link {
+      button {
+        @include sfx-button(161px, 39px, 13px);
+        border: 2px solid #ffffff;
+        margin: 0 auto;
+      }
+
+      a {
+        @include sfx-button(161px, 39px, 13px);
+        border: 2px solid #ffffff;
+        margin: 0 auto 15px auto;
+      }
+    }
+  }
+
+
+  .positive-block--bitrix24 {
+    .c-col {
+      @include sfx-col-flex(3);
+      padding: 0 50px;
+      margin-bottom: 60px;
+
+      @include sfx-media-down(xl) {
+        padding: 0 15px;
+      }
+
+      @include sfx-media-down(lg) {
+        @include sfx-col-flex(6);
+        margin-bottom: 30px;
+      }
+
+      @include sfx-media-down(sm) {
+        @include sfx-col-flex(12);
+      }
+    }
+
+    .c-row {
+      @include sfx-media-down(xl) {
+        margin: 0 -15px;
+      }
+    }
+  }
+
+
+
+  .bx24-price {
+    background: url(images/support-tariff-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding: 80px 0 65px 0;
+
+    @include sfx-media-down(lg) {
+      padding: 65px 0 35px 0;
+    }
+
+    &__bnr {
+      margin-bottom: 20px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &__note {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: right;
+      padding: 0 0 0 0;
+    }
+
+    &__red-block {
+      background-color: #c4262e;
+      padding: 5px 65px;
+      margin: 0 6px 20px 6px;
+
+      @include sfx-media-down(md) {
+        padding: 5px 10px;
+      }
+
+      &-wrap {
+        max-width: 767px;
+        margin: 0 auto;
+
+        .bx24-price__red-block {
+          padding: 5px 15px;
+
+          @include sfx-media-down(md) {
+            padding: 5px 10px;
+          }
+        }
+      }
+
+      &-item {
+        padding: 0 0 0 41px;
+        background: url(images/marker-check-white.png) no-repeat 0 5px;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 34px;
+
+        @include sfx-media-down(md) {
+          font-size: 13px;
+          line-height: 15px;
+          padding: 0 0 0 30px;
+          background-size: 20px 19px;
+          background-position: 0 1px;
+          margin-bottom: 5px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+
+    &__title {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 40px;
+      text-align: left;
+      padding-bottom: 35px;
+      padding-left: calc(19% + 6px);
+
+      @include sfx-media-down(lg) {
+        padding-bottom: 25px;
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      @include sfx-media-down(md) {
+        padding-left: 0;
+        text-align: center;
+        font-size: 21px;
+        line-height: 28px;
+      }
+
+      @include sfx-media-down(sm) {
+        font-size: 17px;
+        line-height: 23px;
+      }
+    }
+
+
+    &__table {
+      padding-bottom: 30px;
+    }
+
+    &__tr {
+      display: flex;
+      //align-items: center;
+      align-items: stretch;
+
+      @include sfx-media-down(sm) {
+        flex-wrap: wrap;
+
+        &:nth-child(1) {
+          display: none;
+        }
+      }
+    }
+
+    &__col {
+      padding: 6px;
+      flex: 0 0 21%;
+      //height: 100%;
+
+      @include sfx-media-down(sm) {
+        padding: 3px;
+        flex: 0 0 24%;
+
+        @include sfx-col-flex(12);
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        &:before {
+          content: '';
+          display: flex;
+          @include sfx-flex-col-auto();
+          width: 153px;
+          font-size: 13px;
+          line-height: 15px;
+          padding: 2px 3px;
+          min-height: 36px;
+          color: #ffffff;
+          background-color: #c4262e;
+          align-items: center;
+          margin: 0px 6px 0px 0;
+        }
+
+        &:nth-child(2) {
+          &:before {
+            content: 'Базовый';
+          }
+        }
+        &:nth-child(3) {
+          &:before {
+            content: 'Стандартный';
+          }
+        }
+        &:nth-child(4) {
+          &:before {
+            content: 'Профессиональный';
+          }
+        }
+      }
+
+      .bx24-price__col-inner {
+        display: flex;
+        min-height: 34px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.25);
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 3px 5px;
+        text-align: center;
+
+        @include sfx-media-down(xl) {
+          font-size: 17px;
+        }
+
+        @include sfx-media-down(lg) {
+          font-size: 14px;
+          line-height: 16px;
+          padding: 2px 5px;
+        }
+
+        @include sfx-media-down(md) {
+          font-size: 13px;
+          line-height: 15px;
+          min-height: 36px;
+        }
+
+        @include sfx-media-down(sm) {
+          font-size: 13px;
+          line-height: 15px;
+          text-align: center;
+          padding: 2px 3px;
+          justify-content: center;
+
+          @include sfx-flex-col-100();
+        }
+
+        &.bx24-price__price {
+          padding-top: 3px;
+          flex-wrap: wrap;
+
+          span {
+            font-size: 24px;
+            line-height: 26px;
+            padding-bottom: 5px;
+
+            @include sfx-media-down(lg) {
+              font-size: 20px;
+              line-height: 22px;
+            }
+
+            @include sfx-media-down(md) {
+              font-size: 14px;
+              line-height: 16px;
+              padding-bottom: 0px;
+            }
+          }
+        }
+      }
+
+      &.title {
+        @include sfx-media-down(md) {
+          word-break: break-all;
+        }
+
+        .bx24-price__col-inner {
+          background-color: #c4262e;
+        }
+
+        .bx24-nobr-title {
+          @include sfx-media-down(lg) {
+            display: none;
+          }
+        }
+
+        .bx24-br-title {
+          display: none;
+          @include sfx-media-down(lg) {
+            display: block;
+          }
+        }
+      }
+
+      &.name {
+        flex: 0 0 37%;
+
+        .bx24-price__col-inner {
+          padding-left: 60px;
+          justify-content: flex-start;
+          text-align: left;
+
+          @include sfx-media-down(md) {
+            padding-left: 5px;
+          }
+
+          @include sfx-media-down(sm) {
+            justify-content: center;
+            text-align: center;
+            //padding-left: 153px;
+          }
+        }
+
+        &.head-title {
+          .bx24-price__col-inner {
+            font-size: 21px;
+            line-height: 24px;
+
+            @include sfx-media-down(lg) {
+              font-size: 18px;
+              line-height: 20px;
+            }
+
+            @include sfx-media-down(md) {
+              font-size: 16px;
+              line-height: 18px;
+            }
+          }
+        }
+
+        @include sfx-media-down(md) {
+          &.head-title {
+            .bx24-price__col-inner {
+              //display: none;
+            }
+          }
+        }
+
+        @include sfx-media-down(sm) {
+          padding-left: 0;
+          flex: 0 0 28%;
+          text-align: left;
+
+          @include sfx-col-flex(12);
+          text-align: center;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+
+      &.buy {
+        .bx24-price__col-inner {
+          background: transparent;
+
+          @include sfx-media-down(sm) {
+            padding: 0;
+          }
+        }
+
+        &.name {
+          @include sfx-media-down(sm) {
+            display: none;
+          }
+        }
+
+        button {
+          @include sfx-button(161px, 39px, 13px);
+          max-width: 161px;
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+
+      &.discount {
+        .bx24-price__col-inner {
+          background-color: rgba(0, 0, 0, 0.6);
+          padding-right: 72px;
+          position: relative;
+
+          @include sfx-media-down(md) {
+            padding-right: 40px;
+          }
+        }
+
+        .bx24-price__sale {
+          background-color: #c4262e;
+          border-radius: 5px;
+          transform: skew(-20deg, 0deg) translateY(-50%);
+          width: 68px;
+          height: 30px;
+          position: absolute;
+          top: 50%;
+          right: 12px;
+
+          @include sfx-media-down(lg) {
+            width: 52px;
+            height: 26px;
+          }
+
+          @include sfx-media-down(md) {
+            width: 40px;
+            height: 22px;
+            right: 9px;
+          }
+
+          span {
+            transform: skew(20deg, 0deg);
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 30px;
+            display: block;
+            text-align: center;
+
+            @include sfx-media-down(lg) {
+              font-size: 18px;
+              line-height: 26px;
+            }
+
+            @include sfx-media-down(md) {
+              font-size: 14px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+
+    }
+
+    &__no, &__yes {
+      width: 22px;
+      height: 22px;
+      display: block;
+      background-size: 22px 22px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &__no {
+      background-image: url(images/bx-price-no.png);
+    }
+
+    &__yes {
+      background-image: url(images/bx-price-yes.png);
+    }
+
+    &__icon-1, &__icon-2, &__icon-3 {
+      background-repeat: no-repeat;
+      background-position: 10px center;
+    }
+
+    &__icon-1 {
+      background-image: url(images/bx-price-icon-1.png);
+      @include sfx-media-down(md) {
+        background: transparent;
+      }
+    }
+    &__icon-2 {
+      background-image: url(images/bx-price-icon-2.png);
+      @include sfx-media-down(md) {
+        background: transparent;
+      }
+    }
+    &__icon-3 {
+      background-image: url(images/bx-price-icon-3.png);
+      @include sfx-media-down(md) {
+        background: transparent;
+      }
+    }
+
+    &__switch {
+      display: flex;
+      padding: 0 0 35px 0;
+
+      &-btn {
+        &.noactive {
+          @include sfx-button(236px, 37px, 18px);
+          border: 2px solid rgba(255,255,255,0.5);
+          background: transparent !important;
+          transition: all .3s ease;
+
+          @include sfx-media-down(sm) {
+            font-size: 15px;
+          }
+
+          &:hover {
+            border: 2px solid rgba(255,255,255,1);
+            background: transparent;
+            transition: all .3s ease;
+          }
+        }
+
+        &.active {
+          @include sfx-button(236px, 37px, 18px);
+          border: 2px solid #c4262e;
+
+          @include sfx-media-down(sm) {
+            font-size: 15px;
+          }
+        }
+
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+
+
+
+
+  .bx24-complex {
+    background-color: #f9f9f9;
+    padding: 75px 0 70px 0;
+
+    &__toggle-btn {
+      height: 64px;
+      box-shadow: 0 3px 20px 1px rgba(0, 0, 0, 0.05);
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 21px;
+      position: relative;
+      z-index: 1;
+      margin-top: -1px;
+      cursor: pointer;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid #000000;
+        border-right: 2px solid #000000;
+        transform: rotate(135deg);
+        margin: -5px 0 0 12px;
+      }
+
+      &.active {
+        &:after {
+          transform: rotate(-45deg);
+          margin: 9px 0 0 12px;
+        }
+      }
+    }
+
+    &__toggle-block {
+      display: none;
+    }
+
+
+    &__no, &__yes {
+      width: 22px;
+      height: 22px;
+      display: block;
+      background-size: 22px 22px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &__no {
+      background-image: url(images/bx-price-no.png);
+    }
+
+    &__yes {
+      background-image: url(images/bx-price-yes.png);
+    }
+
+    &__table {
+      padding-bottom: 0px;
+      background: rgba(255, 255, 255, 0.97);
+
+      &-inner {
+        padding: 0 40px;
+
+        @include sfx-media-down(xl) {
+          padding: 0 15px;
+        }
+
+        @include sfx-media-down(md) {
+          padding: 0 0px;
+        }
+      }
+    }
+
+    &__tr {
+      display: flex;
+      //align-items: center;
+      align-items: stretch;
+      border-bottom: 1px solid #dfdfdf;
+
+      @include sfx-media-down(sm) {
+        flex-wrap: wrap;
+        border-bottom: 0;
+
+        &:nth-child(1) {
+          display: none;
+        }
+      }
+
+      &.head {
+        padding: 0 40px;
+        border-bottom: 0;
+        box-shadow: 8px 9px 20px 1px rgba(0, 0, 0, 0.05);
+
+        @include sfx-media-down(xl) {
+          padding: 0 15px;
+        }
+
+        @include sfx-media-down(md) {
+          padding: 0 0px;
+        }
+      }
+    }
+
+    &__col {
+      padding: 6px;
+      flex: 0 0 16%;
+      //height: 100%;
+
+      &:nth-child(2) {
+        @include sfx-col-flex-custom(13%);
+
+        @include sfx-media-down(xl) {
+          @include sfx-col-flex-custom(15%);
+        }
+
+        @include sfx-media-down(lg) {
+          @include sfx-col-flex-custom(16%);
+        }
+
+        @include sfx-media-down(sm) {
+          @include sfx-col-flex-custom(100%);
+        }
+      }
+
+      &:nth-child(3) {
+        @include sfx-col-flex-custom(15%);
+
+        @include sfx-media-down(xl) {
+          @include sfx-col-flex-custom(14%);
+        }
+
+        @include sfx-media-down(lg) {
+          @include sfx-col-flex-custom(16%);
+        }
+
+        @include sfx-media-down(sm) {
+          @include sfx-col-flex-custom(100%);
+        }
+      }
+
+      &:nth-child(4) {
+        @include sfx-col-flex-custom(18%);
+
+        @include sfx-media-down(xl) {
+          @include sfx-col-flex-custom(17%);
+        }
+
+        @include sfx-media-down(lg) {
+          @include sfx-col-flex-custom(16%);
+        }
+
+        @include sfx-media-down(sm) {
+          @include sfx-col-flex-custom(100%);
+        }
+      }
+
+      &:nth-child(5) {
+        @include sfx-col-flex-custom(20%);
+
+        @include sfx-media-down(lg) {
+          @include sfx-col-flex-custom(16%);
+        }
+
+        @include sfx-media-down(sm) {
+          @include sfx-col-flex-custom(100%);
+        }
+      }
+
+      @include sfx-media-down(sm) {
+        @include sfx-col-flex(12);
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        border-bottom: 1px solid #dfdfdf;
+
+        &:before {
+          content: '';
+          display: flex;
+          @include sfx-flex-col-auto();
+          width: 153px;
+          font-size: 13px;
+          line-height: 15px;
+          padding: 2px 3px;
+          min-height: 36px;
+          color: #ffffff;
+          background-color: #c4262e;
+          align-items: center;
+          margin: 0px 6px 0px 0;
+        }
+
+        &:nth-child(2) {
+          &:before {
+            content: 'Старт';
+          }
+        }
+        &:nth-child(3) {
+          &:before {
+            content: 'Базовый';
+          }
+        }
+        &:nth-child(4) {
+          &:before {
+            content: 'Расширенный';
+          }
+        }
+        &:nth-child(5) {
+          &:before {
+            content: 'Профессиональный';
+          }
+        }
+      }
+
+      &-inner {
+        display: flex;
+        min-height: 34px;
+        height: 100%;
+        color: #000000;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        text-align: center;
+
+        @include sfx-media-down(xl) {
+          font-size: 17px;
+        }
+
+        @include sfx-media-down(lg) {
+          font-size: 14px;
+          line-height: 16px;
+        }
+
+        @include sfx-media-down(md) {
+          font-size: 13px;
+          line-height: 15px;
+          min-height: 36px;
+        }
+
+        @include sfx-media-down(sm) {
+          font-size: 13px;
+          line-height: 15px;
+          text-align: center;
+          padding: 2px 3px;
+          justify-content: center;
+          @include sfx-flex-col-100();
+        }
+      }
+
+      &.title {
+        @include sfx-media-down(md) {
+          word-break: break-all;
+        }
+
+        .bx24-complex__col-inner {
+          font-size: 18px;
+          line-height: 20px;
+          padding-top: 12px;
+          padding-bottom: 12px;
+
+          @include sfx-media-down(xl) {
+            font-size: 16px;
+            line-height: 18px;
+          }
+
+          @include sfx-media-down(md) {
+            font-size: 13px;
+            line-height: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+          }
+        }
+
+        .bx24-nobr-title {
+          @include sfx-media-down(lg) {
+            display: none;
+          }
+        }
+
+        .bx24-br-title {
+          display: none;
+          @include sfx-media-down(lg) {
+            display: block;
+          }
+        }
+      }
+
+      &.name {
+        flex: 0 0 34%;
+
+        @include sfx-media-down(md) {
+          &.head-title {
+            .bx24-price__col-inner {
+              //display: none;
+            }
+          }
+        }
+
+        @include sfx-media-down(sm) {
+          padding-left: 0;
+          flex: 0 0 28%;
+          text-align: left;
+
+          @include sfx-col-flex(12);
+          text-align: center;
+
+          &:before {
+            display: none;
+          }
+        }
+
+
+        .bx24-complex__col-inner {
+          justify-content: flex-start;
+          text-align: left;
+          color: #3e3e3e;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 18px;
+
+          @include sfx-media-down(lg) {
+            font-size: 15px;
+            line-height: 17px;
+          }
+
+          @include sfx-media-down(md) {
+            font-size: 13px;
+            line-height: 15px;
+          }
+
+          @include sfx-media-down(sm) {
+            justify-content: center;
+            text-align: center;
+            //padding-left: 153px;
+          }
+        }
+
+        &.head-title {
+          .bx24-complex__col-inner {
+            font-size: 18px;
+            line-height: 20px;
+          }
+        }
+
+      }
+
+      &.buy {
+        .bx24-complex__col-inner {
+          background: transparent;
+
+          @include sfx-media-down(sm) {
+            padding: 0;
+          }
+        }
+
+        &.name {
+          @include sfx-media-down(sm) {
+            display: none;
+          }
+        }
+
+        button {
+          @include sfx-button(161px, 39px, 13px);
+          max-width: 161px;
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+  }
+
+
+  &__bnr {
+    background-color: #eaeaea;
+    background-image: url(images/tobx-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+    height: 360px;
+    position: relative;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    margin-top: 74px;
+
+    @include sfx-media-down(xl) {
+      padding: 0 50px;
+    }
+
+    @include sfx-media-down(lg) {
+      height: 263px;
+      background-position: top right -55px;
+      padding: 0 30px;
+    }
+
+    @include sfx-media-down(md) {
+      margin-bottom: 30px;
+      margin-top: 40px;
+    }
+
+    @include sfx-media-down(sm) {
+      background-image: none;
+      height: auto;
+      padding: 30px 30px;
+    }
+
+    &-content {
+      color: #000000;
+      font-size: 31px;
+      font-weight: 500;
+      line-height: 38px;
+      text-transform: uppercase;
+      position: relative;
+      max-width: 300px;
+      width: 100%;
+
+      @include sfx-media-down(lg) {
+        font-size: 26px;
+        line-height: 34px;
+        max-width: 250px;
+      }
+
+      @include sfx-media-down(sm) {
+        padding-bottom: 115px;
+      }
+    }
+
+    &-btn {
+      width: 171px;
+      height: 39px;
+      border: 2px solid #c4262e;
+      background: transparent;
+      color: #c4262e;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: -0.13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px 0 0 0;
+    }
+
+    &-img {
+      width: 381px;
+      height: 183px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 100%;
+
+      @include sfx-media-down(xl) {
+        width: 300px;
+        height: 145px;
+      }
+
+      @include sfx-media-down(lg) {
+        width: 230px;
+        height: 114px;
+      }
+
+      @include sfx-media-down(md) {
+        width: 195px;
+        height: 98px;
+      }
+
+      @include sfx-media-down(sm) {
+        top: auto;
+        bottom: 0px;
+        transform: none;
+        left: 0;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  .advantages-block {
+    padding-top: 0;
+  }
+
+}
+
+
+.bitrix24-modal-content {
+  .bxm-title {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 0 0 35px 0;
+  }
+
+  .bxm-name {
+    padding: 0 0 0 45px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: #000000;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 21px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+
+    &.icon-1 {
+      background-image: url(images/bxm-icon-1.png);
+    }
+    &.icon-2 {
+      background-image: url(images/bxm-icon-2.png);
+    }
+    &.icon-3 {
+      background-image: url(images/bxm-icon-3.png);
+    }
+    &.icon-4 {
+      background-image: url(images/bxm-icon-4.png);
+    }
+
+    @include sfx-media-down(xl) {
+      padding: 0 0 0 0;
+      font-size: 16px;
+      line-height: 19px;
+
+      &.icon-1, &.icon-2, &.icon-3, &.icon-4 {
+        background-image: none;
+      }
+    }
+
+    @include sfx-media-down(lg) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include sfx-media-down(md) {
+      word-break: break-word;
+      width: 100%;
+    }
+  }
+
+  .bxm-small {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+
+    @include sfx-media-down(lg) {
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+
+  .bxm-table {
+    margin-bottom: 40px;
+  }
+
+  .bxm-tr {
+    display: flex;
+  }
+
+  .bxm-td {
+    display: flex;
+    border-right: 2px solid #dcdcdc;
+    border-bottom: 2px solid #dcdcdc;
+    color: #242424;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 25px 15px;
+    align-items: center;
+    justify-content: center;
+
+    @include sfx-media-down(xl) {
+      padding: 20px 10px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    @include sfx-media-down(lg) {
+      font-size: 13px;
+      line-height: 15px;
+    }
+
+    &:first-child {
+      border-left: 2px solid #dcdcdc;
+    }
+  }
+
+  .bxm-marker {
+    width: 51px;
+    height: 21px;
+    border: 2px solid #c4262e;
+    padding: 2px;
+
+    &:after {
+      content: '';
+      height: 13px;
+      background: #c4262e;
+      display: block;
+      width: 0%;
+    }
+
+    &.s-1 {
+      &:after {
+        width: 33%;
+      }
+    }
+
+    &.s-2 {
+      &:after {
+        width: 66%;
+      }
+    }
+
+    &.s-3 {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  .bxm-table-1 {
+    .bxm-td {
+      flex: 0 0 11.2%;
+      max-width: 11.2%;
+
+      &.td-1 {
+        flex: 0 0 22%;
+        justify-content: flex-start;
+        max-width: 22%;
+      }
+      &.td-7 {
+        flex: 0 0 22%;
+        max-width: 22%;
+        display: flex;
+
+        .sub-td {
+          flex: 0 0 25%;
+          max-width: 25%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+
+    .hfix {
+      .bxm-td {
+        height: 130px;
+      }
+    }
+
+    .pv {
+      transform: rotate(-90deg);
+      white-space:nowrap;
+    }
+
+    .bxm-head {
+      .bxm-td {
+        border-top: 2px solid #dcdcdc;
+        text-align: center;
+        justify-content: center;
+
+        &:first-child {
+          justify-content: flex-start;
+        }
+
+        &.td-3 {
+          flex: 0 0 44.8%;
+          max-width: 44.8%;
+        }
+        &.td-4 {
+          flex: 0 0 22%;
+          max-width: 22%;
+        }
+      }
+    }
+
+    .bxm-footer {
+      .bxm-td {
+        &.td-3-merge {
+          flex: 0 0 44.8%;
+          max-width: 44.8%;
+        }
+        &.td-7 {
+          flex: 0 0 22%;
+          word-wrap: break-word;
+          padding-left: 8px;
+          padding-right: 8px;
+          max-width: 22%;
+
+          .bxm-small {
+            font-size: 14px;
+
+            @include sfx-media-down(lg) {
+              font-size: 13px;
+              line-height: 15px;
+            }
+          }
+        }
+      }
+
+      .bxm-small {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+
+
+  .bxm-table-2 {
+    .bxm-td {
+      flex: 0 0 15.4%;
+      max-width: 15.4%;
+
+      &.price {
+        flex-wrap: wrap;
+        div {
+          flex: 0 0 100%;
+          text-align: center;
+          &.py {
+            font-size: 15px;
+
+            @include sfx-media-down(lg) {
+              font-size: 12px;
+            }
+            @include sfx-media-down(md) {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+
+      &.td-1 {
+        flex: 0 0 23%;
+        max-width: 23%;
+        justify-content: flex-start;
+
+        @include sfx-media-down(md) {
+          word-break: break-word;
+        }
+      }
+
+      &.td-6 {
+        .bxm-small {
+          @include sfx-media-down(md) {
+            word-break: break-word;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .bxm-head {
+      .bxm-td {
+        border-top: 2px solid #dcdcdc;
+        text-align: center;
+        justify-content: center;
+
+        &:first-child {
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    .bxm-footer {
+      .bxm-td {
+        &.td-3-merge {
+          flex: 0 0 48%;
+          max-width: 48%;
+        }
+        &.td-7 {
+          flex: 0 0 18%;
+          word-wrap: break-word;
+          padding-left: 8px;
+          padding-right: 8px;
+          max-width: 18%;
+
+          .bxm-small {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .bxm-small {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .no-border {
+      &.bxm-first {
+        .bxm-td {
+          padding-top: 25px;
+        }
+      }
+      &.bxm-last {
+        .bxm-td {
+          padding-bottom: 25px;
+          border-bottom: 2px solid #dcdcdc;
+        }
+      }
+      .bxm-td {
+        border-bottom: 0;
+        padding-top: 11px;
+        padding-bottom: 11px;
+      }
+    }
+  }
+
+  .bxm-note {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 0 20px 0;
+
+    @include sfx-media-down(md) {
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      color: #414141;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 19px;
+      display: flex;
+      padding: 0 0 0 30px;
+
+      @include sfx-media-down(lg) {
+        padding: 0 0 0 20px;
+        font-size: 13px;
+        line-height: 15px;
+      }
+
+      @include sfx-media-down(md) {
+        flex: 0 0 50%;
+        padding-bottom: 15px;
+      }
+
+      .bxm-marker {
+        margin-right: 10px;
+      }
+    }
+  }
+}

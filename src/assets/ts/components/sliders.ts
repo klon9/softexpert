@@ -5,7 +5,7 @@ import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const swiper1 = new Swiper(".main-advantages_slider.swiper", {
+  new Swiper(".main-advantages_slider.swiper", {
     breakpoints: {
       1680: {
         slidesPerView: 4,
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slideClass: "main-slider_item",
   });
 
-  const swiper2 = new Swiper(".slider-reviews .swiper", {
+  new Swiper(".slider-reviews .swiper", {
     slidesPerView: 1,
     navigation: {
       nextEl: ".swiper-button_next__reviews",
@@ -49,5 +49,32 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     wrapperClass: "slider-reviews_wrapper",
     slideClass: "slider-reviews_item",
+  });
+
+  new Swiper(".slider-infoblog", {
+    breakpoints: {
+      1680: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+      },
+      1080: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+        loop: true,
+      },
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 50,
+        loop: true,
+      },
+    },
+    navigation: {
+      nextEl: ".swiper-button_next-infoblog",
+      prevEl: ".swiper-button_prev-infoblog",
+    },
+    loop: true,
+    slideClass: "infoblog-element",
+    wrapperClass: "swiper-wrapper-infoblog",
   });
 });

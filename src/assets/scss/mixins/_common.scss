@@ -70,3 +70,45 @@
     }
   }
 }
+
+@mixin scrollbar($color) {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 4px;
+    background: $color;
+    border-radius: 6px;
+  }
+
+  @supports (-moz-user-select: none) {
+    scrollbar-color: $color transparent;
+    scrollbar-width: thin;
+  }
+}
+
+@mixin scrollbar-horizont($color) {
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 4px;
+    background: $color;
+    border-radius: 6px;
+  }
+
+  @supports (-moz-user-select: none) {
+    scrollbar-color: $color transparent;
+    scrollbar-width: thin;
+  }
+}

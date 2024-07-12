@@ -1,0 +1,151 @@
+.services {
+  padding: 80px 0 80px 0;
+  background: #f7f9f9;
+  overflow: hidden;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+  }
+
+  &__wrap {
+    @include sfx-col-flex(4);
+    margin: 80px 0 0 0;
+    padding: 0 30px;
+    display: flex;
+
+    &:nth-child(-n+3) {
+      margin-top: 0;
+    }
+  }
+
+  .service {
+    padding: 15px 0 25px 0;
+    width: 100%;
+    border-radius: 5px;
+    background: transparent;
+
+    &__image {
+      position: relative;
+      height: 44px;
+      width: 54px;
+      display: flex;
+      align-items: flex-end;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 31px;
+        height: 31px;
+        background-color: #c42134;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+      }
+
+      img {
+        max-height: 40px;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &:hover {
+      .service__image {
+        &:after {
+          @extend .si-floating2;
+        }
+      }
+    }
+
+    &__title {
+      @include sfx-title();
+      padding: 30px 0 30px 0;
+    }
+
+    &__text {
+      color: #8e8e8e;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19px;
+
+      &-other {
+        padding: 10px 0 0 0;
+      }
+    }
+  }
+
+
+  @include sfx-media-down(xl) {
+    &__wrap {
+      @include sfx-col-flex(6);
+      margin: 50px 0 0 0;
+
+      &:nth-child(-n+3) {
+        margin-top: 50px;
+      }
+
+      &:nth-child(-n+2) {
+        margin-top: 0;
+      }
+
+    }
+
+    .service {
+      &__text {
+        font-size: 14px;
+        line-height: 19px;
+        padding: 0;
+      }
+    }
+  }
+
+
+  @include sfx-media-down(lg) {
+    &__list {
+      margin: 0 -20px;
+    }
+    &__wrap {
+      padding: 0 20px;
+    }
+  }
+
+
+  @include sfx-media-down(md) {
+    &__wrap {
+      @include sfx-col-flex(12);
+      margin-top: 75px;
+
+      &:nth-child(-n+3) {
+        margin-top: 75px;
+      }
+
+      &:nth-child(-n+2) {
+        margin-top: 75px;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .service {
+      padding: 0;
+    }
+  }
+
+
+  @include sfx-media-down(sm) {
+    .service {
+      &__title {
+        color: #101010;
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+}

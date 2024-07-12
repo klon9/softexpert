@@ -1,0 +1,31 @@
+.seo-position {
+
+  .positive-block {
+    .c-col {
+      @include sfx-col-flex(6);
+
+      @include sfx-media-down(md) {
+        @include sfx-col-flex(12);
+      }
+    }
+  }
+
+  .positive-block.positive-bold .positive-block__item-text {
+    font-weight: 400;
+  }
+
+  .who-suits {
+    @include sfx-media-down(sm) {
+      padding-top: 40px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .seo-stages {
+    @include sfx-media-down(sm) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+}
+

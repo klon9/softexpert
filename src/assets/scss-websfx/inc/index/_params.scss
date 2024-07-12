@@ -1,0 +1,156 @@
+.params {
+  padding: 90px 0 90px 0;
+  background: #f2faf0;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 300px;
+    height: 100%;
+  }
+
+  &__value {
+    color: #8eb95b;
+    font-size: 58px;
+    line-height: 62px;
+    font-weight: 600;
+    letter-spacing: -2.34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 222px;
+    height: 108px;
+    background: url(images/laurel.png) no-repeat center;
+    background-size: cover;
+    margin: 0 auto;
+
+    .small {
+      line-height: 38px;
+      color: #8eb95b;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+    }
+    .small-2 {
+      color: #8eb95b;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 23px;
+      position: relative;
+      top: -1px;
+      padding-left: 3px;
+      display: inline-block;
+      letter-spacing: -0.6px;
+    }
+  }
+
+  &__name {
+    color: #80857a;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 21px;
+    padding: 30px 0 0 0;
+  }
+
+
+  @include sfx-media-down(xl) {
+    &__value {
+      width: 184px;
+      height: 90px;
+      font-size: 48px;
+      line-height: 52px;
+      .small {
+        line-height: 20px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .small-2 {
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 18px;
+        top: -2px;
+      }
+    }
+
+    &__name {
+      font-size: 15px;
+      line-height: 19px;
+    }
+  }
+
+
+  @include sfx-media-down(lg) {
+    padding: 50px 0 50px 0;
+
+    &__value {
+      width: 148px;
+      height: 72px;
+      font-size: 38px;
+      line-height: 42px;
+      .small {
+        line-height: 16px;
+        font-size: 16px;
+      }
+      .small-2 {
+        font-size: 14px;
+        line-height: 14px;
+        top: -2px;
+      }
+    }
+
+    &__name {
+      font-size: 13px;
+      line-height: 16px;
+      max-width: 150px;
+      margin: 0 auto;
+      padding: 20px 0 0 0;
+    }
+  }
+
+
+  @include sfx-media-down(md) {
+    padding: 35px 0;
+    &__list {
+      flex-wrap: wrap;
+    }
+    &__item {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+
+  @include sfx-media-down(sm) {
+    &__list {
+      margin: 0 -10px;
+    }
+    &__item {
+      width: auto;
+      padding: 0 10px;
+    }
+    &__value {
+      width: 131px;
+      height: 65px;
+      font-size: 34px;
+      line-height: 38px;
+      .small {
+        line-height: 14px;
+        font-size: 14px;
+        padding-left: 2px;
+      }
+      .small-2 {
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+    &__name {
+      font-size: 12px;
+    }
+  }
+}

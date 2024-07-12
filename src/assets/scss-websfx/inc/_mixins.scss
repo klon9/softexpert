@@ -1,0 +1,274 @@
+// _mixins.scss
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  animation: #{$str};
+}
+
+@mixin sfx-text() {
+  color: $color-lilac;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.43;
+
+  @include sfx-media-down(sm) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@mixin sfx-title() {
+  color: #3e496a;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+
+  @include sfx-media-down(xl) {
+  }
+
+  @include sfx-media-down(lg) {
+    font-size: 40px;
+  }
+
+  @include sfx-media-down(sm) {
+    font-size: 24px;
+  }
+}
+
+@mixin sfx-absolute-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin sfx-flex-col-auto() {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+@mixin sfx-flex-col-100() {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+@mixin sfx-flex-width($width) {
+  flex: 0 0 $width;
+  max-width: $width;
+}
+
+@mixin sfx-col-flex-custom($size: 0) {
+  flex: 0 0 $size;
+  max-width: $size;
+}
+
+@mixin sfx-col-flex($col: 1) {
+  @include sfx-col-flex-custom(100% * $col / 12);
+}
+
+@mixin sfx-pagenav-arrow($deg, $left) {
+  content: "";
+  border-top: 1px solid #a3a3a3;
+  border-left: 1px solid #a3a3a3;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  transform: rotate($deg);
+  position: relative;
+  left: $left;
+}
+
+@mixin sfx-arrow-down($top, $bottom) {
+  content: "";
+  display: block;
+  left: 50%;
+  top: $top;
+  bottom: $bottom;
+  transform: translateX(-50%);
+  width: 9px;
+  border: 5px solid transparent;
+  border-top: 6px solid #f7a431;
+  position: absolute;
+}
+
+@mixin sfx-arrow-right($top, $right) {
+  content: "";
+  width: 9px;
+  border: 5px solid transparent;
+  border-left: 6px solid #f7a431;
+  position: absolute;
+  display: block;
+  right: $right;
+  top: $top;
+}
+
+@mixin sfx-icon($content, $color, $font-size) {
+  content: $content;
+  font-family: "fl-bigmug-line";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  font-size: $font-size;
+  color: $color;
+  display: block;
+}
+
+@mixin sfx-button($width, $height, $font-size) {
+  width: $width;
+  height: $height;
+  background-color: $color-red;
+  color: #ffffff;
+  font-size: $font-size;
+  font-weight: 500;
+  line-height: $font-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.5s ease;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #d32931;
+  }
+}
+
+@mixin sfx-background($size, $pos, $repeat: no-repeat) {
+  background-size: $size;
+  background-position: $pos;
+  background-repeat: $repeat;
+}
+
+// Media queries
+
+@function get-breakpoint-value($query, $data) {
+  $value: null;
+
+  @if type-of($query) == "number" {
+    $value: $query;
+  }
+
+  @if type-of($query) == "string" {
+    $value: map-get($data, $query);
+  }
+
+  @return $value;
+}
+
+@mixin sfx-media-up($query, $data: $sfx-breakpoints) {
+  $value: get-breakpoint-value($query, $data);
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin sfx-media-down($query, $data: $sfx-breakpoints) {
+  $value: get-breakpoint-value($query, $data);
+
+  @media (max-width: $value - 0.02px) {
+    @content;
+  }
+}
+
+@mixin sfx-media-between($min-query, $max-query, $data: $sfx-breakpoints) {
+  $min-value: get-breakpoint-value($min-query, $data);
+  $max-value: get-breakpoint-value($max-query, $data);
+
+  @media (max-width: $max-value - 0.02px) and (min-width: $min-value) {
+    @content;
+  }
+}
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+
+  @return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face(
+  $name,
+  $path,
+  $weight: null,
+  $style: null,
+  $exts: eot woff2 woff ttf svg
+) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_"),
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype",
+  );
+
+  @each $ext in $exts {
+    $extmod: if(
+      map-has-key($extmods, $ext),
+      $ext + map-get($extmods, $ext),
+      $ext
+    );
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append(
+      $src,
+      url(quote($path + "." + $extmod)) format(quote($format)),
+      comma
+    );
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}

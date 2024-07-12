@@ -1,12 +1,27 @@
 .section__services {
-  padding: 0 0 20px;
+  padding: 110px 0 20px;
   overflow: hidden;
+  background: linear-gradient(
+    1deg,
+    #ebeff2 9.91%,
+    #e3e0f3 54.35%,
+    #ebeff2 97.19%
+  );
   .main-block-decor {
     bottom: unset;
     right: -240px;
     top: -207px;
   }
-  
+
+  @include desktop {
+    padding: 83px 0 20px;
+  }
+
+  @include small-tablet {
+    padding: 63px 0 20px;
+  }
+
+  @include mobile {
+    padding: 58px 0 20px;
+  }
 }
-
-

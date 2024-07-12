@@ -77,6 +77,8 @@
     line-height: normal;
     border-radius: 10px;
     outline: none;
+    height: 100%;
+    width: 100%;
     &::placeholder {
       color: #d3d3d3;
       font-size: 17.5px;
@@ -340,7 +342,7 @@
 .message {
   background: rgba(62, 73, 106, 0.6);
   position: fixed;
-  z-index: 999;
+  z-index: -1;
   top: 0;
   right: 0;
   bottom: 0;
@@ -349,6 +351,10 @@
   backdrop-filter: blur(2px);
   opacity: 0;
   transition: 0.2s linear;
+
+  &.visible {
+    z-index: 999;
+  }
 
   &.active {
     opacity: 1;

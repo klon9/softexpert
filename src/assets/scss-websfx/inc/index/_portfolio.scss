@@ -1,0 +1,277 @@
+.portfolio {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__hover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #383838;
+    background-image: linear-gradient(to top, rgba(0, 0, 4, 0.71) 0%, rgba(0, 0, 0, 0.29) 100%);
+    padding: 100px 30px 0 60px;
+    transform: translateY(100%);
+    transition: transform .5s ease;
+
+    @include sfx-media-down(xl) {
+      padding: 60px 40px 0 40px;
+    }
+
+    @include sfx-media-down(sm) {
+      padding: 30px 15px 0 15px;
+    }
+  }
+
+  &__item {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    height: 440px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:hover {
+      .portfolio__hover {
+        transform: translateY(0%);
+      }
+    }
+
+    @include sfx-media-down(xl) {
+      @include sfx-col-flex(6);
+      height: 350px;
+    }
+
+    @include sfx-media-down(lg) {
+      @include sfx-col-flex(12);
+      height: 535px;
+    }
+
+    @include sfx-media-down(md) {
+      height: 410px;
+    }
+
+    @include sfx-media-down(sm) {
+      height: 320px;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding: 0 70px;
+    width: 100%;
+
+    @include sfx-media-down(1400px) {
+      padding: 0 40px;
+    }
+    @include sfx-media-down(1300px) {
+      top: 40%;
+    }
+
+    @include sfx-media-down(lg) {
+      top: 55%;
+    }
+
+    @include sfx-media-down(sm) {
+      top: 50%;
+      padding: 0 15px;
+    }
+  }
+
+  &__tag {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 12px;
+    line-height: 27px;
+    height: 27px;
+    background-color: #c42134;
+    display: inline-block;
+
+    @include sfx-media-down(xl) {
+      font-size: 13px;
+      height: 21px;
+      line-height: 20px;
+    }
+
+    @include sfx-media-down(lg) {
+      height: 32px;
+      font-size: 19px;
+      line-height: 32px;
+      padding: 0 15px;
+    }
+
+    @include sfx-media-down(md) {
+      font-size: 15px;
+      height: 25px;
+      line-height: 25px;
+    }
+
+    @include sfx-media-down(sm) {
+      font-size: 12px;
+      height: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &__name {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    padding: 20px 0 0 0;
+
+    @include sfx-media-down(xl) {
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    @include sfx-media-down(lg) {
+      font-size: 34px;
+      line-height: 40px;
+    }
+
+    @include sfx-media-down(md) {
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    @include sfx-media-down(sm) {
+      font-size: 20px;
+      line-height: 24px;
+      padding-top: 12px;
+    }
+  }
+
+  &__hover-name {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 40px;
+    padding: 0 0 40px 0;
+
+    @include sfx-media-down(xl) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    @include sfx-media-down(lg) {
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    @include sfx-media-down(md) {
+      font-size: 30px;
+      line-height: 34px;
+    }
+
+    @include sfx-media-down(sm) {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  &__platform {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+
+    @include sfx-media-down(xl) {
+      font-size: 19px;
+      line-height: 23px;
+    }
+
+    @include sfx-media-down(lg) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    @include sfx-media-down(md) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include sfx-media-down(sm) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__links {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    padding: 0 30px 0 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include sfx-media-down(xl) {
+      bottom: 40px;
+      padding: 0 40px 0 40px;
+    }
+
+    @include sfx-media-down(sm) {
+      padding: 0 15px 0 15px;
+      bottom: 30px;
+    }
+  }
+
+  &__case {
+    color: #c42134;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    text-decoration: underline;
+
+    @include sfx-media-down(xl) {
+      font-size: 11px;
+    }
+
+    @include sfx-media-down(lg) {
+      font-size: 14px;
+    }
+
+    @include sfx-media-down(sm) {
+      font-size: 12px;
+    }
+  }
+
+  &__site {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    display: inline-block;
+    background: url(images/icon-site-link.svg) no-repeat center right;
+    background-size: 20px 20px;
+    padding: 0 35px 0 0;
+    min-height: 20px;
+
+    @include sfx-media-down(xl) {
+      font-size: 11px;
+      background-size: 17px 17px;
+      line-height: 20px;
+      padding-right: 25px;
+    }
+
+    @include sfx-media-down(lg) {
+      font-size: 14px;
+    }
+
+    @include sfx-media-down(sm) {
+      font-size: 12px;
+    }
+  }
+
+}

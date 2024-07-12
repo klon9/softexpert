@@ -1,0 +1,53 @@
+.online-store {
+
+  .steps-block {
+    @include sfx-media-down(lg) {
+      padding-top: 60px;
+    }
+  }
+
+  @include sfx-media-down(xl) {
+    .more-services {
+      padding-bottom: 40px;
+      .params__item {
+        &:nth-child(5) {
+          background-color: #ffffff;
+          color: #383838;
+        }
+        &:nth-child(6) {
+          background-color: #c42134;
+          color: #ffffff;
+        }
+        &:nth-child(7) {
+          background-color: #383838;
+          color: #ffffff;
+        }
+        &:nth-child(8) {
+          background-color: #dfe3e4;
+          color: #383838;
+        }
+      }
+    }
+  }
+
+
+  @include sfx-media-down(md) {
+    .more-services {
+      .params__item {
+        &:nth-child(2) {
+          background-color: #dfe3e4;
+          color: #383838;
+        }
+        &:nth-child(3) {
+          background-color: #ffffff;
+          color: #383838;
+        }
+        &:nth-child(7) {
+          background-color: #c42134;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+}
