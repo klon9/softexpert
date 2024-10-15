@@ -13,37 +13,35 @@
     top: 0;
     left: 0;
     background-color: #383838;
-    background-image: linear-gradient(to top, rgba(0, 0, 4, 0.71) 0%, rgba(0, 0, 0, 0.29) 100%);
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 4, 0.71) 0%,
+      rgba(0, 0, 0, 0.29) 100%
+    );
     padding: 40px 30px 40px 60px;
     transform: translateY(100%);
-    transition: transform .5s ease;
+    transition: transform 0.5s ease;
     display: flex;
     align-items: flex-end;
 
     //transform: translateY(0%);
 
-
     @include sfx-media-down(xl) {
-      padding: 40px 30px 40px 30px;
+      padding: 40px 30px;
     }
 
     @include sfx-media-down(lg) {
-      padding: 40px 80px 80px 80px;
+      padding: 40px 80px 80px;
     }
 
     @include sfx-media-down(md) {
-      padding: 40px 30px 40px 30px;
+      padding: 40px 30px;
     }
 
     @include sfx-media-down(sm) {
-      padding: 15px 15px 30px 15px;
+      padding: 15px 15px 30px;
     }
   }
-
-  &__hover-inner {
-
-  }
-
 
   &__item {
     //flex: 0 0 33.333333%;
@@ -157,7 +155,7 @@
     font-size: 28px;
     font-weight: 500;
     line-height: 34px;
-    padding: 20px 0 0 0;
+    padding: 20px 0 0;
 
     @include sfx-media-down(xl) {
       font-size: 22px;
@@ -186,7 +184,7 @@
     font-size: 36px;
     font-weight: 500;
     line-height: 40px;
-    padding: 0 0 40px 0;
+    padding: 0 0 40px;
 
     @include sfx-media-down(xl) {
       font-size: 26px;
@@ -238,14 +236,13 @@
   }
 
   &__links {
-    padding: 30px 0 0 0;
+    padding: 30px 0 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @include sfx-media-down(xl) {
-
     }
 
     @include sfx-media-down(sm) {
@@ -299,5 +296,4 @@
       font-size: 12px;
     }
   }
-
 }

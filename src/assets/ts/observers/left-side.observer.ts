@@ -1,15 +1,15 @@
 export const leftSideObserver = () => {
   if (leftSideWrapper) {
-    let leftSideChildren = leftSideWrapper.querySelector(
+    const leftSideChildren = leftSideWrapper.querySelector(
       ".main_left-side_item.not-active"
-    );
+    ) as HTMLElement;
     const timeToStart = 1000;
     const timePerStep = 75;
     const options = {
-        threshold: 0.65,
+      threshold: 0.65,
     };
-    const observerCollback = (entries: any) => {
-      entries.forEach((entry: any) => {
+    const observerCollback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.remove("not-active");
 
@@ -27,13 +27,13 @@ export const leftSideObserver = () => {
 
 const leftSideWrapper = document.querySelector("#left-side");
 
-function showElements(leftSideChildren: any, time: number) {
+function showElements(leftSideChildren: HTMLElement, time: number) {
   if (leftSideChildren) {
     setTimeout(() => {
       leftSideChildren.classList.remove("not-active");
       leftSideChildren = leftSideWrapper?.querySelector(
         ".main_left-side_item.not-active"
-      );
+      ) as HTMLElement;
       showElements(leftSideChildren, time);
     }, time);
   }

@@ -1,9 +1,10 @@
 @import "/src/assets/scss/mixins/breakpoint";
 
 $lilac: #6e74a8;
-$dark-lilac: rgba(62, 73, 106, 1);
+$dark-lilac: #3e496a;
 $green: #4cc8af;
 $gray: #3e496ab2;
+$color-white: #ebeff2;
 
 $review_slide_width: 940px;
 
@@ -17,3 +18,5 @@ $card-block_angle-background-2: linear-gradient(
 $card-block_angle-width: 25px;
 $card-block_angle-margin: 50px;
 $card-block_border-radius: 45px;
+
+$time-default: 0.3s;

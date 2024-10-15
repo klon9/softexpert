@@ -1,10 +1,8 @@
-import IMask from "imask";
+import IMask, { InputMaskElement } from "imask";
 
 export const inputsMask = () => {
-  const inputsTel = document.querySelectorAll("input[type='tel']");
-
-  inputsTel.forEach((element: any) => {
-    IMask(element, masks.tel);
+  document.querySelectorAll("input[type='tel']").forEach((element) => {
+    IMask(element as InputMaskElement, masks.tel);
   });
 };
 

@@ -5,15 +5,15 @@ import path from "path";
 
 export default {
   plugins: [
-    // checker({
-    //   typescript: true,
-    //    eslint: {
-    //     lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
-    //   },
-    //   stylelint: {
-    //     lintCommand: 'stylelint ./src/**/*.{css,scss}'
-    //   },
-    // }),
+    checker({
+      typescript: true,
+      eslint: {
+        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
+      },
+      // stylelint: {
+      //   lintCommand: "stylelint ./src/**/*.{css,scss}",
+      // },
+    }),
     VitePluginBrowserSync(),
     qrcode(),
   ],
@@ -27,9 +27,9 @@ export default {
   },
   build: {
     rollupOptions: {
-      // input: {
-      //   main: path.resolve(__dirname, "index.html"),
-      // },
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+      },
       output: {
         assetFileNames: (assetInfo) => {
           let extType = assetInfo.name.split(".").at(1);

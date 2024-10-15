@@ -1,6 +1,7 @@
 @import "/src/assets/scss/mixins/font-face";
 @import "/src/assets/scss/mixins/breakpoint";
 @import "/src/assets/scss/mixins/common";
+@import "/src/assets/scss/mixins/_font";
 
 @import "/src/assets/scss/vars.scss";
 @import "/src/assets/scss/fonts";
@@ -28,3 +29,5 @@
 @import "/src/assets/scss/sections/section-6.our-services.scss";
 @import "/src/assets/scss/sections/section-7.stages.scss";
 @import "/src/assets/scss/sections/section-8.reviews.scss";
+
+@import "./components/main";

@@ -23,13 +23,13 @@ function hide(element: Element) {
   return true;
 }
 
-function moveX(element: any, range: number) {
+function moveX(element: HTMLElement, range: number) {
   element.style.right = "unset";
   element.style.left = range + "px";
   return true;
 }
 
-function calcRange(element: any): number {
+function calcRange(element: HTMLElement) {
   return element.offsetLeft + element.offsetWidth / 2;
 }
 
@@ -74,7 +74,7 @@ function createNavItems() {
 function listen() {
   const sections =
     document.querySelectorAll("[data-role='navigation-target']") || null;
-  const navPointer = document.querySelector(".nav-pointer");
+  const navPointer = document.querySelector(".nav-pointer") as HTMLElement;
 
   if (!sections || !navPointer) return false;
 
@@ -102,8 +102,8 @@ function listen() {
     if (visibleSections.length > 0) {
       const id = visibleSections[0].id;
       const currentMenuItem = document.querySelector(
-        `li[data-role='navigation-link']:has([href='#${id}'])`
-      );
+        `li[data-role='navigation-link']:has([href$='#${id}'])`
+      ) as HTMLElement;
 
       if (currentMenuItem) {
         setActiveMenuItem(currentMenuItem);

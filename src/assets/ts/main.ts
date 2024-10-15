@@ -13,8 +13,10 @@ import {
 import { buildNavItems } from "./observers/nav.observer";
 import { runObserv } from "./observers/main";
 import { buttonsAction } from "./components/buttons";
+import { template } from "handlebars";
 
 document.addEventListener("DOMContentLoaded", () => {
+  template;
   if (!getCookie("is_visited_page")) {
     //setFormsPreventDefault();
     inputsMask();

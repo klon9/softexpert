@@ -1,0 +1,206 @@
+.post {
+  color: $lilac;
+  position: relative;
+  isolation: isolate;
+
+  h1 {
+    @include font-size(58px, 600, 68px);
+    text-align: center;
+    margin: 0 0 32px;
+    color: $dark-lilac;
+  }
+
+  h3 {
+    margin: 0 0 40px;
+    @include font-size(32px, 600, 38px);
+    color: $dark-lilac;
+  }
+
+  h5 {
+    @include font-size(28px, 600, 32px);
+    margin: 0 0 32px;
+    color: $dark-lilac;
+  }
+
+  p {
+    margin: 16px 0;
+    @include font-size(16px, 400, 24px);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px 0;
+  }
+
+  &-body {
+    background: rgba(238, 241, 250, 0.3);
+    box-shadow: 0px 4px 44px rgba(158, 170, 207, 0.3);
+    border-radius: 40px;
+    padding: 60px;
+    isolation: isolate;
+    position: relative;
+    margin: 32px 0 64px;
+  }
+
+  &-text {
+    &-block {
+      margin: 44px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-card {
+      padding: 20px 16px;
+
+      background: rgba(238, 241, 250, 0.3);
+      border: 1px solid #ffffff;
+      border-radius: 20px;
+    }
+  }
+
+  &-img {
+    text-align: center;
+  }
+
+  @include small-desktop {
+    a.button__close {
+      height: 40px;
+    }
+
+    h1 {
+      @include font-size(48px, 600, 1.2);
+      text-align: center;
+      margin: 0 0 32px;
+      color: $dark-lilac;
+    }
+
+    h5 {
+      @include font-size(24px, 600, 1.2);
+      margin: 0 0 16px;
+    }
+
+    h3 {
+      @include font-size(28px, 600, 1.2);
+      margin: 0 0 28px;
+    }
+
+    p {
+      @include font-size(14px, 400, 1.2);
+      margin: 8px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-text {
+      &-block {
+        margin: 36px 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-body {
+      padding: 40px;
+      border-radius: 32px;
+    }
+  }
+
+  @include tablet {
+    a.button__close {
+      height: 36px;
+    }
+
+    h1 {
+      @include font-size(32px, 600, 1.2);
+    }
+
+    h5 {
+      @include font-size(20px, 600, 1.2);
+      margin: 0 0 8px;
+    }
+
+    p {
+      margin: 0 0 8px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-text {
+      &-block {
+        margin: 24px 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-body {
+      padding: 28px;
+      border-radius: 24px;
+    }
+  }
+
+  @include small-tablet {
+    padding: 40px 0;
+    h1 {
+      @include font-size(28px, 600, 1.1);
+      margin: 0 0 24px;
+    }
+
+    h3 {
+      @include font-size(22px, 600, 1.1);
+      margin: 0 0 16px;
+    }
+
+    &-nav {
+      margin: 24px 0;
+    }
+
+    &-body {
+      margin: 24px 0 48px;
+    }
+  }
+}
