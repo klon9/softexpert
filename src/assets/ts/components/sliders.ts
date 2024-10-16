@@ -53,27 +53,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   new Swiper(".slider-infoblog", {
     breakpoints: {
-      1680: {
+      1440: {
         slidesPerView: 3,
-        spaceBetween: 20,
-        loop: true,
       },
-      1080: {
+      1280: {
         slidesPerView: 2,
         spaceBetween: 40,
-        loop: true,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 24,
       },
       0: {
         slidesPerView: 1,
-        spaceBetween: 50,
-        loop: true,
+        spaceBetween: 16,
       },
     },
     navigation: {
       nextEl: ".swiper-button_next-infoblog",
       prevEl: ".swiper-button_prev-infoblog",
     },
-    loop: true,
+    loop: false,
     slideClass: "infoblog-element",
     wrapperClass: "swiper-wrapper-infoblog",
   });

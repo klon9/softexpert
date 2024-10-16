@@ -92,6 +92,11 @@ export const showSections = () => {
     funcName: "translateY",
     direction: -1,
   });
+
+  tryTransformElement(".section-infoblog", {
+    funcName: "translateX",
+    direction: 1,
+  });
 };
 
 function tryTransformElements(selector: string, options: TransformOptions) {
